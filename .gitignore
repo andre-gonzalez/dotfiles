@@ -60,9 +60,9 @@ Downloads/
 .config/ktorrentrc
 .config/kmagrc
 .config/kdeglobals
-.config/kcong_updaterc
+.config/kconf_updaterc
 .config/htop/
-.config/guiscicpy/
+.config/guiscrcpy/
 .config/gtk-3.0/
 .config/gtk-2.0/
 .config/google-cloud-sdk/
@@ -99,3 +99,8 @@ Downloads/
 .bash_history
 .bash_logout
 .Xauthority
+.dotfiles/
+.config/obsidian/
+.config/nvim/plugged/dbext.vim
+.config/nvim/plugged/nvim-compe
+.config/plugged/nvim-lspconfig
