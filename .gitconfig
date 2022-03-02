@@ -1,0 +1,14 @@
+[user]
+	email = lopescg@gmail.com
+	name = André Gonzalez
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = vim
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[init]
+	defaultBranch = main
