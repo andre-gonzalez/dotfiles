@@ -73,8 +73,11 @@ export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 		alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 #Change directories using fuzzy finder
+gi() {
+		file=$(pwd | fd -H -td . | fzf -e) && cd "$file"
+}
 g() {
-    file=$(pwd | fd -H -td . | fzf -e) && cd "$file"
+		file=$(pwd | fd -td . | fzf -e) && cd "$file"
 }
 gh() {
     file=$(fd -H -td . ~ | fzf -e) && cd "$file"
