@@ -20,6 +20,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 # Alias
 		alias r="ranger"
+		alias cat="bat"
 		alias lf="/usr/local/bin/lfub"
 		alias l="ls --color -h --group-directories-first"
 		alias tar="tar -xf"
@@ -80,7 +81,7 @@ g() {
 		file=$(pwd | fd -td . | fzf -e) && cd "$file"
 }
 gh() {
-    file=$(fd -H -td . ~ | fzf -e) && cd "$file"
+    file=$(fd  -td . ~ | fzf -e) && cd "$file"
 }
 gr() {
     file=$(fd -td . / | fzf -e) && cd "$file"
