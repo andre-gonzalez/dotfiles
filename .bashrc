@@ -1,4 +1,3 @@
-#; kill -45 $(pidof dwmblocks)
 # ~/.bashrc
 #
 
@@ -21,6 +20,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 # Alias
 		alias r="ranger"
+		alias lf="/home/frank/.local/bin/lfub"
 		alias l="ls --color -h --group-directories-first"
 		alias tar="tar -xf"
 		alias p="python3"
