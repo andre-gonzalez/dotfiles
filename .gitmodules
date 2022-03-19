@@ -1,3 +1,0 @@
-[submodule ".config/my-dwm"]
-	path = .config/my-dwm
-	url = git@github.com:andre-gonzalez/my-dwm.git
