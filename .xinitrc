@@ -97,9 +97,6 @@ numlockx &
 # Multiple Monitor configuration
 xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1360x434 --rotate normal --output HDMI-1 --mode 1360x768 --pos 0x0 --rotate normal
 
-# Remove Downloads folder
-rm $HOME/Downloads
-
 # Loop
 while true; do
 	dwm > /dev/null 2>&1
