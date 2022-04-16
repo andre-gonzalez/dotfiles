@@ -90,6 +90,7 @@ Downloads/
 .config/BraveSoftware/
 .config/Bitwarden CLI/
 .config/Authy Desktop/
+.config/my-dwm
 .cdk/
 .cargo/
 .cache/
