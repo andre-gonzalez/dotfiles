@@ -107,6 +107,6 @@ if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
 bind '"\C-o":"lfcd\C-m"'
-bind '"\C-e":"$(pwd | fd -H -td . | fzf -e) && cd "$file"\C-m"'
+bind '"\C-e":"$(pwd | fd -td . | fzf -e) && cd "$file"\C-m"'
 bind '"\C-u":"$pwd |fd -tf . | fzf | xargs -r $EDITOR"\C-m"'
 #To reload .bashrc use ->  source ~/.bashrc
