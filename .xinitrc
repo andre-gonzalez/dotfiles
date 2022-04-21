@@ -61,7 +61,7 @@ dwmblocks &
 #picom -f &
 
 #Wallpaper
-nitrogen --restore &
+feh --bg-fill "$HOME"/.config/.wallpaper/arco-login.jpg
 
 # unclutter to make the mouse dissapear when not using it
 unclutter &
