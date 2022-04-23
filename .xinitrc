@@ -58,10 +58,6 @@ xbindkeys &
 #/home/frank/.config/my-dwm-bar/dwm_bar.sh &
 dwmblocks &
 
-#Compositor
-#picom -f &
-
-
 # unclutter to make the mouse dissapear when not using it
 unclutter &
 
