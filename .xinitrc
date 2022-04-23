@@ -55,7 +55,6 @@ setxkbmap -layout us -variant dvorak-intl && setxkbmap -option caps:escape
 xbindkeys &
 
 # DWM Status
-#/home/frank/.config/my-dwm-bar/dwm_bar.sh &
 dwmblocks &
 
 # unclutter to make the mouse dissapear when not using it
