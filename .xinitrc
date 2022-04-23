@@ -48,7 +48,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-setxkbmap -variant ,qwerty
+# set keyboard layout to dvorak, change esc with caps lock and change numpad , to . (dot)
+setxkbmap -layout us -variant dvorak-intl && setxkbmap -option caps:escape
 
 #Keybinds for audio and backlight
 xbindkeys &
@@ -60,21 +61,12 @@ dwmblocks &
 #Compositor
 #picom -f &
 
-#Wallpaper
-feh --bg-fill "$HOME"/.config/.wallpaper/arco-login.jpg
 
 # unclutter to make the mouse dissapear when not using it
 unclutter &
 
 # insync start
 insync start &
-
-# set to dvorak layout when press Alt + space
-#setxkbmap -layout br, abnt2  -variant us,dvorak -option "lv3:rwin_switch,grp:alt_space_toggle"
-# change esc with caps lock
-setxkbmap -option caps:escape
-# change numpad , to . (dot)
-setxkbmap -option kpdl:dot &
 
 # start xflux so the screen get orange in the night
 xflux -l -23 -g -43.4 -k 2700 &
@@ -96,6 +88,9 @@ numlockx &
 
 # Multiple Monitor configuration
 xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1360x434 --rotate normal --output HDMI-1 --mode 1360x768 --pos 0x0 --rotate normal
+
+#Wallpaper
+feh --bg-fill "$HOME"/.config/.wallpaper/arco-login.jpg
 
 # Loop
 while true; do
