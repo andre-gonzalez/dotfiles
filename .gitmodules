@@ -1,0 +1,6 @@
+[submodule ".config/nvim/plugged/nvim-compe"]
+	path = .config/nvim/plugged/nvim-compe
+	url = git@github.com:hrsh7th/nvim-compe.git
+[submodule ".config/nvim/plugged/nvim-lspconfig"]
+	path = .config/nvim/plugged/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig.git
