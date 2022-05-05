@@ -4,6 +4,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Bash aliases file
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+
 # Funcition used to show my branch in the PS1
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'

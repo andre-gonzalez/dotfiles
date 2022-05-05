@@ -8,25 +8,6 @@ alias p="python3"
 alias mv="mv -i"
 alias rm="trash -i"
 alias cp="cp -i"
-# cd..ing around
-# alias salesops="cd ~/eureciclo/salesops"
-# alias pessoal="cd ~/gdrive-pessoal/pessoal"
-# alias trabalho="cd ~/gdrive-pessoal/trabalho"
-# alias estudo="cd ~/gdrive-pessoal/estudo"
-alias ~="cd ~"
-# alias arch-setup="cd ~/gdrive-pessoal/pessoal/programação/arch-setup"
-# alias dotfiles="cd ~/gdrive-pessoal/pessoal/programação/arch-setup/dotfiles"
-# alias downloads="cd ~/gdrive-pessoal/downloads"
-# alias fotos="cd ~/gdrive-pessoal/pessoal/fotos"
-# alias hubspot="cd ~/eureciclo/salesops/hubspot"
-# alias pipefy="cd ~/eureciclo/salesops/pipefy"
-# alias slack="cd ~/eureciclo/salesops/slack-bot"
-# alias ..="cd .."
-# alias edownloads="cd ~/eureciclo/downloads"
-# alias database="cd ~/eureciclo/salesops-dw/"
-# alias utils="cd ~/eureciclo/utils"
-# alias organizar="cd /home/frank/gdrive-pessoal/pessoal/obsidian/_organizar"
-# alias scripts="cd /home/frank/gdrive-pessoal/pessoal/programação/arch-setup/scripts-dmenu"
 # doas alises
 alias sudo="doas"
 alias sudoedit="doas rvim"
@@ -50,9 +31,9 @@ alias notas="cd /home/frank/gdrive-pessoal/pessoal/obsidian && nvim"
 # systemctl
 alias sytemctl="systemctl"
 # Dotfiles in git
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 # Moving with fuzzy finder
-alias gi='file=$(pwd | fd -H -td . | fzf -e) && cd "$file"'
-alias g='file=$(pwd | fd -td . | fzf -e) && cd "$file"'
-alias gh='file=$(fd  -td . ~ | fzf -e) && cd "$file"'
-alias gr='file=$(fd -td . / | fzf -e) && cd "$file"'
+# alias gi="file=$(pwd | fd -H -td . | fzf -e) && cd "$file""
+# alias g="file=$(pwd | fd -td . | fzf -e) && cd "$file""
+# alias gh="file=$(fd  -td . ~ | fzf -e) && cd "$file""
+# alias gr="file=$(fd -td . / | fzf -e) && cd "$file""
