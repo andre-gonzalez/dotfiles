@@ -51,3 +51,8 @@ alias notas="cd /home/frank/gdrive-pessoal/pessoal/obsidian && nvim"
 alias sytemctl="systemctl"
 # Dotfiles in git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# Moving with fuzzy finder
+alias gi='file=$(pwd | fd -H -td . | fzf -e) && cd "$file"'
+alias g='file=$(pwd | fd -td . | fzf -e) && cd "$file"'
+alias gh='file=$(fd  -td . ~ | fzf -e) && cd "$file"'
+alias gr='file=$(fd -td . / | fzf -e) && cd "$file"'
