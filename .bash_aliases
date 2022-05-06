@@ -32,6 +32,8 @@ alias notas="cd /home/frank/gdrive-pessoal/pessoal/obsidian && nvim"
 alias sytemctl="systemctl"
 # Dotfiles in git
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+# ansible
+alias ansible-local="ansible-playbook --connection=local --inventory 127.0.0.1, --limit 127.0.0.1 --ask-become"
 # Moving with fuzzy finder
 # alias gi="file=$(pwd | fd -H -td . | fzf -e) && cd "$file""
 # alias g="file=$(pwd | fd -td . | fzf -e) && cd "$file""
