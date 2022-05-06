@@ -111,6 +111,8 @@
 				" colorscheme
 				Plug 'morhetz/gruvbox'
 
+				" dracula colorscheme
+				Plug 'Mofiqul/dracula.nvim'
 
 				Plug 'rentalcustard/exuberant-ctags'
 
@@ -144,6 +146,9 @@
 
 				"Comment in a vim like way
 			    Plug 'tpope/vim-commentary'
+
+				"fish syntax highlight
+				Plug 'dag/vim-fish'
 
 		call plug#end()
 
@@ -222,11 +227,9 @@
 		set background=dark
 
 		" My coloscheme of choice
-		colorscheme gruvbox
+		" colorscheme gruvbox
+		colorscheme dracula
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Random
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Automatically recompile dwmblocks
-		autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
