@@ -1,5 +1,4 @@
-if status is-interactive
-# Commands to run in interactive sessions can go here
+# startx
 [ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 ] && exec startx
 # Bring the aliases from bash
 source ~/.bash_aliases
@@ -10,10 +9,11 @@ set fish_greeting
 # Enable vi mode
 fish_vi_key_bindings
 
-# Allow ctrl + f to autocomplete to work in vi mode
+# Allow ctrl + f to autocomplete to work in vi mode and ctrl + g to forward a word
 function fish_user_key_bindings
     for mode in insert default visual
         bind -M $mode \cf forward-char
+        bind -M $mode \cg forward-word
     end
 end
 
@@ -37,5 +37,4 @@ function fish_mode_prompt
       echo '|?| '
   end
   set_color normal
-end
 end
