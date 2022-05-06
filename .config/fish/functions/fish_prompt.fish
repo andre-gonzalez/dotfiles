@@ -49,7 +49,7 @@ function fish_prompt
                 echo hg
                 return 0
             else if _is_git_repo
-                echo
+                echo git
                 return 0
             end
             return 1
