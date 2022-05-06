@@ -1,10 +1,11 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+# Commands to run in interactive sessions can go here
+[ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 ] && exec startx
 # Bring the aliases from bash
 source ~/.bash_aliases
 
-# Remove the fish gretting message 
-set fish_greeting 
+# Remove the fish gretting message
+set fish_greeting
 
 # Enable vi mode
 fish_vi_key_bindings
@@ -16,7 +17,7 @@ function fish_user_key_bindings
     end
 end
 
-# Change the vim prompt 
+# Change the vim prompt
 function fish_mode_prompt
   switch $fish_bind_mode
     case default
