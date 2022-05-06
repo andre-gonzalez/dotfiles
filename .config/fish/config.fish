@@ -3,6 +3,9 @@ if status is-interactive
 # Bring the aliases from bash
 source ~/.bash_aliases
 
+# Remove the fish gretting message 
+set fish_greeting 
+
 # Enable vi mode
 fish_vi_key_bindings
 
