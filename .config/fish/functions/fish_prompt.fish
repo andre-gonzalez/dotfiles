@@ -49,7 +49,7 @@ function fish_prompt
                 echo hg
                 return 0
             else if _is_git_repo
-                echo git
+                echo
                 return 0
             end
             return 1
@@ -68,7 +68,7 @@ function fish_prompt
         set arrow_color "$red"
     end
 
-    set -l arrow "$arrow_color ❯"
+    set -l arrow "$arrow_color❯"
     if fish_is_root_user
         set arrow "$arrow_color# "
     end
@@ -86,5 +86,5 @@ function fish_prompt
         end
     end
 
-    echo -n -s ' '$cwd $repo_info $normal ' ' $arrow ' '
+    echo -n -s $cwd $repo_info $normal ' ' $arrow ' '
 end
