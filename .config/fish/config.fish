@@ -11,6 +11,12 @@ source ~/.bash_aliases
 # set -e fish_user_paths
 # set -U fish_user_paths $HOME/.local/bin $HOME/.scripts $fish_user_paths
 
+### MANPAGER
+### "bat" as manpager
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+### "nvim" as manpager
+# set -x MANPAGER "nvim -c 'set ft=man' -"
+
 
 # Remove the fish gretting message
 set fish_greeting
