@@ -20,6 +20,7 @@ PS1="\W\033[00;32m\]\$(git_branch)\[\033[00m\] > "
 ########
 export EDITOR='/usr/bin/nvim'
 export VISUAL='/usr/bin/nvim'
+export PATH='$HOME/.scripts:$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH'
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
