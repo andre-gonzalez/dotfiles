@@ -114,3 +114,4 @@ Downloads/
 .config/nvim/plugged/dbext.vim
 .config/fontforge/
 .config/configstore/
+.ansible/
