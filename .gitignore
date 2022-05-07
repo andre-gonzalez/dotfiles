@@ -106,3 +106,11 @@ Downloads/
 **.png
 **.py
 .config/ansible/
+.yarnrc
+.java/
+.jak/
+.electron-gyp/
+.config/nvim/plugged/
+.config/nvim/plugged/dbext.vim
+.config/fontforge/
+.config/configstore/
