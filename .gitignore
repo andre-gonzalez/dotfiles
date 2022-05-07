@@ -102,3 +102,7 @@ Downloads/
 .dotfiles/
 .config/obsidian/
 .vault_key
+**.jpg
+**.png
+**.py
+.config/ansible/
