@@ -10,6 +10,7 @@ source ~/.bash_aliases
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/.scripts /usr/local/bin /usr/bin $fish_user_paths
 set EDITOR /usr/bin/nvim
+set VISUAL /usr/bin/nvim
 
 ### MANPAGER
 ### "bat" as manpager
