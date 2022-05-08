@@ -9,8 +9,8 @@ source ~/.bash_aliases
 # your path gets massive and fish becomes very slow.
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/.scripts /usr/local/bin /usr/bin $fish_user_paths
-set EDITOR /usr/bin/nvim
-set VISUAL /usr/bin/nvim
+set EDITOR "/usr/bin/nvim" 
+set VISUAL "/usr/bin/nvim"
 
 ### MANPAGER
 ### "bat" as manpager
