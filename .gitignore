@@ -47,11 +47,11 @@ Downloads/
 .config/nuclear/
 .config/nitrogen/
 .config/neofetch
-.config/my-st/
-.config/my-slock/
-.config/my-dwmblocks/
-.config/my-dwm-large-screen/
-.config/my-dwm-bar/
+.config/st/
+.config/slock/
+.config/dwmblocks/
+.config/dwm-large-screen/
+.config/dwm-bar/
 .config/mimeapps.list
 .config/menus/
 .config/mc/
@@ -90,7 +90,7 @@ Downloads/
 .config/BraveSoftware/
 .config/Bitwarden CLI/
 .config/Authy Desktop/
-.config/my-dwm
+.config/dwm
 .cdk/
 .cargo/
 .cache/
