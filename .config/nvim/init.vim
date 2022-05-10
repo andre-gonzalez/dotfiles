@@ -219,7 +219,13 @@
 		"Python completion
 		source ~/.config/nvim/python-lsp.lua
 
+		"SQL completion
+		source ~/.config/nvim/sql-lsp.lua
 
+		"SQL Server completion
+		let g:LanguageClient_serverCommands = {
+			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
+			\ }
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colorscheme configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
