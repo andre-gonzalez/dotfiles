@@ -102,6 +102,7 @@ Downloads/
 .config/obsidian/
 .vault_key
 **.jpg
+**.sql
 **.png
 **.py
 .config/ansible/
@@ -149,4 +150,5 @@ Downloads/
 .local/share/remmina/
 .local/share/vscode-sqltools/
 .local/share/vulkan/
+.config/sql-language-server/
 .local/share/xorg/
