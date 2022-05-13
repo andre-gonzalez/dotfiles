@@ -1,0 +1,145 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-17c374b3f42-269620bcf266451c": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "salesops-dw (production)",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "postgres",
+				"url": "jdbc:postgresql://localhost:3306/postgres",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"SQLEditor.outputPanel.autoShow": "false"
+			}
+		},
+		"mysql8-17c374e1df7-77096f7719092efd": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "redeciclo-corp",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3308",
+				"database": "redeciclo-corp",
+				"url": "jdbc:mysql://localhost:3308/redeciclo-corp",
+				"type": "dev",
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"SQLEditor.outputPanel.autoShow": "false"
+			}
+		},
+		"postgres-redshift-jdbc-17f23e7bf96-439f1259a9eb6626": {
+			"provider": "postgresql",
+			"driver": "postgres-redshift-jdbc",
+			"name": "production",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "my-redshift-cluster.ccml3bxyexe8.us-east-1.redshift.amazonaws.com",
+				"port": "5439",
+				"database": "production",
+				"url": "jdbc:redshift://my-redshift-cluster.ccml3bxyexe8.us-east-1.redshift.amazonaws.com:5439/production",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-180295d7be2-35327768c1c3fbb9": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "salesops-dw  (staging)",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "postgres",
+				"url": "jdbc:postgresql://localhost:3306/postgres",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-1809bdcbac2-6db5724f6240bee7": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres 2",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://localhost:5432/postgres",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

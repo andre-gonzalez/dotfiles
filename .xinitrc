@@ -87,6 +87,9 @@ xrandr --output eDP-1 --mode 1920x1080 --pos 1360x434 --rotate normal --output H
 #Wallpaper
 feh --bg-fill "$HOME"/.config/.wallpaper/arco-login.jpg
 
+# Turn off bluetooth
+bluetoothctl power off
+
 # Loop
 while true; do
 	dwm > /dev/null 2>&1
