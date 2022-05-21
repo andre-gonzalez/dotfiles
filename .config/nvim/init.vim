@@ -136,7 +136,7 @@
 				Plug 'nvim-treesitter/playground'
 
 				" enable jupyter notebook inside vim
-				Plug 'jupyter-vim/jupyter-vim'
+				Plug 'untitled-ai/jupyter_ascending.vim'
 
 				"Indentation script for python
 				Plug 'vim-scripts/indentpython.vim'
@@ -150,18 +150,15 @@
 				"fish syntax highlight
 				Plug 'dag/vim-fish'
 
+				"csv viewer
+				Plug 'chrisbra/csv.vim'
+
 		call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		"configuration of jupyter-vim
-		if has('nvim')
-			let g:python3_host_prog = '/usr/bin/python3'
-		else
-			set pyxversion=3
-		endif
 
 		" Set firenvim extension to ignore whats app
 		" let fc['https?://web.whatsapp.com/'] = {'takeover': 'never', 'priority': 1 }
@@ -174,6 +171,12 @@
 		let g:SimpylFold_fold_docstring = 0
 		let b:SimpylFold_fold_docstring = 0
 
+		"jupyter-vim
+		if has('nvim')
+			let g:python3_host_prog = '/path/to/python/bin/python3'
+		else
+			set pyxversion=3
+		endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
