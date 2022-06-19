@@ -153,6 +153,8 @@
 				"csv viewer
 				Plug 'chrisbra/csv.vim'
 
+				"terraform plugins
+				Plug 'hashivim/vim-terraform'
 		call plug#end()
 
 
@@ -204,7 +206,7 @@
 		nmap <Leader>p <Plug>MarkdownPreview
 
 		" remap to run telescope with \ + f
-		nnoremap <Leader>f :lua require('telescope.builtin').find_files()<CR>
+		nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
 
 		" remap to run nerdtree with \ + n
 		nnoremap <leader>n :NERDTreeFocus<CR>
