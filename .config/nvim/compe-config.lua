@@ -25,6 +25,7 @@ require'compe'.setup {
     tags = true;
     snippets_nvim = true;
     treesitter = true;
+	vim_dadbod_completion = true;
   };
 }
 local t = function(str)

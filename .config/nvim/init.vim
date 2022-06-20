@@ -155,6 +155,11 @@
 
 				"terraform plugins
 				Plug 'hashivim/vim-terraform'
+
+				"Datapase plugins
+				Plug 'tpope/vim-dadbod'
+				Plug 'kristijanhusak/vim-dadbod-ui'
+				Plug 'kristijanhusak/vim-dadbod-completion'
 		call plug#end()
 
 
@@ -234,6 +239,14 @@
 		let g:LanguageClient_serverCommands = {
 			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
 			\ }
+		"Database operations
+		nnoremap <silent> <leader>du :DBUIToggle<CR>
+		nnoremap <silent> <leader>df :DBUIFindBuffer<CR>
+		nnoremap <silent> <leader>dr :DBUIRenameBuffer<CR>
+		nnoremap <silent> <leader>dl :DBUILastQueryInfo<CR>
+		let g:db_ui_save_location = '~/eureciclo/salesops-dw/main-salesops-dw/queries'
+		let g:db_ui_tmp_query_location = '~/eureciclo/salesops-dw/main-salesops-dw/tmp'
+		" autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colorscheme configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
