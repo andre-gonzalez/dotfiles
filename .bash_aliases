@@ -12,6 +12,7 @@ alias cp="cp -i"
 alias sudo="doas"
 alias sudoedit="doas rvim"
 # git aliases
+alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push -u origin"
