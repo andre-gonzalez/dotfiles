@@ -150,3 +150,5 @@ Downloads/
 .local/share/vulkan/
 .config/sql-language-server/
 .local/share/xorg/
+.config/my-dwm
+.config/anki
