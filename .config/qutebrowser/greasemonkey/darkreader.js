@@ -4115,7 +4115,7 @@ DarkReader.enable({
 	brightness: 100,
 	contrast: 100,
 	sepia: 0,
-    darkSchemeBackgroundColor: "#282a36",
+    darkSchemeBackgroundColor: "#201c1c",
     darkSchemeTextColor: "#f8f8f2",
     // darkColorScheme: "Solarized",
     lightSchemeBackgroundColor: "#44475a",
