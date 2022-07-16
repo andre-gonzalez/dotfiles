@@ -5,10 +5,12 @@
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [core]
-	editor = vim
+	editor = nvim
 [pull]
 	rebase = true
 [rebase]
 	autoStash = true
 [init]
 	defaultBranch = main
+[alias]
+	root = rev-parse --show-toplevel
