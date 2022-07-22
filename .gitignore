@@ -163,3 +163,4 @@ vimwiki/
 .ipython
 .config/nvim/spell/pt.utf-8.spl
 learning.md
+.config/nvim/plugged/
