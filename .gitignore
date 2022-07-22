@@ -152,3 +152,14 @@ Downloads/
 .local/share/xorg/
 .config/my-dwm
 .config/anki
+*.csv
+airflow
+vimwiki/
+.local/share/qutebrowser/
+.local/share/onlyoffice/
+.terraform.d/
+.python_history-58539.tmp
+.config/db_ui/
+.ipython
+.config/nvim/spell/pt.utf-8.spl
+learning.md
