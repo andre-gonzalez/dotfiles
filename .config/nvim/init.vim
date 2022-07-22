@@ -78,7 +78,7 @@
 		endif
 
 		" Syntax highlight in markdown files
-		let g:markdown_fenced_languages = ['html', 'python', 'SQL', 'vim']
+		let g:markdown_fenced_languages = ['html', 'python', 'SQL', 'vim', 'HCL', 'CSS']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
