@@ -8,11 +8,59 @@ config_version: 2
 settings:
   auto_save.session:
     global: true
+  colors.statusbar.command.private.bg:
+    global: darkslategray
+  colors.webpage.bg:
+    global: white
+  colors.webpage.darkmode.enabled:
+    global: true
+  colors.webpage.preferred_color_scheme:
+    global: dark
+  content.fullscreen.window:
+    global: false
+  content.geolocation:
+    https://g1.globo.com: false
   content.notifications.enabled:
     https://calendar.google.com: true
     https://www.drogariasaopaulo.com.br: false
     https://www.reddit.com: false
   content.register_protocol_handler:
+    https://calendar.google.com?cid=%25s: true
     https://mail.google.com?extsrc=mailto&url=%25s: true
+  downloads.location.directory:
+    global: /home/frank/gdrive-pessoal/downloads
+  downloads.position:
+    global: bottom
+  statusbar.padding:
+    global:
+      bottom: 0
+      left: 0
+      right: 0
+      top: 0
+  statusbar.position:
+    global: bottom
+  statusbar.show:
+    global: in-mode
+  tabs.padding:
+    global:
+      bottom: 0
+      left: 5
+      right: 5
+      top: 0
+  tabs.position:
+    global: top
   tabs.show:
     global: multiple
+  tabs.show_switching_delay:
+    global: 1000
+  tabs.tabs_are_windows:
+    global: false
+  url.default_page:
+    global: https://www.google.com/
+  url.searchengines:
+    global:
+      DEFAULT: https://www.google.com/search?hl=en&q={}
+  url.start_pages:
+    global: https://www.startpage.com/
+  window.hide_decoration:
+    global: false
