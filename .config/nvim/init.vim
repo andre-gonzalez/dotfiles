@@ -243,6 +243,9 @@
 
 		map <leader>af :set ft=yaml.ansible<CR>
 
+		"Terraform completion
+		source ~/.config/nvim/terraform-lsp.lua
+
 		"SQL Server completion
 		let g:LanguageClient_serverCommands = {
 			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
