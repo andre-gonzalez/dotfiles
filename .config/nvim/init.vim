@@ -246,6 +246,9 @@
 		"Terraform completion
 		source ~/.config/nvim/terraform-lsp.lua
 
+		"Grammarly completion
+		source ~/.config/nvim/grammarly-lsp.lua
+
 		"SQL Server completion
 		let g:LanguageClient_serverCommands = {
 			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
