@@ -238,6 +238,11 @@
 		"SQL completion
 		source ~/.config/nvim/sql-lsp.lua
 
+		"Ansible completion
+		source ~/.config/nvim/ansible-lsp.lua
+
+		map <leader>af :set ft=yaml.ansible<CR>
+
 		"SQL Server completion
 		let g:LanguageClient_serverCommands = {
 			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
