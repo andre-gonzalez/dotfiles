@@ -8,6 +8,10 @@ config_version: 2
 settings:
   auto_save.session:
     global: true
+  backend:
+    global: webengine
+  colors.messages.warning.bg:
+    global: darkorange
   colors.statusbar.command.private.bg:
     global: darkslategray
   colors.webpage.bg:
@@ -20,9 +24,12 @@ settings:
     global: false
   content.geolocation:
     https://g1.globo.com: false
+    https://parceiro.empresas.bs2.com: true
   content.notifications.enabled:
     https://calendar.google.com: true
+    https://exame.com: false
     https://www.drogariasaopaulo.com.br: false
+    https://www.networkworld.com: false
     https://www.reddit.com: false
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: true
