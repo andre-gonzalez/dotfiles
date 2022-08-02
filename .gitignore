@@ -165,3 +165,7 @@ vimwiki/
 learning.md
 .config/nvim/plugged/
 .aws/credentials
+.local/share/icons
+.local/share/man
+.config/whatsapp-nativefier-d40211/
+.aws/
