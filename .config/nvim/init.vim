@@ -219,6 +219,8 @@
 		" remap to run nerdtree with \ + n
 		nnoremap <leader>n :NERDTreeFocus<CR>
 
+		" insert lines to debug in python
+		nnoremap <leader>db ifrom ipdb import set_trace as st<CR>st()<Esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
