@@ -32,7 +32,7 @@ windows:
     shell_command_before:
       - cd ~/eureciclo/datalake-infra/ansible-datalake-infra/ansible
     panes:
-      - nvim ~/eureciclo/datalake-infra/ansible-datalake-infra/ansible/
+      - nvim ~/eureciclo/datalake-infra/ansible-datalake-infra/
       - clear && ls
   - window_name: pessoal
     panes:
