@@ -10,6 +10,7 @@ export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
 export CM_OUTPUT_CLIP=1
 export CM_IGNORE_WINDOW="Bitwarden"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
