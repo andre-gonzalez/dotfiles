@@ -7,6 +7,10 @@ source ~/.bash_aliases
 ### ADDING TO THE PATH
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
+set -gx XDG_DATA_HOME "$HOME/.local/share"
+set -gx XDG_CONFIG_HOME "$HOME/.config"
+set -gx XDG_STATE_HOME "$HOME/.local/state"
+set -gx XDG_CACHE_HOME "$HOME/.cache"
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/.scripts /usr/local/bin /usr/bin $fish_user_paths
 set -gx EDITOR "/usr/bin/nvim"
