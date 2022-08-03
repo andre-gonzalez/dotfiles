@@ -1,0 +1,33 @@
+session_name: diversos
+windows:
+  - window_name: main
+    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
+    shell_command_before:
+      - cd ~/eureciclo/ # run as a first command in all panes
+    panes:
+      - shell_command:
+        - nvim ~/eureciclo # pane no. 1
+        focus: true
+      - null
+  - window_name: notas
+    layout: main-horizontal
+    shell_command_before:
+      - cd ~/gdrive-pessoal/pessoal/obsidian/ # run as a first command in all panes
+    panes:
+      - shell_command:
+        - nvim ~/gdrive-pessoal/pessoal/obsidian/ # run as a first command in all panes
+  - window_name: ssh
+    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
+    shell_command_before:
+      - ssh eureciclo
+    panes:
+      - null
+      - null
+  - window_name: ansible
+    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
+    shell_command_before:
+      - cd ~/eureciclo/datalake-infra/ansible-datalake-infra/ansible
+    panes:
+      - nvim ~/eureciclo/datalake-infra/ansible-datalake-infra/ansible/
+      - null
+  - window_name: pessoal
