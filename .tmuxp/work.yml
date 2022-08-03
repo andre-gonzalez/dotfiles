@@ -1,6 +1,6 @@
-session_name: diversos
+session_name: work
 windows:
-  - window_name: main
+  - window_name: work
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
       - cd ~/eureciclo/ # run as a first command in all panes
@@ -8,7 +8,8 @@ windows:
       - shell_command:
         - nvim ~/eureciclo # pane no. 1
         focus: true
-      - null
+      - shell_command:
+        - clear && ls
   - window_name: notas
     layout: main-horizontal
     shell_command_before:
@@ -21,13 +22,18 @@ windows:
     shell_command_before:
       - ssh eureciclo
     panes:
-      - null
-      - null
+      - shell_command:
+        - clear && ls
+        focus: true
+      - shell_command:
+        - clear && ls
   - window_name: ansible
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
       - cd ~/eureciclo/datalake-infra/ansible-datalake-infra/ansible
     panes:
       - nvim ~/eureciclo/datalake-infra/ansible-datalake-infra/ansible/
-      - null
+      - clear && ls
   - window_name: pessoal
+    panes:
+      - clear && ls
