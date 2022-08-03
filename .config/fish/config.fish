@@ -17,7 +17,8 @@ set -gx EDITOR "/usr/bin/nvim"
 set -gx VISUAL "/usr/bin/nvim"
 set -gx AWS_SHARED_CREDENTIALS_FILE "$XDG_CONFIG_HOME/aws/credentials"
 set -gx AWS_CONFIG_FILE "$XDG_CONFIG_HOME/aws/config"
-set -gx CARGO_HOME="$XDG_DATA_HOME/cargo"
+set -gx CARGO_HOME "$XDG_DATA_HOME/cargo"
+set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME"/nv
 
 ### MANPAGER
 ### "bat" as manpager
