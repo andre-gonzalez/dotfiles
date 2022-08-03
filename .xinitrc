@@ -61,7 +61,7 @@ numlockx &
 xrandr --output eDP-1 --mode 1920x1080 --pos 1360x434 --rotate normal --output HDMI-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
 
 #Wallpaper
-feh --bg-fill "$HOME"/.config/.wallpaper/montanhas-e-nuvens.jpg
+feh --bg-fill --no-fehbg "$HOME"/.config/.wallpaper/montanhas-e-nuvens.jpg
 
 # Turn off bluetooth
 bluetoothctl power off
