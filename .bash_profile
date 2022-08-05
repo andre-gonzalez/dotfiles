@@ -17,6 +17,7 @@ export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
