@@ -21,6 +21,7 @@ set -gx AWS_CONFIG_FILE "$XDG_CONFIG_HOME/aws/config"
 set -gx CARGO_HOME "$XDG_DATA_HOME/cargo"
 set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME"/nv
 set -gx SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
+set -gx GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
 ### MANPAGER
 ### "bat" as manpager
