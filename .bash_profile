@@ -12,6 +12,7 @@ export CM_OUTPUT_CLIP=1
 export CM_IGNORE_WINDOW="Bitwarden"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export HISTFILE="${XDG_STATE_HOME}"/bash/history
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
