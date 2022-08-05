@@ -15,11 +15,12 @@ set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/.scripts /usr/local/bin /usr/bin $fish_user_paths
 set -gx EDITOR "/usr/bin/nvim"
 set -gx VISUAL "/usr/bin/nvim"
-set -gx HISTFILE="${XDG_STATE_HOME}"/bash/history
+set -gx HISTFILE="$XDG_STATE_HOME"/bash/history
 set -gx AWS_SHARED_CREDENTIALS_FILE "$XDG_CONFIG_HOME/aws/credentials"
 set -gx AWS_CONFIG_FILE "$XDG_CONFIG_HOME/aws/config"
 set -gx CARGO_HOME "$XDG_DATA_HOME/cargo"
 set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME"/nv
+set -gx SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 
 ### MANPAGER
 ### "bat" as manpager
