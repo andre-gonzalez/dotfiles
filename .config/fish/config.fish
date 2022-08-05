@@ -23,6 +23,7 @@ set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME"/nv
 set -gx SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 set -gx GNUPGHOME="$XDG_DATA_HOME"/gnupg
 set -gx GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+set -gx IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
 
 ### MANPAGER
 ### "bat" as manpager
