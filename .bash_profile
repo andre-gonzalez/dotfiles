@@ -20,6 +20,7 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 export KDEHOME="$XDG_CONFIG_HOME"/kde
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
