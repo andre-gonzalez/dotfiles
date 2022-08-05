@@ -26,6 +26,7 @@ set -gx GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 set -gx IPYTHONDIR "$XDG_CONFIG_HOME/ipython"
 set -gx JUPYTER_CONFIG_DIR "$XDG_CONFIG_HOME/jupyter"
 set -gx KDEHOME "$XDG_CONFIG_HOME/kde"
+set -gx LESSHISTFILE "$XDG_CACHE_HOME"/less/history
 
 ### MANPAGER
 ### "bat" as manpager
