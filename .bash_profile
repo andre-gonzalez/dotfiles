@@ -15,6 +15,7 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export HISTFILE="$XDG_STATE_HOME"/bash/history
 export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 

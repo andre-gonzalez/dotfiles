@@ -22,6 +22,7 @@ set -gx CARGO_HOME "$XDG_DATA_HOME/cargo"
 set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME"/nv
 set -gx SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 set -gx GNUPGHOME="$XDG_DATA_HOME"/gnupg
+set -gx GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 
 ### MANPAGER
 ### "bat" as manpager
