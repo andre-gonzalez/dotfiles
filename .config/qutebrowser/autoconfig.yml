@@ -25,6 +25,7 @@ settings:
   content.geolocation:
     https://g1.globo.com: false
     https://parceiro.empresas.bs2.com: true
+    https://www.google.com: false
   content.notifications.enabled:
     https://calendar.google.com: true
     https://exame.com: false
