@@ -28,7 +28,7 @@ set -gx JUPYTER_CONFIG_DIR "$XDG_CONFIG_HOME/jupyter"
 set -gx KDEHOME "$XDG_CONFIG_HOME/kde"
 set -gx LESSHISTFILE "$XDG_CACHE_HOME"/less/history
 set -gx _JAVA_OPTIONS -Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
-
+set -gx PYTHONSTARTUP "$XDG_CONFIG_HOME/python/pythonrc"
 
 ### MANPAGER
 ### "bat" as manpager
