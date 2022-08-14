@@ -173,3 +173,4 @@ learning.md
 .config/yay
 .config/ipython
 .local/share/DBeaverData
+*.md
