@@ -58,7 +58,7 @@ rfkill unblock all &
 numlockx &
 
 # Multiple Monitor configuration
-xrandr --output eDP-1 --mode 1920x1080 --pos 1360x434 --rotate normal --output HDMI-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
+xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x249 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
 
 #Wallpaper
 feh --bg-fill --no-fehbg "$HOME"/.config/.wallpaper/montanhas-e-nuvens.jpg
