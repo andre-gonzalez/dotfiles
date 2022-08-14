@@ -170,3 +170,6 @@ learning.md
 .config/aws/
 .config/qutebrowser/qsettings/
 .local/share/fish/
+.config/yay
+.config/ipython
+.local/share/DBeaverData
