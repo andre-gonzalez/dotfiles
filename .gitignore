@@ -174,3 +174,4 @@ learning.md
 .config/ipython
 .local/share/DBeaverData
 *.md
+.config/dotfiles
