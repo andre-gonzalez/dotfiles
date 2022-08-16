@@ -163,6 +163,9 @@
 
 				"Vim wiki obisidian alternative
 				Plug 'vimwiki/vimwiki'
+
+				"
+				Plug 'jpalardy/vim-slime'
 		call plug#end()
 
 
@@ -187,6 +190,10 @@
 		else
 			set pyxversion=3
 		endif
+
+		"vim-slime
+		let g:slime_target = "tmux"
+		let g:slime_paste_file = "$HOME/.slime_paste"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
