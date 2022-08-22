@@ -193,7 +193,7 @@
 
 		"vim-slime
 		let g:slime_target = "tmux"
-		let g:slime_paste_file = "$HOME/.slime_paste"
+		let g:slime_paste_file = "$HOME/.cache/slime_paste"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
