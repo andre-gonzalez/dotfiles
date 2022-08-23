@@ -30,9 +30,9 @@ windows:
   - window_name: ansible
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
-      - cd ~/eureciclo/datalake-infra/ansible-datalake-infra/ansible/
+      - cd ~/eureciclo/datalake-infra/main-datalake-infra/ansible/
     panes:
-      - nvim ~/eureciclo/datalake-infra/ansible-datalake-infra/
+      - nvim ~/eureciclo/datalake-infra/main-datalake-infra/
       - clear && ls
   - window_name: pessoal
     panes:
