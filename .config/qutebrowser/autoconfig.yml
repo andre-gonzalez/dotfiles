@@ -23,6 +23,7 @@ settings:
   content.fullscreen.window:
     global: false
   content.geolocation:
+    https://app.assine.online: true
     https://g1.globo.com: false
     https://parceiro.empresas.bs2.com: true
     https://www.google.com: false
