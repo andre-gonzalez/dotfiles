@@ -175,3 +175,4 @@ learning.md
 .local/share/DBeaverData
 *.md
 .config/dotfiles
+.pdbhistory
