@@ -112,7 +112,7 @@
 				Plug 'morhetz/gruvbox'
 
 				" dracula colorscheme
-				Plug 'Mofiqul/dracula.nvim'
+				" Plug 'Mofiqul/dracula.nvim'
 
 				Plug 'rentalcustard/exuberant-ctags'
 
@@ -164,8 +164,13 @@
 				"Vim wiki obisidian alternative
 				Plug 'vimwiki/vimwiki'
 
-				"
+				"Plugin that i use with ipython
 				Plug 'jpalardy/vim-slime'
+
+				"instant markdown visualizer
+				Plug 'instant-markdown/vim-instant-markdown'
+				"base 16 colorschemes
+				Plug 'RRethy/nvim-base16'
 		call plug#end()
 
 
@@ -194,6 +199,22 @@
 		"vim-slime
 		let g:slime_target = "tmux"
 		let g:slime_paste_file = "$HOME/.cache/slime_paste"
+
+		"Instant markdown
+		filetype plugin on
+		"Uncomment to override defaults:
+		" let g:instant_markdown_slow = 1
+		"let g:instant_markdown_autostart = 0
+		"let g:instant_markdown_open_to_the_world = 1
+		"let g:instant_markdown_allow_unsafe_content = 1
+		"let g:instant_markdown_allow_external_content = 0
+		"let g:instant_markdown_mathjax = 1
+		"let g:instant_markdown_mermaid = 1
+		"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+		"let g:instant_markdown_autoscroll = 0
+		"let g:instant_markdown_port = 8888
+		" let g:instant_markdown_python = 1
+		let g:instant_markdown_browser = "qutebrowser --target auto"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -278,7 +299,8 @@
 
 		" My coloscheme of choice
 		" colorscheme gruvbox
-		colorscheme dracula
+		" colorscheme dracula
+		colorscheme base16-onedark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abreviations
