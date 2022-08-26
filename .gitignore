@@ -176,3 +176,4 @@ learning.md
 *.md
 .config/dotfiles
 .pdbhistory
+.config/tlpui/
