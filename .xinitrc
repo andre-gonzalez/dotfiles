@@ -58,7 +58,11 @@ rfkill unblock all &
 numlockx &
 
 # Multiple Monitor configuration
-xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x249 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
+if [ $(xrandr --query | grep -c HDMI) = 1 ]; then
+		xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x249 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
+else
+		xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off
+fi
 
 #Wallpaper
 feh --bg-fill --no-fehbg "$HOME"/.config/.wallpaper/montanhas-e-nuvens.jpg
