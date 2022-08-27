@@ -79,6 +79,9 @@
 
 		" Syntax highlight in markdown files
 		let g:markdown_fenced_languages = ['html', 'python', 'SQL', 'vim', 'HCL', 'CSS']
+
+		"Python conventoin keep line under 79 characters
+		set colorcolumn=79
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
