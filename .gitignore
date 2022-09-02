@@ -8,7 +8,6 @@ teste.py
 .wget-hsts
 .vscode-oss/
 .viminfo
-.vim/
 .var/
 .swt/
 .stremio-server/
@@ -177,3 +176,5 @@ learning.md
 .config/dotfiles
 .pdbhistory
 .config/tlpui/
+.vim/after/
+.vim/undo/
