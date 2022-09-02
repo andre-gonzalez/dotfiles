@@ -37,3 +37,10 @@ windows:
   - window_name: pessoal
     panes:
       - clear && ls
+  - window_name: database
+    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
+    shell_command_before:
+      - cd ~/eureciclo/salesops-dw/
+    panes:
+      -  cd ~/eureciclo/salesops-dw/main-salesops-dw && nvim -c "edit salesops-dw|tabedit redeciclo-corp"
+      - clear && ls
