@@ -13,7 +13,7 @@ windows:
       - cd ~/gdrive-pessoal/pessoal/obsidian/ # run as a first command in all panes
     panes:
       - shell_command:
-        - nvim ~/gdrive-pessoal/pessoal/obsidian/pessoal/Meus personal To-dos.md # run as a first command in all panes
+        - "nvim ~/gdrive-pessoal/pessoal/obsidian/pessoal/meus-personal-to-dos.md" # run as a first command in all panes
   - window_name: ansible
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
