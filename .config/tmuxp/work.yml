@@ -23,10 +23,10 @@ windows:
       - cd ~/.ssh
     panes:
       - shell_command:
-        - ssh eureciclo && clear && ls
+        - /bin/sh ~/.scripts/ssh-linux-data-analytics-vm
         focus: true
       - shell_command:
-        - clear && ls
+        - /bin/sh ~/.scripts/ssh-linux-data-analytics-vm
   - window_name: ansible
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
