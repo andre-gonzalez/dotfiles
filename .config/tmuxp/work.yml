@@ -42,5 +42,5 @@ windows:
     shell_command_before:
       - cd ~/eureciclo/salesops-dw/
     panes:
-      -  cd ~/eureciclo/salesops-dw/main-salesops-dw && nvim -c "edit salesops-dw|tabedit redeciclo-corp"
+      -  cd ~/eureciclo/salesops-dw/main-salesops-dw && nvim -c "DBUIToggle" -p salesops-dw redeciclo-corp
       - clear && ls
