@@ -174,6 +174,10 @@
 				Plug 'instant-markdown/vim-instant-markdown'
 				"base 16 colorschemes
 				Plug 'RRethy/nvim-base16'
+
+				"Harpoon to move between files rapidly
+				Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
+				Plug 'ThePrimeagen/harpoon'
 		call plug#end()
 
 
@@ -247,6 +251,14 @@
 		" remap to run telescope with \ + f
 		nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
 
+		" harpoon remaps
+		nnoremap <leader>a :lua require("harpoon.mark").add_file()<CR>
+		nnoremap <leader>e :lua require("harpoon.ui").toggle_quick_menu()<CR>
+		nnoremap <leader>h :lua require("harpoon.ui").nav_file(1)<CR>
+		nnoremap <leader>t :lua require("harpoon.ui").nav_file(2)<CR>
+		nnoremap <leader>n :lua require("harpoon.ui").nav_file(3)<CR>
+		nnoremap <leader>s :lua require("harpoon.ui").nav_file(4)<CR>
+
 		" remap to run nerdtree with \ + n
 		nnoremap <leader>n :NERDTreeFocus<CR>
 
@@ -294,6 +306,7 @@
 		let g:db_ui_save_location = '~/eureciclo/salesops-dw/main-salesops-dw/queries'
 		let g:db_ui_tmp_query_location = '~/eureciclo/salesops-dw/main-salesops-dw/tmp'
 		" autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colorscheme configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
