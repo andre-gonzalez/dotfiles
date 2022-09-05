@@ -117,9 +117,6 @@
 				" File tree explorer
 				Plug 'preservim/nerdtree'
 
-				" dracula colorscheme
-				" Plug 'Mofiqul/dracula.nvim'
-
 				Plug 'rentalcustard/exuberant-ctags'
 
 				"vim in the brownser
