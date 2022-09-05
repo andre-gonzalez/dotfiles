@@ -164,9 +164,6 @@
 				Plug 'kristijanhusak/vim-dadbod-ui'
 				Plug 'kristijanhusak/vim-dadbod-completion'
 
-				"Vim wiki obisidian alternative
-				Plug 'vimwiki/vimwiki'
-
 				"Plugin that i use with ipython
 				Plug 'jpalardy/vim-slime'
 
@@ -322,10 +319,3 @@
 " Abreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 		ab SF SELECT * FROM
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim wiki configuration
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Random
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
