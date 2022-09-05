@@ -30,6 +30,7 @@ settings:
   content.notifications.enabled:
     https://calendar.google.com: true
     https://exame.com: false
+    https://thepiratebay.org: false
     https://www.drogariasaopaulo.com.br: false
     https://www.networkworld.com: false
     https://www.reddit.com: false
