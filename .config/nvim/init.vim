@@ -2,7 +2,6 @@
 " TO-DOs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	- Learn to use fugitive.vim
-"	- Larn to use Harpoon
 "	- Learn to personalize vim-airline
 
 
