@@ -81,6 +81,13 @@
 
 		"Python conventoin keep line under 79 characters
 		set colorcolumn=79
+
+
+		"highlight what i yank
+		augroup highlight_yank
+			autocmd!
+			au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=200 }
+		augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
