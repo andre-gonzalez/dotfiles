@@ -88,6 +88,9 @@
 			autocmd!
 			au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=200 }
 		augroup END
+
+		"autoread to update files edit in another text editor
+		set autoread
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
