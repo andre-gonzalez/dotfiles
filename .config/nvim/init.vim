@@ -117,9 +117,6 @@
 				" File tree explorer
 				Plug 'preservim/nerdtree'
 
-				" colorscheme
-				Plug 'morhetz/gruvbox'
-
 				" dracula colorscheme
 				" Plug 'Mofiqul/dracula.nvim'
 
