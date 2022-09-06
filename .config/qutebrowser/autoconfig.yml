@@ -27,6 +27,7 @@ settings:
     https://g1.globo.com: false
     https://parceiro.empresas.bs2.com: true
     https://www.google.com: false
+    https://www.petco.com.mx: false
   content.notifications.enabled:
     https://calendar.google.com: true
     https://exame.com: false
