@@ -105,6 +105,9 @@
 				"Set a infomative line in the bottom of the editor
 				Plug 'vim-airline/vim-airline'
 
+				"Themes for airline
+				Plug 'vim-airline/vim-airline-themes'
+
 				" Enable git commands direct from vim
 				Plug 'tpope/vim-fugitive'
 
@@ -116,9 +119,6 @@
 
 				" Enable vim arround keybinds like ca'"
 				Plug 'tpope/vim-surround'
-
-				" File tree explorer
-				Plug 'preservim/nerdtree'
 
 				Plug 'rentalcustard/exuberant-ctags'
 
@@ -178,6 +178,8 @@
 				"Harpoon to move between files rapidly
 				Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 				Plug 'ThePrimeagen/harpoon'
+
+
 		call plug#end()
 
 
@@ -222,6 +224,14 @@
 		"let g:instant_markdown_port = 8888
 		" let g:instant_markdown_python = 1
 		let g:instant_markdown_browser = "qutebrowser --target auto"
+
+		"Vim airline
+		let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+		let g:airline#extensions#tabline#formatter = 'default'  " f/p/file-name.js
+		let g:airline#extensions#tabline#formatter = 'jsformatter' " path-to/f
+		let g:airline#extensions#tabline#formatter = 'unique_tail' " file-name.js
+		let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " f/p/file-name.js
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -229,7 +239,7 @@
 		let mapleader = " "
 
 		"use s as an alias to replace all
-		noremap <leader>s :%s//g<Left><Left>
+		noremap <leader>S :%s//g<Left><Left>
 
 		"move between split windows using ctrl + h,j,k,l
 		map <C-h> <C-w>h
@@ -245,9 +255,6 @@
 		nmap <F3> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
 		imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
 
-		" remap to preview markdown
-		nmap <Leader>p <Plug>MarkdownPreview
-
 		" remap to run telescope with \ + f
 		nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
 
@@ -258,9 +265,6 @@
 		nnoremap <leader>t :lua require("harpoon.ui").nav_file(2)<CR>
 		nnoremap <leader>n :lua require("harpoon.ui").nav_file(3)<CR>
 		nnoremap <leader>s :lua require("harpoon.ui").nav_file(4)<CR>
-
-		" remap to run nerdtree with \ + n
-		nnoremap <leader>n :NERDTreeFocus<CR>
 
 		" insert lines to debug in python
 		nnoremap <leader>db ifrom ipdb import set_trace as st<CR>st()<Esc>
