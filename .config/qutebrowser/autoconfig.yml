@@ -28,9 +28,16 @@ settings:
     https://parceiro.empresas.bs2.com: true
     https://www.google.com: false
     https://www.petco.com.mx: false
+  content.media.audio_capture:
+    https://meet.google.com: true
+  content.media.audio_video_capture:
+    https://meet.google.com: true
+  content.media.video_capture:
+    https://meet.google.com: true
   content.notifications.enabled:
     https://calendar.google.com: true
     https://exame.com: false
+    https://meet.google.com: true
     https://thepiratebay.org: false
     https://www.drogariasaopaulo.com.br: false
     https://www.networkworld.com: false
