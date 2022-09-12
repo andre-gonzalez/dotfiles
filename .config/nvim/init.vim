@@ -269,6 +269,8 @@
 		" insert lines to debug in python
 		nnoremap <leader>db ifrom ipdb import set_trace as st<CR>st()<Esc>
 
+		" Remap to paste delete and paste without change the register
+		vnoremap <leader>p "_dP
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
