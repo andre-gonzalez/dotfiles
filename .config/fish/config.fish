@@ -102,3 +102,5 @@ function fish_mode_prompt
   end
   set_color normal
 end
+
+bind -M insert \ch 'cd $(pwd | fd -Htd . |fzf -e)'
