@@ -271,6 +271,11 @@
 
 		" Remap to paste delete and paste without change the register
 		vnoremap <leader>p "_dP
+
+		" Delete without saving to register
+		nnoremap <leader>d" "_d
+		vnoremap <leader>d" "_d
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
