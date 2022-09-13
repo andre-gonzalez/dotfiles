@@ -276,6 +276,9 @@
 		nnoremap <leader>d" "_d
 		vnoremap <leader>d" "_d
 
+		"Insert line using o but keeping you in normal mode
+		nmap <leader>o o<Esc>
+		nmap <leader>O O<Esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
