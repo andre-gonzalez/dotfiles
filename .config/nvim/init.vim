@@ -308,6 +308,9 @@
 		"Grammarly completion
 		source ~/.config/nvim/grammarly-lsp.lua
 
+		"Json completion
+		source ~/.config/nvim/json-lsp.lua
+
 		"SQL Server completion
 		let g:LanguageClient_serverCommands = {
 			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
