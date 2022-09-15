@@ -109,7 +109,7 @@
 				Plug 'vim-airline/vim-airline-themes'
 
 				" Enable git commands direct from vim
-				Plug 'tpope/vim-fugitive'
+				" Plug 'tpope/vim-fugitive'
 
 				"Plugin to show + and - git signs in the text file
 				Plug 'airblade/vim-gitgutter'
@@ -123,7 +123,7 @@
 				Plug 'rentalcustard/exuberant-ctags'
 
 				"vim in the brownser
-				Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(1) } }
+				" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(1) } }
 
 				" telescope requirements (fuzzy finder in vim)
 				Plug 'nvim-treesitter/nvim-treesitter'
@@ -142,7 +142,7 @@
 				Plug 'nvim-treesitter/playground'
 
 				" enable jupyter notebook inside vim
-				Plug 'untitled-ai/jupyter_ascending.vim'
+				" Plug 'untitled-ai/jupyter_ascending.vim'
 
 				"Indentation script for python
 				Plug 'vim-scripts/indentpython.vim'
@@ -162,7 +162,7 @@
 				"terraform plugins
 				Plug 'hashivim/vim-terraform'
 
-				"Datapase plugins
+				"Database plugins
 				Plug 'tpope/vim-dadbod'
 				Plug 'kristijanhusak/vim-dadbod-ui'
 				Plug 'kristijanhusak/vim-dadbod-completion'
@@ -171,14 +171,14 @@
 				Plug 'jpalardy/vim-slime'
 
 				"instant markdown visualizer
-				Plug 'instant-markdown/vim-instant-markdown'
+				" Plug 'instant-markdown/vim-instant-markdown'
+				"
 				"base 16 colorschemes
 				Plug 'RRethy/nvim-base16'
 
 				"Harpoon to move between files rapidly
 				Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 				Plug 'ThePrimeagen/harpoon'
-
 
 		call plug#end()
 
@@ -190,20 +190,20 @@
 		" Set firenvim extension to ignore whats app
 		" let fc['https?://web.whatsapp.com/'] = {'takeover': 'never', 'priority': 1 }
 		" Set filetype of Firenvim in gmail to markdown
-		au BufEnter mail.google.com_*.txt set filetype=markdown
-		au BufEnter app.datacamp.com_*.txt set filetype=python
-		au BufEnter hackerrank.com_*.txt set filetype=python
+		" au BufEnter mail.google.com_*.txt set filetype=markdown
+		" au BufEnter app.datacamp.com_*.txt set filetype=python
+		" au BufEnter hackerrank.com_*.txt set filetype=python
 
 		let g:SimpylFold_docstring_preview = 1
 		let g:SimpylFold_fold_docstring = 0
 		let b:SimpylFold_fold_docstring = 0
 
 		"jupyter-vim
-		if has('nvim')
-			let g:python3_host_prog = '/path/to/python/bin/python3'
-		else
-			set pyxversion=3
-		endif
+		" if has('nvim')
+		" 	let g:python3_host_prog = '/path/to/python/bin/python3'
+		" else
+		" 	set pyxversion=3
+		" endif
 
 		"vim-slime
 		let g:slime_target = "tmux"
@@ -315,6 +315,7 @@
 		let g:LanguageClient_serverCommands = {
 			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
 			\ }
+
 		"Database operations
 		nnoremap <silent> <leader>du :DBUIToggle<CR>
 		nnoremap <silent> <leader>df :DBUIFindBuffer<CR>
