@@ -257,6 +257,7 @@
 
 		" remap to run telescope with \ + f
 		nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
+		nnoremap <leader>g ::lua require('telescope.builtin').live_grep({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
 
 		" harpoon remaps
 		nnoremap <leader>a :lua require("harpoon.mark").add_file()<CR>
