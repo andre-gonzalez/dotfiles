@@ -75,5 +75,8 @@ while true; do
 	dwm > /dev/null 2>&1
 done
 
+# Shell definition
+SHELL=/bin/fish
+
 #Execute DWM
 exec dwm
