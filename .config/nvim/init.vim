@@ -181,12 +181,12 @@
 				Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 				Plug 'ThePrimeagen/harpoon'
 
-				"Freeze function in the first line
-				Plug 'nvim-treesitter/nvim-treesitter-context'
 
 				" Change to work directory
 				Plug 'airblade/vim-rooter'
 
+				" Context freeze functions to the first line
+				Plug 'wellle/context.vim'
 		call plug#end()
 
 
@@ -320,9 +320,6 @@
 
 		"Json completion
 		source ~/.config/nvim/json-lsp.lua
-
-		"nvim-treesitter-context
-		source ~/.config/nvim/treesitter-context.lua
 
 		"Telecope file_browser configs
 		source ~/.config/nvim/telescope.lua
