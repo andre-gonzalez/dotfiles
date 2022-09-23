@@ -6,7 +6,7 @@ windows:
       - cd ~/eureciclo/ # run as a first command in all panes
     panes:
       - shell_command:
-        - nvim ~/eureciclo # pane no. 1
+        - nvim -c "Telescope file_browser"  # pane no. 1
         focus: true
       - shell_command:
         - clear && ls
@@ -32,7 +32,7 @@ windows:
     shell_command_before:
       - cd ~/eureciclo/datalake-infra/main-datalake-infra/ansible/
     panes:
-      - nvim ~/eureciclo/datalake-infra/main-datalake-infra/
+      - nvim -c "Telescope find_files"  # pane no. 1
       - clear && ls
   - window_name: pessoal
     panes:
@@ -42,5 +42,5 @@ windows:
     shell_command_before:
       - cd ~/eureciclo/salesops-dw/
     panes:
-      -  cd ~/eureciclo/salesops-dw/main-salesops-dw && nvim -c "DBUIToggle" -p salesops-dw redeciclo-corp
+      -  cd ~/eureciclo/salesops-dw/main-salesops-dw/ansible && nvim -c "Telescope file_browser"
       - clear && ls
