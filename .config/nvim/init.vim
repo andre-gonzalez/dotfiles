@@ -131,6 +131,7 @@
 				Plug 'nvim-lua/plenary.nvim'
 				Plug 'nvim-telescope/telescope.nvim'
 				Plug 'nvim-telescope/telescope-fzy-native.nvim'
+				Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 				"LSP for having language servers
 				Plug 'neovim/nvim-lspconfig'
@@ -179,6 +180,12 @@
 				"Harpoon to move between files rapidly
 				Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 				Plug 'ThePrimeagen/harpoon'
+
+				"Freeze function in the first line
+				Plug 'nvim-treesitter/nvim-treesitter-context'
+
+				" Change to work directory
+				Plug 'airblade/vim-rooter'
 
 		call plug#end()
 
@@ -257,7 +264,9 @@
 
 		" remap to run telescope with \ + f
 		nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
-		nnoremap <leader>g ::lua require('telescope.builtin').live_grep({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
+		nnoremap <leader>g :lua require('telescope.builtin').live_grep({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
+		nnoremap <leader>c :Telescope file_browser<CR>
+
 
 		" harpoon remaps
 		nnoremap <leader>a :lua require("harpoon.mark").add_file()<CR>
@@ -311,6 +320,12 @@
 
 		"Json completion
 		source ~/.config/nvim/json-lsp.lua
+
+		"nvim-treesitter-context
+		source ~/.config/nvim/treesitter-context.lua
+
+		"Telecope file_browser configs
+		source ~/.config/nvim/telescope.lua
 
 		"SQL Server completion
 		let g:LanguageClient_serverCommands = {
