@@ -3,6 +3,7 @@ windows:
   - window_name: pessoal
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
+      - /usr/bin/fish
       - cd ~/gdrive-pessoal
     panes:
       - shell_command:
@@ -10,6 +11,7 @@ windows:
   - window_name: notas
     layout: main-horizontal
     shell_command_before:
+      - /usr/bin/fish
       - cd ~/gdrive-pessoal/pessoal/obsidian/ # run as a first command in all panes
     panes:
       - shell_command:
@@ -17,6 +19,7 @@ windows:
   - window_name: ansible
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
+      - /usr/bin/fish
       - cd ~/gdrive-pessoal/pessoal/programação/ansible/main-ansible/
     panes:
       - nvim ~/gdrive-pessoal/pessoal/programação/ansible/main-ansible/

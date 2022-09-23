@@ -3,6 +3,7 @@ windows:
   - window_name: work
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
+      - /usr/bin/fish
       - cd ~/eureciclo/ # run as a first command in all panes
     panes:
       - shell_command:
@@ -13,6 +14,7 @@ windows:
   - window_name: notas
     layout: main-horizontal
     shell_command_before:
+      - /usr/bin/fish
       - cd ~/gdrive-pessoal/pessoal/obsidian/ # run as a first command in all panes
     panes:
       - shell_command:
@@ -20,6 +22,7 @@ windows:
   - window_name: ssh
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
+      - /usr/bin/fish
       - cd ~/.ssh
     panes:
       - shell_command:
@@ -30,6 +33,7 @@ windows:
   - window_name: ansible
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
+      - /usr/bin/fish
       - cd ~/eureciclo/datalake-infra/main-datalake-infra/ansible/
     panes:
       - nvim ~/eureciclo/datalake-infra/main-datalake-infra/
@@ -40,6 +44,7 @@ windows:
   - window_name: database
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
+      - /usr/bin/fish
       - cd ~/eureciclo/salesops-dw/
     panes:
       -  cd ~/eureciclo/salesops-dw/main-salesops-dw && nvim -c "DBUIToggle" -p salesops-dw redeciclo-corp
