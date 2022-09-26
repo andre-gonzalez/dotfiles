@@ -42,5 +42,5 @@ windows:
     shell_command_before:
       - cd ~/eureciclo/salesops-dw/
     panes:
-      -  cd ~/eureciclo/salesops-dw/main-salesops-dw/ansible && nvim -c "Telescope file_browser"
+      -  cd ~/eureciclo/salesops-dw/main-salesops-dw/ && nvim -c "Telescope file_browser"
       - clear && ls
