@@ -217,6 +217,15 @@
 		let g:airline#extensions#tabline#formatter = 'unique_tail' " file-name.js
 		let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " f/p/file-name.js
 
+		"Database operations
+		nnoremap <silent> <leader>du :DBUIToggle<CR>
+		nnoremap <silent> <leader>df :DBUIFindBuffer<CR>
+		nnoremap <silent> <leader>dr :DBUIRenameBuffer<CR>
+		nnoremap <silent> <leader>dl :DBUILastQueryInfo<CR>
+		let g:db_ui_save_location = '~/eureciclo/salesops-dw/main-salesops-dw/queries'
+		let g:db_ui_tmp_query_location = '~/eureciclo/salesops-dw/main-salesops-dw/tmp'
+		" autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -307,14 +316,6 @@
 			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
 			\ }
 
-		"Database operations
-		nnoremap <silent> <leader>du :DBUIToggle<CR>
-		nnoremap <silent> <leader>df :DBUIFindBuffer<CR>
-		nnoremap <silent> <leader>dr :DBUIRenameBuffer<CR>
-		nnoremap <silent> <leader>dl :DBUILastQueryInfo<CR>
-		let g:db_ui_save_location = '~/eureciclo/salesops-dw/main-salesops-dw/queries'
-		let g:db_ui_tmp_query_location = '~/eureciclo/salesops-dw/main-salesops-dw/tmp'
-		" autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colorscheme configuration
