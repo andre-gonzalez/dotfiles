@@ -46,7 +46,7 @@
 
 		" save undo trees in files
 		set undofile
-		set undodir=~/.vim/undo
+		set undodir=~/.config/nvim/undo
 
 		" number of undo saved
 		set undolevels=10000
