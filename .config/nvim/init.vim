@@ -88,6 +88,10 @@
 
 		"autoread to update files edit in another text editor
 		set autoread
+
+		"Only show command line (the line below status bar) when in being
+		"used. It gives you extra space
+		set cmdheight=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -315,7 +319,6 @@
 		let g:LanguageClient_serverCommands = {
 			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
 			\ }
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colorscheme configuration
