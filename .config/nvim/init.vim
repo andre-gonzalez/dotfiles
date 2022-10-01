@@ -180,6 +180,11 @@
 
 				" Context freeze functions to the first line
 				Plug 'wellle/context.vim'
+
+				"Buffer line
+				Plug 'kyazdani42/nvim-web-devicons'
+				Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+				set termguicolors
 		call plug#end()
 
 
@@ -309,6 +314,9 @@
 
 		"Telecope file_browser configs
 		source ~/.config/nvim/telescope.lua
+
+		"Buffer line
+		source ~/.config/nvim/buffer-line.lua
 
 		"SQL Server completion
 		let g:LanguageClient_serverCommands = {
