@@ -22,12 +22,12 @@
 		autocmd BufWritePre * %s/\s\+$//e
 
 		"alternate between relative line numbers and absolute based in wich mode you are
-		:set number
-		:augroup numbertoggle
-		:  autocmd!
-		:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-		:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-		:augroup END
+		set number
+		augroup numbertoggle
+		  autocmd!
+		  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+		  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+		augroup END
 
 		" enable incremental search
 		set incsearch
