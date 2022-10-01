@@ -80,7 +80,6 @@
 		"Python conventoin keep line under 79 characters
 		set colorcolumn=79
 
-
 		"highlight what i yank
 		augroup highlight_yank
 			autocmd!
@@ -96,9 +95,6 @@
 
 				" Better markdown highlight and some keybinds to make easier to edit markdown files
 				Plug 'gabrielelana/vim-markdown'
-
-				"Plugin to preview markdown files in the brownser
-				Plug 'iamcco/markdown-preview.nvim'
 
 				"Set a infomative line in the bottom of the editor
 				Plug 'vim-airline/vim-airline'
@@ -213,22 +209,6 @@
 		"vim-slime
 		let g:slime_target = "tmux"
 		let g:slime_paste_file = "$HOME/.cache/slime_paste"
-
-		"Instant markdown
-		filetype plugin on
-		"Uncomment to override defaults:
-		" let g:instant_markdown_slow = 1
-		"let g:instant_markdown_autostart = 0
-		"let g:instant_markdown_open_to_the_world = 1
-		"let g:instant_markdown_allow_unsafe_content = 1
-		"let g:instant_markdown_allow_external_content = 0
-		"let g:instant_markdown_mathjax = 1
-		"let g:instant_markdown_mermaid = 1
-		"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-		"let g:instant_markdown_autoscroll = 0
-		"let g:instant_markdown_port = 8888
-		" let g:instant_markdown_python = 1
-		let g:instant_markdown_browser = "qutebrowser --target auto"
 
 		"Vim airline
 		let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
