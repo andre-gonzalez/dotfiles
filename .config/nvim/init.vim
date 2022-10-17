@@ -246,8 +246,8 @@
 		map <C-l> <C-w>l
 
 		" Enable spell checking
-		map <leader>oe :setlocal spell! spelllang=en_us<CR>
-		map <leader>op :setlocal spell! spelllang=pt_br<CR>
+		map <leader>roe :setlocal spell! spelllang=en_us<CR>
+		map <leader>rop :setlocal spell! spelllang=pt_br<CR>
 
 		"fill with the date and hour
 		nmap <F3> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
@@ -268,7 +268,7 @@
 		nnoremap <leader>s :lua require("harpoon.ui").nav_file(4)<CR>
 
 		" insert lines to debug in python
-		nnoremap <leader>db ifrom ipdb import set_trace as st<CR>st()<Esc>
+		nnoremap <leader>bb ifrom ipdb import set_trace as st<CR>st()<Esc>
 
 		" Remap to paste delete and paste without change the register
 		vnoremap <leader>p "_dP
@@ -332,7 +332,7 @@
 		" My coloscheme of choice
 		" colorscheme gruvbox
 		" colorscheme dracula
-		colorscheme base16-onedark
+        colorscheme base16-onedark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abreviations
