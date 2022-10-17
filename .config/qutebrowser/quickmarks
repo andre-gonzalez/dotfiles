@@ -18,3 +18,5 @@ contabilizei https://sso.contabilizei.com/login
 prevent-senior https://beneficiario.preventsenior.com.br
 how-bootcamps https://how-bootcamps.memberkit.com.br/
 alura https://cursos.alura.com.br/loginForm
+aws https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-east-1.console.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26nc2%3Dh_ct%26region%3Dus-east-1%26skipRegion%3Dtrue%26src%3Dheader-signin%26state%3DhashArgsFromTB_us-east-1_d03dbc5718491b43&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=_8JIjigQ4-RYkSgqxug3AjQhzi44g7WZ-k5SUCQH8dM&code_challenge_method=SHA-256
+telmex https://loginsso.telmex.com/nidp/idff/sso?id=custom-telmex&sid=0&option=credential&sid=0&target=https%3A%2F%2Fmitelmex.telmex.com%2Fweb%2Fmitelmex-hogar%2Fhome
