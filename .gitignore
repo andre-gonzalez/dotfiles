@@ -178,3 +178,5 @@ learning.md
 .config/tlpui/
 .vim/after/
 .vim/undo/
+.local/
+.config/nvim/undo
