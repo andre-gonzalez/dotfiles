@@ -6,6 +6,7 @@
 
 		" Set tab width to 4 columns.
 		set tabstop=4
+		autocmd FileType sql setlocal shiftwidth=2 tabstop=2
 
 		" Enable auto completion menu after pressing TAB in command mode
 		set wildmenu
