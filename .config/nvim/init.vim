@@ -222,10 +222,6 @@
 		let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " f/p/file-name.js
 
 		"Database operations
-		" nnoremap <silent> <leader>du :DBUIToggle<CR>
-		" nnoremap <silent> <leader>bf :DBUIFindBuffer<CR>
-		" nnoremap <silent> <leader>dr :DBUIRenameBuffer<CR>
-		" nnoremap <silent> <leader>dl :DBUILastQueryInfo<CR>
 		let g:db_ui_save_location = '~/eureciclo/salesops-dw/main-salesops-dw/queries'
 		let g:db_ui_tmp_query_location = '~/eureciclo/salesops-dw/main-salesops-dw/tmp'
 		let g:db_ui_winwidth = 10 " change drawer width
@@ -238,6 +234,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 		"Remaped the leader key
 		let mapleader = " "
+
+		"DBUI
+		nnoremap <silent> <leader>bf :DBUIFindBuffer<CR>
 
 		"use s as an alias to replace all
 		noremap <leader>S :%s//g<Left><Left>
