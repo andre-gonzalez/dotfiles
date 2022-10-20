@@ -222,12 +222,15 @@
 		let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " f/p/file-name.js
 
 		"Database operations
-		nnoremap <silent> <leader>du :DBUIToggle<CR>
-		nnoremap <silent> <leader>df :DBUIFindBuffer<CR>
-		nnoremap <silent> <leader>dr :DBUIRenameBuffer<CR>
-		nnoremap <silent> <leader>dl :DBUILastQueryInfo<CR>
+		" nnoremap <silent> <leader>du :DBUIToggle<CR>
+		" nnoremap <silent> <leader>bf :DBUIFindBuffer<CR>
+		" nnoremap <silent> <leader>dr :DBUIRenameBuffer<CR>
+		" nnoremap <silent> <leader>dl :DBUILastQueryInfo<CR>
 		let g:db_ui_save_location = '~/eureciclo/salesops-dw/main-salesops-dw/queries'
 		let g:db_ui_tmp_query_location = '~/eureciclo/salesops-dw/main-salesops-dw/tmp'
+		let g:db_ui_winwidth = 10 " change drawer width
+		let g:db_ui_execute_on_save = 0 " Disable the executing of the query on save
+		let g:db_ui_force_echo_notifications = 1 "Force notifications to be show on command line
 		" autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
