@@ -89,6 +89,29 @@
 		"used. It gives you extra space
 		set cmdheight=0
 
+		"Function to Automatically clean highlight searches after 5 seconds
+		func! TimerHLS()
+				let s:timer = timer_start(5000, 'HLS_Handler', {'repeat': -1})
+		endfunc
+
+		func! HLS_Handler(timer)
+				if mode() != 'n'
+						return
+				else
+						call feedkeys("\<c-\>\<c-n>:nohls\<cr>", 'tn')
+						call timer_stop(s:timer)
+				endif
+		endfunc
+
+		func! Setup_HLS_Timer()
+				set hls
+				augroup vimrc-incsearch-highlight
+						autocmd!
+						autocmd CmdlineLeave /,\? call TimerHLS()
+				augroup END
+		endfunc
+
+		call Setup_HLS_Timer()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
