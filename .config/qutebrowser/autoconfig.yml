@@ -41,6 +41,7 @@ settings:
     https://thepiratebay.org: false
     https://www.drogariasaopaulo.com.br: false
     https://www.networkworld.com: false
+    https://www.reclameaqui.com.br: false
     https://www.reddit.com: false
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: true
