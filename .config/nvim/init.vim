@@ -346,6 +346,8 @@
 		" colorscheme gruvbox
 		" colorscheme dracula
         colorscheme base16-onedark
+		" Set line numbers as white
+		highlight LineNr guifg=#FFFFFF
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abreviations
