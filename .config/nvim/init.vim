@@ -88,6 +88,7 @@
 		"Only show command line (the line below status bar) when in being
 		"used. It gives you extra space
 		set cmdheight=0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -283,6 +284,15 @@
 		"Insert line using o but keeping you in normal mode
 		nmap <leader>o o<Esc>
 		nmap <leader>O O<Esc>
+
+		"autoformat SQL
+		autocmd FileType sql call SqlFormatter()
+		augroup end
+		function SqlFormatter()
+			set noai
+			" set mappings...
+			map <leader>pt  :%!sqlformat --reindent --keywords upper --identifiers lower -<CR>
+		endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -341,4 +351,4 @@
 " Abreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 		ab SF SELECT *<cr>FROM
-		ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 100
+		ab SLIM SELECT *<cr>FROM<cr>LIMIT 200 ;
