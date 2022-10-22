@@ -275,7 +275,7 @@
 		nnoremap <leader>bb ifrom ipdb import set_trace as st<CR>st()<Esc>
 
 		" Remap to paste delete and paste without change the register
-		vnoremap <leader>p "_dP
+		xnoremap <leader>p "_dP
 
 		" Delete without saving to register
 		nnoremap <leader>d" "_d
