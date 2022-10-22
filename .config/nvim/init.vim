@@ -278,8 +278,9 @@
 		xnoremap <leader>p "_dP
 
 		" Delete without saving to register
-		nnoremap <leader>d" "_d
-		vnoremap <leader>d" "_d
+		xnoremap <leader>d "_d
+		nnoremap <leader>d "_d
+		vnoremap <leader>d "_d
 
 		"Insert line using o but keeping you in normal mode
 		nmap <leader>o o<Esc>
