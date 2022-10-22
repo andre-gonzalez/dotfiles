@@ -103,8 +103,9 @@
 				"Themes for airline
 				Plug 'vim-airline/vim-airline-themes'
 
-				" Enable git commands direct from vim
-				" Plug 'tpope/vim-fugitive'
+				" Enable git commands direct from vim (I use to show the
+				" branch in vim-airline)
+				Plug 'tpope/vim-fugitive'
 
 				"Plugin to show + and - git signs in the text file
 				Plug 'airblade/vim-gitgutter'
