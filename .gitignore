@@ -8,6 +8,7 @@
 *.png
 *.py
 *.sql
+*.pdf
 
 # Dotfiles in home directory
 .Xauthority
