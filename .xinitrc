@@ -68,7 +68,9 @@ fi
 feh --bg-fill --no-fehbg "$HOME"/.config/.wallpaper/montanhas-e-nuvens.jpg
 
 # Turn off bluetooth
-bluetoothctl power off
+# bluetoothctl power off
+bluetoothctl power on
+bluetoothctl connect CC:98:8B:C1:5C:78; kill -46 $(pidof dwmblocks)
 
 # Loop
 while true; do
