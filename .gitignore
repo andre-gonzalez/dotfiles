@@ -10,6 +10,7 @@
 *.sql
 *.pdf
 *.xml
+*.rs
 
 # Dotfiles in home directory
 .Xauthority
