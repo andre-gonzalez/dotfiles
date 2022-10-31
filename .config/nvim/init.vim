@@ -375,4 +375,4 @@
 " Abreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 		ab SF SELECT *<cr>FROM
-		ab SLIM SELECT *<cr>FROM<cr>LIMIT 200 ;
+		ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 200 ;
