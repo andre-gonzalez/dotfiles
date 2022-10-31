@@ -118,6 +118,9 @@
 		map <leader>sf :0r ~/.config/nvim/skeleton/skeleton.sql<CR>
 		autocmd BufNewFile  *.md 0r ~/.config/nvim/skeleton/skeleton.md
 
+		"Disable spellchecker
+		set nospell
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
