@@ -25,9 +25,6 @@
 		  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 		augroup END
 
-		" enable incremental search
-		set incsearch
-
 		" Leave 8 lines at the top when scrolling with Ctrl + D
 		set scrolloff=8
 
