@@ -364,9 +364,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colorscheme configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		" Set background to dark
-		set background=dark
-
 		" My coloscheme of choice
 		" colorscheme gruvbox
 		" colorscheme dracula
