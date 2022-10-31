@@ -1,0 +1,3 @@
+SELECT *
+FROM lake.
+LIMIT 200 ;

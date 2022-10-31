@@ -112,6 +112,12 @@
 		endfunc
 
 		call Setup_HLS_Timer()
+
+		"File template for SQL files
+		autocmd BufNewFile  *.sql 0r ~/.config/nvim/skeleton/skeleton.sql
+		map <leader>sf :0r ~/.config/nvim/skeleton/skeleton.sql<CR>
+		autocmd BufNewFile  *.md 0r ~/.config/nvim/skeleton/skeleton.md
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
