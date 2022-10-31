@@ -1,9 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Basics
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		" enable syntax highlight
-		syntax on
-
 		" Set tab width to 4 columns.
 		set tabstop=4
 		autocmd FileType sql setlocal shiftwidth=2 tabstop=2
