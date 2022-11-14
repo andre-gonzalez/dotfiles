@@ -323,6 +323,8 @@
 		nnoremap <C-u> <C-u>zz
 		nnoremap <C-d> <C-d>zz
 
+		"Find last search match with screen centralized
+		nnoremap n nzz
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
