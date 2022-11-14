@@ -318,6 +318,11 @@
 			" set mappings...
 			map <leader>pt  :%!sqlformat --reindent --keywords upper --identifiers lower -<CR>
 		endfunction
+
+		"Move with the screen centralized
+		nnoremap <C-u> <C-u>zz
+		nnoremap <C-d> <C-d>zz
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
