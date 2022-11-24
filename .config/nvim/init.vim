@@ -381,5 +381,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		ab SF SELECT *<cr>FROM
-		ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 200 ;
+		ab SF SELECT *<cr>FROM<cr>;
+		ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 200<cr>;
+		ab SDIST SELECT DISTINCT<cr>FROM<cr>;
