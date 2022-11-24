@@ -119,6 +119,7 @@
 
 				" Better markdown highlight and some keybinds to make easier to edit markdown files
 				Plug 'gabrielelana/vim-markdown'
+				let g:markdown_enable_mappings = 0
 
 				"Set a infomative line in the bottom of the editor
 				Plug 'vim-airline/vim-airline'
