@@ -385,3 +385,4 @@
 		ab SF SELECT *<cr>FROM<cr>;
 		ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 200<cr>;
 		ab SDIST SELECT DISTINCT<cr>FROM<cr>;
+		ab skeletonmd #<cr><cr>## Participantes:<cr>- [[]]<cr><cr>---<cr># Notas:<cr>- <cr>---<cr># To-do:<cr>- [ ]
