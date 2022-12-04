@@ -65,7 +65,7 @@ else
 fi
 
 #Wallpaper
-feh --bg-fill --no-fehbg "$HOME"/.config/.wallpaper/montanhas-e-nuvens.jpg
+feh --bg-fill --no-fehbg "$HOME"/.config/.wallpaper/arco-login.jpg
 
 # Turn off bluetooth
 # bluetoothctl power off
