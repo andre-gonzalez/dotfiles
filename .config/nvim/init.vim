@@ -326,6 +326,12 @@
 
 		"Find last search match with screen centralized
 		nnoremap n nzz
+
+		"Insert image in markdown note
+		nnoremap <leader>i :r!cd _attachment && ls '.png'<left><left><left><left><left>
+		"Format images in markdown format
+		nnoremap <leader>mi :%s/\(.*\)\.png$/![\1](\1.png)<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
