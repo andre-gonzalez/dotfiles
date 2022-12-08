@@ -388,7 +388,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		ab SF SELECT *<cr>FROM<cr>;
-		ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 200<cr>;
-		ab SDIST SELECT DISTINCT<cr>FROM<cr>;
+		ab SF SELECT *<cr>FROM<cr>;<up><right><right><right>
+		ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 200<cr>;<up><up><right><right><right>
+		ab SDIST SELECT DISTINCT<cr>FROM<cr>;<up><right><right><right>
 		ab skeletonmd #<cr><cr>## Participantes:<cr>- [[]]<cr><cr>---<cr># Notas:<cr>- <cr>---<cr># To-do:<cr>- [ ]
