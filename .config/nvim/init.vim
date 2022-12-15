@@ -391,4 +391,5 @@
 		ab SF SELECT *<cr>FROM<cr>;<up><right><right><right>
 		ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 200<cr>;<up><up><right><right><right>
 		ab SDIST SELECT DISTINCT<cr>FROM<cr>;<up><right><right><right>
+		ab SCOLUMNS SELECT "column_name"<cr>FROM information_schema."columns"<cr>WHERE "table_name" = ''<cr>;<up><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right>
 		ab skeletonmd #<cr><cr>## Participantes:<cr>- [[]]<cr><cr>---<cr># Notas:<cr>- <cr>---<cr># To-do:<cr>- [ ]
