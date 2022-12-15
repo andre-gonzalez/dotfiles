@@ -332,6 +332,10 @@
 		"Format images in markdown format
 		nnoremap <leader>mi :%s/\(.*\)\.png$/![\1](\1.png)<CR>
 
+		"Set filetype
+		nnoremap <leader>ss :set filetype=sql<CR>
+		nnoremap <leader>sp :set filetype=python<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
