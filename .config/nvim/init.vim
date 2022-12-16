@@ -342,6 +342,10 @@
 
 		"When using J keep cursor still
 		nnoremap J mzJ`z
+
+		"When searching keep the cursos in the middle of the screen
+		nnoremap n nzzzv
+		nnoremap N Nzzzv
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
