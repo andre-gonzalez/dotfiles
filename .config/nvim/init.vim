@@ -339,6 +339,9 @@
 		"Move what is highlighted
 		vnoremap J :m '>+1<CR>gv=gv
 		vnoremap K :m '<-2<CR>gv=gv
+
+		"When using J keep cursor still
+		nnoremap J mzJ`z
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
