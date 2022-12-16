@@ -346,6 +346,10 @@
 		"When searching keep the cursos in the middle of the screen
 		nnoremap n nzzzv
 		nnoremap N Nzzzv
+
+		"Getting rid of Ex mode
+		nnoremap Q <nop>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
