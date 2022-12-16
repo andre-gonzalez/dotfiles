@@ -143,7 +143,7 @@
 				Plug 'rentalcustard/exuberant-ctags'
 
 				"vim in the brownser
-				" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(1) } }
+				Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(1) } }
 
 				" telescope requirements (fuzzy finder in vim)
 				Plug 'nvim-treesitter/nvim-treesitter'
