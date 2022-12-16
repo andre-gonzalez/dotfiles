@@ -336,6 +336,9 @@
 		nnoremap <leader>ss :set filetype=sql<CR>
 		nnoremap <leader>sp :set filetype=python<CR>
 
+		"Move what is highlighted
+		vnoremap J :m '>+1<CR>gv=gv
+		vnoremap K :m '<-2<CR>gv=gv
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
