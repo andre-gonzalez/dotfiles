@@ -350,6 +350,8 @@
 		"Getting rid of Ex mode
 		nnoremap Q <nop>
 
+		"Remap to substitute a word in the file
+		nnoremap <leader>ws :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
