@@ -333,8 +333,8 @@
 		nnoremap <leader>mi :%s/\(.*\)\.png$/![\1](\1.png)<CR>
 
 		"Set filetype
-		nnoremap <leader>ss :set filetype=sql<CR>
-		nnoremap <leader>sp :set filetype=python<CR>
+		nnoremap <leader>fs :set filetype=sql<CR>
+		nnoremap <leader>fp :set filetype=python<CR>
 
 		"Move what is highlighted
 		vnoremap J :m '>+1<CR>gv=gv
