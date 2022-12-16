@@ -352,6 +352,9 @@
 
 		"Remap to substitute a word in the file
 		nnoremap <leader>ws :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+
+		"Make a file executable
+		nnoremap <leader>x <cmd>!chmod +x %<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
