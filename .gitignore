@@ -11,6 +11,7 @@
 *.pdf
 *.xml
 *.rs
+*.txt
 
 # Dotfiles in home directory
 .Xauthority
