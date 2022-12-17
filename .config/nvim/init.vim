@@ -219,13 +219,39 @@
 " Plugins configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-		" Set firenvim extension to ignore whats app
-		" let fc['https?://web.whatsapp.com/'] = {'takeover': 'never', 'priority': 1 }
-		" Set filetype of Firenvim in gmail to markdown
-		" au BufEnter mail.google.com_*.txt set filetype=markdown
-		" au BufEnter app.datacamp.com_*.txt set filetype=python
-		" au BufEnter hackerrank.com_*.txt set filetype=python
+		"firenvim config
+		let g:firenvim_config = {
+			\ 'globalSettings': {
+				\ 'alt': 'all',
+				\ 'takeover': 'never'
+			\  },
+			\ 'localSettings': {
+				\ '.*': {
+				\ },
+			\ }
+		\ }
+		let fc = g:firenvim_config['localSettings']
+		let fc['https?://.+'] = { 'takeover': 'never', 'priority': 1 }
+		let fc['.*'] = { 'cmdline' : 'neovim' }
+		au BufEnter d8c7fc-e847.cloud.databricks.com_*.txt set filetype=sql
+		au BufEnter mail.google.com_*.txt set filetype=markdown
+		let g:timer_started = v:false
+		function! My_Write(timer) abort
+			let g:timer_started = v:false
+			write
+		endfunction
 
+		function! Delay_My_Write() abort
+			if g:timer_started
+				return
+			end
+			let g:timer_started = v:true
+			call timer_start(10000, 'My_Write')
+		endfunction
+		au TextChanged * ++nested call Delay_My_Write()
+		au TextChangedI * ++nested call Delay_My_Write()
+
+		"SimpylFold
 		let g:SimpylFold_docstring_preview = 1
 		let g:SimpylFold_fold_docstring = 0
 		let b:SimpylFold_fold_docstring = 0
