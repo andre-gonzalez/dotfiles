@@ -40,7 +40,7 @@ unclutter &
 insync start &
 
 # start xflux so the screen get orange in the night
-xflux -l 19.438315 -g -99.201804 -k 2700 &
+xflux -l 19.438315 -g -99.201804 -k 2000 &
 
 #start clipmenud
 clipmenud &
