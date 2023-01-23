@@ -170,9 +170,6 @@
 				"Comment in a vim like way
 			    Plug 'tpope/vim-commentary'
 
-				"fish syntax highlight
-				Plug 'dag/vim-fish'
-
 				"csv viewer
 				Plug 'chrisbra/csv.vim'
 
