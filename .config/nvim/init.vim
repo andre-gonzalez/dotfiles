@@ -199,7 +199,6 @@
 
 				"Buffer line
 				Plug 'kyazdani42/nvim-web-devicons'
-				Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 				set termguicolors
 		call plug#end()
 
