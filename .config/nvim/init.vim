@@ -188,9 +188,8 @@
 				Plug 'RRethy/nvim-base16'
 
 				"Harpoon to move between files rapidly
-				Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
+				" Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 				Plug 'ThePrimeagen/harpoon'
-
 
 				" Change to work directory
 				Plug 'airblade/vim-rooter'
