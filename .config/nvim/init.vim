@@ -19,9 +19,6 @@
 		  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 		augroup END
 
-		" Leave 8 lines at the top when scrolling with Ctrl + D
-		set scrolloff=8
-
 		" Ignore case in search
 		set ignorecase
 		" If you type an uppercase character in the search it will change the search to a case
