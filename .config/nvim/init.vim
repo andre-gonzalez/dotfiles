@@ -239,13 +239,6 @@
 		au TextChanged * ++nested call Delay_My_Write()
 		au TextChangedI * ++nested call Delay_My_Write()
 
-		"jupyter-vim
-		" if has('nvim')
-		" 	let g:python3_host_prog = '/path/to/python/bin/python3'
-		" else
-		" 	set pyxversion=3
-		" endif
-
 		"vim-slime
 		let g:slime_target = "tmux"
 		let g:slime_paste_file = "$HOME/.cache/slime_paste"
