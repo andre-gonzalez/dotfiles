@@ -126,9 +126,6 @@
 				"telescope requirements
 				Plug 'nvim-treesitter/playground'
 
-				" enable jupyter notebook inside vim
-				" Plug 'untitled-ai/jupyter_ascending.vim'
-
 				"Indentation script for python
 				Plug 'vim-scripts/indentpython.vim'
 
