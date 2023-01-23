@@ -74,11 +74,6 @@
 		"used. It gives you extra space
 		set cmdheight=0
 
-		"File template for SQL files
-		autocmd BufNewFile  *.sql 0r ~/.config/nvim/skeleton/skeleton.sql
-		map <leader>sf :0r ~/.config/nvim/skeleton/skeleton.sql<CR>
-		autocmd BufNewFile  *.md 0r ~/.config/nvim/skeleton/skeleton.md
-
 		"Disable spellchecker
 		set nospell
 
