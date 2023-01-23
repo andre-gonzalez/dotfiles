@@ -239,11 +239,6 @@
 		au TextChanged * ++nested call Delay_My_Write()
 		au TextChangedI * ++nested call Delay_My_Write()
 
-		"SimpylFold
-		let g:SimpylFold_docstring_preview = 1
-		let g:SimpylFold_fold_docstring = 0
-		let b:SimpylFold_fold_docstring = 0
-
 		"jupyter-vim
 		" if has('nvim')
 		" 	let g:python3_host_prog = '/path/to/python/bin/python3'
