@@ -162,6 +162,9 @@
 				"Buffer line
 				Plug 'kyazdani42/nvim-web-devicons'
 				set termguicolors
+
+				"Plugin to measure startup time in vim
+				" Plug 'dstein64/vim-startuptime'
 		call plug#end()
 
 
