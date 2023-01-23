@@ -39,9 +39,6 @@
 		"Provides tab-completion for all file-related tasks
 		set path+=**
 
-		" consider only 100 columns until break line
-		"setl tw=100
-
 		"Enable copying to clipboard there is two lines becaus it is one for each linux clipboard
 		set clipboard+=unnamedplus
 		" set clipboard=unnamed
