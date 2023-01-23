@@ -167,9 +167,6 @@
 				"Indentation script for python
 				Plug 'vim-scripts/indentpython.vim'
 
-				"Code folding for python
-				Plug 'tmhedberg/SimpylFold'
-
 				"Comment in a vim like way
 			    Plug 'tpope/vim-commentary'
 
