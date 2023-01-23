@@ -184,9 +184,6 @@
 				"Plugin that i use with ipython
 				Plug 'jpalardy/vim-slime'
 
-				"instant markdown visualizer
-				" Plug 'instant-markdown/vim-instant-markdown'
-				"
 				"base 16 colorschemes
 				Plug 'RRethy/nvim-base16'
 
