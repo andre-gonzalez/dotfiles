@@ -117,8 +117,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 		call plug#begin()
 
-				" Better markdown highlight and some keybinds to make easier to edit markdown files
-				Plug 'gabrielelana/vim-markdown'
+				"Disable markdown mappings
 				let g:markdown_enable_mappings = 0
 
 				"Set a infomative line in the bottom of the editor
