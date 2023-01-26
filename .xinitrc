@@ -65,7 +65,7 @@ else
 fi
 
 #Wallpaper
-feh --bg-fill --no-fehbg "$HOME"/.config/.wallpaper/arco-login-text.png
+/bin/dash "$HOME"/.scripts/random-wallpaper.sh
 
 # Turn off bluetooth
 # bluetoothctl power off
