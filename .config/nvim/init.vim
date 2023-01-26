@@ -165,6 +165,18 @@
 
 				"Plugin to measure startup time in vim
 				" Plug 'dstein64/vim-startuptime'
+
+				" LSP Support
+				Plug 'neovim/nvim-lspconfig'             " Required
+
+				" Autocompletion Engine
+				Plug 'hrsh7th/nvim-cmp'         " Required
+				Plug 'hrsh7th/cmp-nvim-lsp'     " Required
+
+				"  Snippets
+				Plug 'L3MON4D3/LuaSnip'             " Required
+
+				Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 		call plug#end()
 
 
@@ -359,6 +371,9 @@
 
 		"Buffer line
 		source ~/.config/nvim/buffer-line.lua
+
+		"lsp zero
+		source ~/.config/nvim/lsp-zero.lua
 
 		"SQL Server completion
 		let g:LanguageClient_serverCommands = {
