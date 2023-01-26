@@ -1,6 +1,7 @@
 # Directories
 eureciclo/
 gdrive-pessoal/
+.kube/
 
 # File extensions
 *.csv
