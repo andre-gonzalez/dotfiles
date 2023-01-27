@@ -156,9 +156,6 @@
 				" Change to work directory
 				Plug 'airblade/vim-rooter'
 
-				" Context freeze functions to the first line
-				Plug 'wellle/context.vim'
-
 				"Buffer line
 				Plug 'kyazdani42/nvim-web-devicons'
 				set termguicolors
