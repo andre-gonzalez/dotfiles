@@ -232,7 +232,7 @@
 		let g:db_ui_winwidth = 10 " change drawer width
 		let g:db_ui_execute_on_save = 0 " Disable the executing of the query on save
 		let g:db_ui_force_echo_notifications = 1 "Force notifications to be show on command line
-		" autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
+		autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remaps
