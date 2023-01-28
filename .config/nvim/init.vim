@@ -220,7 +220,7 @@
 		let g:slime_paste_file = "$HOME/.cache/slime_paste"
 
 		"Vim airline
-		let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+		let g:airline#extensions#tabline#enabled = 0 " Enable the list of buffers
 		let g:airline#extensions#tabline#formatter = 'default'  " f/p/file-name.js
 		let g:airline#extensions#tabline#formatter = 'jsformatter' " path-to/f
 		let g:airline#extensions#tabline#formatter = 'unique_tail' " file-name.js
