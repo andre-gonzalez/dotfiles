@@ -29,6 +29,7 @@ set -gx KDEHOME "$XDG_CONFIG_HOME/kde"
 set -gx LESSHISTFILE "$XDG_CACHE_HOME"/less/history
 set -gx _JAVA_OPTIONS -Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 set -gx PYTHONSTARTUP "$XDG_CONFIG_HOME/python/pythonrc"
+set -gx ANSIBLE_HOME "$XDG_CONFIG_HOME/ansible"
 
 ### MANPAGER
 ### "bat" as manpager
@@ -104,3 +105,4 @@ function fish_mode_prompt
 end
 
 bind -M insert \ch 'cd $(pwd | fd -Htd . |fzf -e)'
+
