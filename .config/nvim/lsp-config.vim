@@ -13,3 +13,11 @@ autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.sql lua vim.lsp.buf.formatting_sync(nil, 100)
+
+lua << EOF
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+        -- Disable underline, it's very annoying
+        underline = false,
+    })
+EOF
