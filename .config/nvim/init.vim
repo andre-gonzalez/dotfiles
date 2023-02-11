@@ -104,8 +104,6 @@
 				" Enable vim arround keybinds like ca'"
 				Plug 'tpope/vim-surround'
 
-				Plug 'rentalcustard/exuberant-ctags'
-
 				"vim in the brownser
 				Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(1) } }
 
