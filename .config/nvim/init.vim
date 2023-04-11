@@ -172,14 +172,12 @@
 				Plug 'L3MON4D3/LuaSnip'             " Required
 
 				Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
-				Plug 'xiyaowong/nvim-transparent'
 		call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		source ~/.config/nvim/transparency.lua
 
 		"firenvim config
 		let g:firenvim_config = {
