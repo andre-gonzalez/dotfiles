@@ -2,6 +2,7 @@
 eureciclo/
 gdrive-pessoal/
 .kube/
+.config/bleachbit/
 
 # File extensions
 *.csv
@@ -195,3 +196,10 @@ gdrive-pessoal/
 .config/yay
 .config/yay-git
 .config/zoomus.conf
+.config/btop/
+.config/chromium/
+.config/google-chrome-unstable/
+.config/google-chrome/
+.config/ungoogled-chromium/
+.databricks-connect
+.vault_password
