@@ -17,7 +17,7 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push -u origin"
 alias gam="git commit -am"
-alias gd="git diff"
+alias gd="git diff $argv --name-only | fzf -m --ansi --preview 'git diff $argv --color=always -- {-1}'"
 # pacman aliases
 alias mirror="doas reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" #get fastest mirrors
 alias pms="doas pacman -S"
