@@ -207,6 +207,7 @@
 		let g:airline#extensions#tabline#formatter = 'jsformatter' " path-to/f
 		let g:airline#extensions#tabline#formatter = 'unique_tail' " file-name.js
 		let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " f/p/file-name.js
+		let g:airline#extensions#disable_rtp_load=1 "fix error messages when starting neovim
 
 		"Database operations
 		let g:db_ui_save_location = '~/eureciclo/salesops-dw/main-salesops-dw/queries'
