@@ -9,7 +9,7 @@
 		set wildmode=list:longest
 
 		" Automatically deletes all trailing whitespace on save
-		autocmd BufWritePre * %s/\s\+$//e
+		" autocmd BufWritePre * %s/\s\+$//e
 
 		"alternate between relative line numbers and absolute based in wich mode you are
 		set number
@@ -201,7 +201,7 @@
 
 		"vim-slime
 		let g:slime_target = "tmux"
-		let g:slime_paste_file = "$HOME/.cache/slime_paste"
+		let g:slime_paste_file = expand("$HOME/.cache/slime_paste")
 
 		"Vim airline
 		let g:airline#extensions#tabline#enabled = 0 " Enable the list of buffers
@@ -274,13 +274,13 @@
 		nmap <leader>O O<Esc>
 
 		"autoformat SQL
-		autocmd FileType sql call SqlFormatter()
-		augroup end
-		function SqlFormatter()
-			set noai
-			" set mappings...
-			map <leader>pt  :%!sqlformat --reindent --keywords upper --identifiers lower -<CR>
-		endfunction
+		" autocmd FileType sql call SqlFormatter()
+		" augroup end
+		" function SqlFormatter()
+		" 	set noai
+		" 	" set mappings...
+		" 	map <leader>pt  :%!sqlformat --reindent --keywords upper --identifiers lower -<CR>
+		" endfunction
 
 		"Move with the screen centralized
 		nnoremap <C-u> <C-u>zz
