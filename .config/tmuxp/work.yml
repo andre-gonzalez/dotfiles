@@ -17,23 +17,16 @@ windows:
     panes:
       - shell_command:
         - nvim ~/gdrive-pessoal/pessoal/obsidian/_organizar/eureciclo-todos.md
-  - window_name: ssh
+  - window_name: databricks
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    shell_command_before:
-      - cd ~/.ssh
     panes:
-      - shell_command:
-        - /bin/sh ~/.scripts/ssh-linux-data-analytics-vm
-        focus: true
-      - shell_command:
-        - /bin/sh ~/.scripts/ssh-linux-data-analytics-vm
-  - window_name: ansible
+      - cd ~/eureciclo/databricks-notebooks/ && nvim -c "Telescope file_browser"
+      - cd ~/eureciclo/databricks-notebooks/main-databricks-notebooks/
+  - window_name: airflow
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    shell_command_before:
-      - cd ~/eureciclo/datalake-infra/main-datalake-infra/ansible/
     panes:
-      - nvim -c "Telescope find_files"  # pane no. 1
-      - clear && ls
+      - cd ~/eureciclo/airflow/ && nvim -c "Telescope file_browser"
+      - cd ~/eureciclo/airflow/main-airflow/
   - window_name: pessoal
     panes:
       - clear && ls
