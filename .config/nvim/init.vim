@@ -172,6 +172,9 @@
 				Plug 'L3MON4D3/LuaSnip'             " Required
 
 				Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
+
+				"github Copilot-like
+				Plug 'Exafunction/codeium.vim'
 		call plug#end()
 
 
@@ -316,6 +319,11 @@
 
 		"Make a file executable
 		nnoremap <leader>x <cmd>!chmod +x %<CR>
+
+		"Codeium
+		imap <script><silent><nowait><expr> <C-f> codeium#Accept()
+		imap <leader>.   <Cmd>call codeium#CycleCompletions(1)<CR>
+		imap <leader>,   <Cmd>call codeium#CycleCompletions(-1)<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
