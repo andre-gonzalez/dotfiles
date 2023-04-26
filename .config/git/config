@@ -14,3 +14,10 @@
 	defaultBranch = main
 [alias]
 	root = rev-parse --show-toplevel
+[pager]
+  # Use `delta`.
+  log = delta
+  show = delta
+  diff = delta
+; [delta]
+    ; side-by-side = true
