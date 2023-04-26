@@ -1,90 +1,19 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Basics
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		set foldmethod=manual
-		" Set tab width to 4 columns.
-		set tabstop=4
-		autocmd FileType sql setlocal shiftwidth=2 tabstop=2
-
-		" Make wildmenu behave like similar to Bash completion.
-		set wildmode=list:longest
-
-		" Automatically deletes all trailing whitespace on save
-		" autocmd BufWritePre * %s/\s\+$//e
 
 		"alternate between relative line numbers and absolute based in wich mode you are
-		set number
+		" set number
 		augroup numbertoggle
 		  autocmd!
 		  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
 		  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 		augroup END
 
-		" Ignore case in search
-		set ignorecase
-		" If you type an uppercase character in the search it will change the search to a case
-		" sensitive one
-		set smartcase
-
-		"allows you to paste in vim with the mouse
-		set mouse=a
-
-		" save undo trees in files
-		set undofile
-		set undodir=~/.config/nvim/undo
-
-		" number of undo saved
-		set undolevels=10000
-
-		"Search down into subfolders
-		"Provides tab-completion for all file-related tasks
-		set path+=**
-
-		"Enable copying to clipboard there is two lines becaus it is one for each linux clipboard
-		set clipboard+=unnamedplus
-		" set clipboard=unnamed
-
-		" completion
-		set completeopt+=noselect
-
-		" use w!! to save when you open a file in read only mode. You need to type faster so it can
-		" work
-		cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
-
-		" Use <C-L> to clear the highlighting of :set hlsearch.
-		if maparg('<C-L>', 'n') ==# ''
-		  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
-		endif
-
-		" Syntax highlight in markdown files
-		let g:markdown_fenced_languages = ['html', 'python', 'SQL', 'vim', 'HCL', 'CSS']
-
-		"Python conventoin keep line under 79 characters
-		set colorcolumn=79
-
-		"highlight what i yank
-		augroup highlight_yank
-			autocmd!
-			au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=200 }
-		augroup END
-
-		"autoread to update files edit in another text editor
-		set autoread
-
-		"Only show command line (the line below status bar) when in being
-		"used. It gives you extra space
-		set cmdheight=0
-
-		"Disable spellchecker
-		set nospell
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 		call plug#begin()
-
-				"Disable markdown mappings
-				let g:markdown_enable_mappings = 0
 
 				"Set a infomative line in the bottom of the editor
 				Plug 'vim-airline/vim-airline'
@@ -224,57 +153,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		"Remaped the leader key
-		let mapleader = " "
 
-		"DBUI
-		nnoremap <silent> <leader>bf :DBUIFindBuffer<CR>
-
-		"use s as an alias to replace all
-		noremap <leader>S :%s//g<Left><Left>
-
-		"move between split windows using ctrl + h,j,k,l
-		map <C-h> <C-w>h
-		map <C-j> <C-w>j
-		map <C-k> <C-w>k
-		map <C-l> <C-w>l
-
-		" Enable spell checking
-		map <leader>roe :setlocal spell! spelllang=en_us<CR>
-		map <leader>rop :setlocal spell! spelllang=pt_br<CR>
-
-		"fill with the date and hour
-		nmap <F3> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
-		imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
+		source ~/.config/nvim/transition.lua
 
 		" remap to run telescope with \ + f
 		nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
 		nnoremap <leader>g :lua require('telescope.builtin').live_grep({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
 		nnoremap <leader>c :Telescope file_browser<CR>
-
-
-		" harpoon remaps
-		nnoremap <leader>a :lua require("harpoon.mark").add_file()<CR>
-		nnoremap <leader>e :lua require("harpoon.ui").toggle_quick_menu()<CR>
-		nnoremap <leader>h :lua require("harpoon.ui").nav_file(1)<CR>
-		nnoremap <leader>t :lua require("harpoon.ui").nav_file(2)<CR>
-		nnoremap <leader>n :lua require("harpoon.ui").nav_file(3)<CR>
-		nnoremap <leader>s :lua require("harpoon.ui").nav_file(4)<CR>
-
-		" insert lines to debug in python
-		nnoremap <leader>bb ifrom ipdb import set_trace as st<CR>st()<Esc>
-
-		" Remap to paste delete and paste without change the register
-		xnoremap <leader>p "_dP
-
-		" Delete without saving to register
-		xnoremap <leader>d "_d
-		nnoremap <leader>d "_d
-		vnoremap <leader>d "_d
-
-		"Insert line using o but keeping you in normal mode
-		nmap <leader>o o<Esc>
-		nmap <leader>O O<Esc>
 
 		"autoformat SQL
 		" autocmd FileType sql call SqlFormatter()
@@ -284,13 +169,6 @@
 		" 	" set mappings...
 		" 	map <leader>pt  :%!sqlformat --reindent --keywords upper --identifiers lower -<CR>
 		" endfunction
-
-		"Move with the screen centralized
-		nnoremap <C-u> <C-u>zz
-		nnoremap <C-d> <C-d>zz
-
-		"Find last search match with screen centralized
-		nnoremap n nzz
 
 		"Insert image in markdown note
 		nnoremap <leader>i :r!cd _attachment && ls '.png'<left><left><left><left><left>
