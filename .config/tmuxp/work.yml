@@ -26,7 +26,7 @@ windows:
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     panes:
       - cd ~/eureciclo/airflow/ && nvim -c "Telescope file_browser"
-      - cd ~/eureciclo/airflow/main-airflow/
+      - cd ~/eureciclo/airflow/main-airflow/ && kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow
   - window_name: pessoal
     panes:
       - clear && ls
