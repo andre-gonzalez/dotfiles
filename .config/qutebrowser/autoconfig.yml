@@ -10,6 +10,10 @@ settings:
     global: true
   backend:
     global: webengine
+  bindings.commands:
+    global:
+      normal:
+        xt: config-cycle tabs.show always switching
   colors.messages.warning.bg:
     global: darkorange
   colors.statusbar.command.private.bg:
@@ -69,7 +73,7 @@ settings:
   tabs.position:
     global: top
   tabs.show:
-    global: multiple
+    global: always
   tabs.show_switching_delay:
     global: 1000
   tabs.tabs_are_windows:
