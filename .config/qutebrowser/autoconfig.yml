@@ -29,7 +29,9 @@ settings:
   content.geolocation:
     https://app.assine.online: true
     https://g1.globo.com: false
+    https://login.clear.com.br: true
     https://parceiro.empresas.bs2.com: true
+    https://portal.xpi.com.br: true
     https://www.google.com: false
     https://www.petco.com.mx: false
   content.media.audio_capture:
@@ -39,6 +41,7 @@ settings:
   content.media.video_capture:
     https://meet.google.com: true
   content.notifications.enabled:
+    https://app.toroinvestimentos.com.br: false
     https://calendar.google.com: true
     https://exame.com: false
     https://meet.google.com: true
