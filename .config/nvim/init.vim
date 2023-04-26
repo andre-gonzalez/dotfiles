@@ -170,39 +170,6 @@
 		" 	map <leader>pt  :%!sqlformat --reindent --keywords upper --identifiers lower -<CR>
 		" endfunction
 
-		"Insert image in markdown note
-		nnoremap <leader>i :r!cd _attachment && ls '.png'<left><left><left><left><left>
-		"Format images in markdown format
-		nnoremap <leader>mi :%s/\(.*\)\.png$/![\1](\1.png)<CR>
-
-		"Set filetype
-		nnoremap <leader>qs :set filetype=sql<CR>
-		nnoremap <leader>qp :set filetype=python<CR>
-
-		"Move what is highlighted
-		vnoremap J :m '>+1<CR>gv=gv
-		vnoremap K :m '<-2<CR>gv=gv
-
-		"When using J keep cursor still
-		nnoremap J mzJ`z
-
-		"When searching keep the cursos in the middle of the screen
-		nnoremap n nzzzv
-		nnoremap N Nzzzv
-
-		"Getting rid of Ex mode
-		nnoremap Q <nop>
-
-		"Remap to substitute a word in the file
-		nnoremap <leader>ws :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
-
-		"Make a file executable
-		nnoremap <leader>x <cmd>!chmod +x %<CR>
-
-		"Codeium
-		imap <script><silent><nowait><expr> <C-f> codeium#Accept()
-		imap <leader>.   <Cmd>call codeium#CycleCompletions(1)<CR>
-		imap <leader>,   <Cmd>call codeium#CycleCompletions(-1)<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -248,23 +215,3 @@
 		let g:LanguageClient_serverCommands = {
 			\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
 			\ }
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" colorscheme configuration
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		" My coloscheme of choice
-		" colorscheme gruvbox
-		" colorscheme dracula
-        colorscheme base16-onedark
-		" Set line numbers as white
-		highlight LineNr guifg=#ABB2BF
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Abreviations
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		ab SF SELECT *<cr>FROM<cr>;<up><right><right><right>
-		ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 200<cr>;<up><up><right><right><right>
-		ab SDIST SELECT DISTINCT<cr>FROM<cr>;<up><right><right><right>
-		ab SCOLUMNS SELECT "column_name"<cr>FROM information_schema."columns"<cr>WHERE "table_name" = ''<cr>;<up><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right>
-		ab skeletonmd #<cr><cr>## Participantes:<cr>- [[]]<cr><cr>---<cr># Notas:<cr>- <cr>---<cr># To-do:<cr>- [ ]
-		ab dcom # COMMAND ----------

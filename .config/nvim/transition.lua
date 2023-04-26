@@ -151,3 +151,56 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 
 -- Find last search match with screen centralized
 vim.keymap.set('n', 'n', 'nzz')
+
+--Insert image in markdown note
+vim.keymap.set('n', '<leader>i', ":r!cd _attachment && ls '.png'<left><left><left><left><left>")
+
+-- Format images in markdown format
+vim.keymap.set('n', '<leader>mi', ':%s/\\(.*\\)\\.png$/![\\1](\\1.png)<CR>')
+
+-- Set filetype
+vim.keymap.set('n', '<leader>qs', ':set filetype=sql<CR>')
+vim.keymap.set('n', '<leader>qp', ':set filetype=python<CR>')
+
+-- Move what is highlighted
+vim.keymap.set('v', 'J', ":m \\'>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m \\'<-2<CR>gv=gv")
+
+-- When using J keep cursor still
+vim.keymap.set('n', 'J', 'mzJ`z')
+
+-- When searching keep the cursos in the middle of the screen
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
+-- Getting rid of Ex mode
+vim.keymap.set('n', 'Q', '<nop>')
+
+-- Remap to substitute a word in the file
+vim.keymap.set('n', '<leader>ws', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
+
+-- Make a file executable
+vim.keymap.set('n', '<leader>x', ':!chmod +x %<CR>')
+
+-- Codeium
+vim.keymap.set('i', '<C-f>', 'codeium#Accept()')
+vim.keymap.set('i', '<C-;>', '<Cmd>call codeium#CycleCompletions(1)<CR>')
+vim.keymap.set('i', '<C-\\>', '<Cmd>call codeium#CycleCompletions(-1)<CR>')
+
+--colorscheme base16-onedark
+vim.cmd('colorscheme base16-onedark')
+
+-- Set line numbers as white
+vim.cmd('highlight LineNr guifg=#ABB2BF')
+
+
+------------------------------------------------------------------------------
+----------------------------- ABREVIATIONS -----------------------------------
+------------------------------------------------------------------------------
+
+vim.cmd('ab SF SELECT * FROM;<up><right><right><right>')
+vim.cmd('ab SLIMIT SELECT *<cr>FROM<cr>LIMIT 200<cr>;<up><up><right><right><right>')
+vim.cmd('ab SDIST SELECT DISTINCT<cr>FROM<cr>;<up><right><right><right>')
+vim.cmd('ab SCOLUMNS SELECT "column_name"<cr>FROM information_schema."columns"<cr>WHERE "table_name" = \'\'<cr>;<up><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right>')
+vim.cmd('ab skeletonmd #<cr><cr>## Participantes:<cr>- [[]]<cr><cr>---<cr># Notas:<cr>- <cr>---<cr># To-do:<cr>- [ ]')
+vim.cmd('ab dcom # COMMAND ----------')
