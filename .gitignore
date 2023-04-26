@@ -2,7 +2,8 @@
 eureciclo/
 gdrive-pessoal/
 .kube/
-.config/bleachbit/
+.vscode/
+.wdm/
 
 # File extensions
 *.csv
@@ -41,6 +42,7 @@ gdrive-pessoal/
 .zcompdump
 .zsh_history
 .zshrc
+.scala_history
 
 # Dot directories
 .ansible/
@@ -114,6 +116,9 @@ gdrive-pessoal/
 .local/share/xorg/
 
 # .config directory files
+.config/pritunl/
+.config/bleachbit/
+.config/onlyoffice/
 .config/Authy Desktop/
 .config/Bitwarden CLI/
 .config/BraveSoftware/
@@ -137,6 +142,7 @@ gdrive-pessoal/
 .config/db_ui/
 .config/dconf/
 .config/discord/
+.config/Portmaster/
 .config/dmenu/
 .config/dmenu_bw/
 .config/dmenufm/
