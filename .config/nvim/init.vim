@@ -1,6 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Basics
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+		source ~/.config/nvim/transition.lua
 
 		"alternate between relative line numbers and absolute based in wich mode you are
 		" set number
@@ -9,6 +10,10 @@
 		  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
 		  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 		augroup END
+
+		" auto-format
+		autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+		" autocmd BufWritePre *.sql lua vim.lsp.buf.formatting_sync(nil, 100)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
@@ -154,7 +159,6 @@
 " Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-		source ~/.config/nvim/transition.lua
 
 		" remap to run telescope with \ + f
 		nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
@@ -169,47 +173,6 @@
 		" 	" set mappings...
 		" 	map <leader>pt  :%!sqlformat --reindent --keywords upper --identifiers lower -<CR>
 		" endfunction
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins configuration files
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-		" PLugin nvim-compe config file
-		source ~/.config/nvim/compe-config.lua
-
-		" Plugin lsp-config config file
-		source ~/.config/nvim/lsp-config.vim
-
-		"Bash completion
-		source ~/.config/nvim/bash-lsp.lua
-
-		"Python completion
-		source ~/.config/nvim/python-lsp.lua
-
-		"SQL completion
-		source ~/.config/nvim/sql-lsp.lua
-
-		"Ansible completion
-		source ~/.config/nvim/ansible-lsp.lua
-
-		map <leader>af :set ft=yaml.ansible<CR>
-
-		"Terraform completion
-		source ~/.config/nvim/terraform-lsp.lua
-
-		"Grammarly completion
-		source ~/.config/nvim/grammarly-lsp.lua
-
-		"Json completion
-		source ~/.config/nvim/json-lsp.lua
-
-		"Telecope file_browser configs
-		source ~/.config/nvim/telescope.lua
-
-		"Buffer line
-		source ~/.config/nvim/buffer-line.lua
-
-		"lsp zero
-		source ~/.config/nvim/lsp-zero.lua
 
 		"SQL Server completion
 		let g:LanguageClient_serverCommands = {

@@ -1,3 +1,15 @@
+require("lsp.lsp-zero")
+require("lsp.ansible-lsp")
+require("lsp.bash-lsp")
+require("lsp.grammarly-lsp")
+require("lsp.json-lsp")
+require("lsp.terraform-lsp")
+require("lsp.python-lsp")
+require("lsp.sql-lsp")
+require("lsp.lsp-config")
+-- require("plugins.buffer-line")
+require("plugins.compe-config")
+require("plugins.telescope")
 ------------------------------------------------------------------------------
 ----------------------------- GENERAL ----------------------------------------
 ------------------------------------------------------------------------------
@@ -96,7 +108,6 @@ vim.opt.cmdheight = 0
 --Disable spellchecker
 vim.opt.spell = false
 
-
 ------------------------------------------------------------------------------
 ----------------------------- REMAPS -----------------------------------------
 ------------------------------------------------------------------------------
@@ -105,7 +116,6 @@ vim.opt.spell = false
 -- vim.keymap.set('n', '<C-L>', ':nohlsearch<CR>')
 
 -- Remaped the leader key
-vim.g.mapleader = " "
 
 -- DBUI
 vim.keymap.set('n', '<leader>bf', ':DBUIFindBuffer<CR>')
@@ -193,6 +203,18 @@ vim.cmd('colorscheme base16-onedark')
 -- Set line numbers as white
 vim.cmd('highlight LineNr guifg=#ABB2BF')
 
+-- To ansible LSP work
+vim.keymap.set('n', '<leader>af', ':set ft=yaml.ansible<CR>')
+
+-- LSP config (the mappings used in the default file don't quite work right)
+vim.keymap.set('n', 'gd',  '<cmd>lua vim.lsp.buf.definition()<CR>')
+vim.keymap.set('n', 'gD',  '<cmd>lua vim.lsp.buf.declaration()<CR>')
+vim.keymap.set('n', 'gi',  '<cmd>lua vim.lsp.buf.implementation()<CR>')
+vim.keymap.set('n', 'gr',  '<cmd>lua vim.lsp.buf.references()<CR>')
+vim.keymap.set('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>')
+vim.keymap.set('n', '<C-k>',  '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.keymap.set('n', '<C-n>',  '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
+vim.keymap.set('n', '<C-p>',  '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
 
 ------------------------------------------------------------------------------
 ----------------------------- ABREVIATIONS -----------------------------------
