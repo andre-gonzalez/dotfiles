@@ -175,7 +175,8 @@ require("lazy").setup({
     build = function()
         require("lazy").load({ plugins = "firenvim", wait = true })
         vim.fn["firenvim#install"](0)
-    end
+    end,
+	'akinsho/bufferline.nvim'
 })
 
 require("plugins.telescope")
@@ -188,7 +189,7 @@ require("lsp.json-lsp")
 require("lsp.terraform-lsp")
 require("lsp.python-lsp")
 require("lsp.sql-lsp")
---require("plugins.buffer-line")
+require("plugins.buffer-line")
 require("plugins.compe-config")
 ------------------------------------------------------------------------------
 ----------------------------- REMAPS -----------------------------------------
