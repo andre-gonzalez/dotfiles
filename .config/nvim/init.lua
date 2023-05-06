@@ -151,6 +151,7 @@ require("lazy").setup({
   "Exafunction/codeium.vim",
   "VonHeikemen/lsp-zero.nvim",
   "nvim-treesitter/nvim-treesitter-context",
+  "folke/zen-mode.nvim",
   branch = 'v2.x',
   dependencies = {
     -- LSP Support
@@ -192,6 +193,7 @@ require("lsp.python-lsp")
 require("lsp.sql-lsp")
 require("plugins.buffer-line")
 require("plugins.compe-config")
+require("plugins.zen-mode")
 ------------------------------------------------------------------------------
 ----------------------------- REMAPS -----------------------------------------
 ------------------------------------------------------------------------------
