@@ -149,7 +149,8 @@ require("lazy").setup({
   "hrsh7th/cmp-nvim-lsp",
   "L3MON4D3/LuaSnip",
   "Exafunction/codeium.vim",
-  'VonHeikemen/lsp-zero.nvim',
+  "VonHeikemen/lsp-zero.nvim",
+  "nvim-treesitter/nvim-treesitter-context",
   branch = 'v2.x',
   dependencies = {
     -- LSP Support
