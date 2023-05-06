@@ -180,6 +180,7 @@ gdrive-pessoal/
 .config/nvim/plugged/dbext.vim
 .config/nvim/spell/pt.utf-8.spl
 .config/nvim/undo
+.config/nvim/lazy-lock.json
 .config/obsidian/
 .config/pavucontrol.ini
 .config/pulse/
