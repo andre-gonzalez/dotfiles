@@ -50,35 +50,32 @@ require("lazy").setup({
   "hrsh7th/cmp-nvim-lsp",
   "L3MON4D3/LuaSnip",
   "Exafunction/codeium.vim",
-  "VonHeikemen/lsp-zero.nvim",
   "nvim-treesitter/nvim-treesitter-context",
   "folke/zen-mode.nvim",
   "mfussenegger/nvim-dap",
-  branch = 'v2.x',
-  dependencies = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {                                      -- Optional
-      'williamboman/mason.nvim',
-      build = function()
-        pcall(vim.cmd, 'MasonUpdate')
-      end,
-    },
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},     -- Required
-    {'hrsh7th/cmp-nvim-lsp'}, -- Required
-    {'L3MON4D3/LuaSnip'},     -- Required
-  },
+  "mfussenegger/nvim-dap-python",
+  "rcarriga/nvim-dap-ui",
+  "theHamsta/nvim-dap-virtual-text",
   'glacambre/firenvim',
+  'akinsho/bufferline.nvim',
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    dependencies = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+      {                                      -- Optional
+        'williamboman/mason.nvim',
+        build = function()
+          pcall(vim.cmd, 'MasonUpdate')
+        end,
+      },
+      {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-    -- Lazy load firenvim
-    -- Explanation: https://github.com/folke/lazy.nvim/discussions/463#discussioncomment-4819297
-    cond = not not vim.g.started_by_firenvim,
-    build = function()
-        require("lazy").load({ plugins = "firenvim", wait = true })
-        vim.fn["firenvim#install"](0)
-    end,
-	'akinsho/bufferline.nvim'
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'L3MON4D3/LuaSnip'},     -- Required
+    }
+  }
 })
