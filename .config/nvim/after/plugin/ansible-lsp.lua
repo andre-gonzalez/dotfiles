@@ -18,3 +18,5 @@ settings = {
     }
   }
 }
+-- To ansible LSP work
+vim.keymap.set('n', '<leader>af', ':set ft=yaml.ansible<CR>')

@@ -84,29 +84,3 @@ vim.keymap.set('n', '<leader>ws', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left
 
 -- Make a file executable
 vim.keymap.set('n', '<leader>x', ':!chmod +x %<CR>')
-
--- Codeium
-vim.g.codeium_disable_bindings = 1
-vim.keymap.set('i', '<C-F>', '<Cmd>call codeium#Accept()<CR>')
-vim.keymap.set('i', '<C-;>', '<Cmd>call codeium#CycleCompletions(1)<CR>')
-vim.keymap.set('i', '<C-\\>', '<Cmd>call codeium#CycleCompletions(-1)<CR>')
-
---colorscheme base16-onedark
-vim.cmd('colorscheme base16-onedark')
-
--- Set line numbers as white
-vim.cmd('highlight LineNr guifg=#ABB2BF')
-
--- To ansible LSP work
-vim.keymap.set('n', '<leader>af', ':set ft=yaml.ansible<CR>')
-
--- LSP config (the mappings used in the default file don't quite work right)
-vim.keymap.set('n', 'gd',  '<cmd>lua vim.lsp.buf.definition()<CR>')
-vim.keymap.set('n', 'gD',  '<cmd>lua vim.lsp.buf.declaration()<CR>')
-vim.keymap.set('n', 'gi',  '<cmd>lua vim.lsp.buf.implementation()<CR>')
-vim.keymap.set('n', 'gr',  '<cmd>lua vim.lsp.buf.references()<CR>')
-vim.keymap.set('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>')
-vim.keymap.set('n', '<C-k>',  '<cmd>lua vim.lsp.buf.signature_help()<CR>')
-vim.keymap.set('n', '<C-n>',  '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
-vim.keymap.set('n', '<C-p>',  '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
-

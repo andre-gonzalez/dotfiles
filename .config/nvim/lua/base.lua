@@ -57,10 +57,8 @@ vim.opt.clipboard = 'unnamedplus'
 --set completeopt+=noselect
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
-
 --Python conventoin keep line under 79 characters
 vim.opt.colorcolumn = '79'
-
 
 --highlight what i yank
 vim.cmd [[
