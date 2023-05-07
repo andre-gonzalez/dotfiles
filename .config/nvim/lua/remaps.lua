@@ -63,6 +63,8 @@ vim.keymap.set('n', '<leader>mi', ':%s/\\(.*\\)\\.png$/![\\1](\\1.png)<CR>')
 -- Set filetype
 vim.keymap.set('n', '<leader>qs', ':set filetype=sql<CR>')
 vim.keymap.set('n', '<leader>qp', ':set filetype=python<CR>')
+
+-- format sql queries
 vim.keymap.set('n', '<leader>qf', ':%!sqlformat -r --comma_first True -k "upper" - <CR>')
 
 -- Move what is highlighted
