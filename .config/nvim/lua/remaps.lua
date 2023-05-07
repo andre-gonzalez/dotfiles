@@ -57,9 +57,6 @@ vim.keymap.set('n', 'n', 'nzz')
 --Insert image in markdown note
 vim.keymap.set('n', '<leader>i', ":r!cd _attachment && ls '.png'<left><left><left><left><left>")
 
--- Format images in markdown format
-vim.keymap.set('n', '<leader>mi', ':%s/\\(.*\\)\\.png$/![\\1](\\1.png)<CR>')
-
 -- Set filetype
 vim.keymap.set('n', '<leader>qs', ':set filetype=sql<CR>')
 vim.keymap.set('n', '<leader>qp', ':set filetype=python<CR>')
