@@ -22,15 +22,6 @@ nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command =
 nnoremap <leader>g :lua require('telescope.builtin').live_grep({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
 nnoremap <leader>c :Telescope file_browser<CR>
 
-"autoformat SQL
-" autocmd FileType sql call SqlFormatter()
-" augroup end
-" function SqlFormatter()
-" 	set noai
-" 	" set mappings...
-" 	map <leader>pt  :%!sqlformat --reindent --keywords upper --identifiers lower -<CR>
-" endfunction
-
 "SQL Server completion
 let g:LanguageClient_serverCommands = {
 	\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],

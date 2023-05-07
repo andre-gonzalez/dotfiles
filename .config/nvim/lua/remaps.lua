@@ -63,6 +63,7 @@ vim.keymap.set('n', '<leader>mi', ':%s/\\(.*\\)\\.png$/![\\1](\\1.png)<CR>')
 -- Set filetype
 vim.keymap.set('n', '<leader>qs', ':set filetype=sql<CR>')
 vim.keymap.set('n', '<leader>qp', ':set filetype=python<CR>')
+vim.keymap.set('n', '<leader>qf', ':%!sqlformat -r --comma_first True -k "upper" - <CR>')
 
 -- Move what is highlighted
 vim.keymap.set('v', 'J', ":m \\'>+1<CR>gv=gv")
@@ -108,3 +109,4 @@ vim.keymap.set('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<C-k>',  '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 vim.keymap.set('n', '<C-n>',  '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
 vim.keymap.set('n', '<C-p>',  '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
+
