@@ -143,6 +143,7 @@ gdrive-pessoal/
 .config/dconf/
 .config/discord/
 .config/Portmaster/
+.config/python-env/
 .config/dmenu/
 .config/dmenu_bw/
 .config/dmenufm/
