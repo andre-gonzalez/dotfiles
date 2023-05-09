@@ -13,6 +13,7 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<leader>bf', ':DBUIFindBuffer<CR>')
 
 -- use s as an alias to replace all
+vim.keymap.set('v', '<leader>s', ':s//g<Left><Left>')
 vim.keymap.set('n', '<leader>S', ':%s//g<Left><Left>')
 
 -- Enable spell checking
