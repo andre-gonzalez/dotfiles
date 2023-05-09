@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------------
 
 -- Clear search highlights with a keybind
--- vim.keymap.set('n', '<C-L>', ':nohlsearch<CR>')
+vim.keymap.set('n', '<C-l>', ':nohlsearch<CR>')
 
 -- Remaped the leader key
 --vim.g.mapleader = ' '
