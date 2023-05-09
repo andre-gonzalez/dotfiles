@@ -23,14 +23,6 @@ vim.keymap.set('n', '<leader>rop', ':setlocal spell! spelllang=pt_br<CR>')
 vim.keymap.set('n', '<F3>', 'i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>')
 vim.keymap.set('i', '<F3>', '<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>')
 
--- harpoon remaps
-vim.keymap.set('n', '<leader>a', ':lua require("harpoon.mark").add_file()<CR>')
-vim.keymap.set('n', '<leader>e', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
-vim.keymap.set('n', '<leader>h', ':lua require("harpoon.ui").nav_file(1)<CR>')
-vim.keymap.set('n', '<leader>t', ':lua require("harpoon.ui").nav_file(2)<CR>')
-vim.keymap.set('n', '<leader>n', ':lua require("harpoon.ui").nav_file(3)<CR>')
-vim.keymap.set('n', '<leader>s', ':lua require("harpoon.ui").nav_file(4)<CR>')
-
 -- insert lines to debug in python
 -- vim.keymap.set('n', '<leader>bb', ':lua require("dap").toggle_breakpoint()<CR>')
 vim.keymap.set('n', '<leader>bb', 'ifrom ipdb import set_trace as st<CR>st()<Esc>')
@@ -83,3 +75,7 @@ vim.keymap.set('n', '<leader>ws', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left
 
 -- Make a file executable
 vim.keymap.set('n', '<leader>x', ':!chmod +x %<CR>')
+
+-- Keybinds to temporary see a split in fullscreen
+vim.keymap.set('n', '<leader>ys', ':tab split<CR>')
+vim.keymap.set('n', '<leader>yc', ':tabc<CR>')
