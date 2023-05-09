@@ -16,6 +16,9 @@ vim.keymap.set('n', '<leader>bf', ':DBUIFindBuffer<CR>')
 vim.keymap.set('v', '<leader>s', ':s//g<Left><Left>')
 vim.keymap.set('n', '<leader>S', ':%s//g<Left><Left>')
 
+-- Remap to substitute a word in the file
+vim.keymap.set('n', '<leader>ws', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>')
+
 -- Enable spell checking
 vim.keymap.set('n', '<leader>roe', ':setlocal spell! spelllang=en_us<CR>')
 vim.keymap.set('n', '<leader>rop', ':setlocal spell! spelllang=pt_br<CR>')
@@ -71,8 +74,6 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 -- Getting rid of Ex mode
 vim.keymap.set('n', 'Q', '<nop>')
 
--- Remap to substitute a word in the file
-vim.keymap.set('n', '<leader>ws', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
 
 -- Make a file executable
 vim.keymap.set('n', '<leader>x', ':!chmod +x %<CR>')
