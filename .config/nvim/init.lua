@@ -15,7 +15,7 @@ augroup numbertoggle
 augroup END
 
 " auto-format
-autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+"autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 1000)
 " autocmd BufWritePre *.sql lua vim.lsp.buf.formatting_sync(nil, 100)
 
 nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
