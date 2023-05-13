@@ -34,7 +34,7 @@ require("lazy").setup({
   "hrsh7th/nvim-compe",
   "nvim-treesitter/playground",
   "vim-scripts/indentpython.vim",
-  "tpope/vim-commentary",
+  "terrortylor/nvim-comment",
   "chrisbra/csv.vim",
   "hashivim/vim-terraform",
   "tpope/vim-dadbod",
