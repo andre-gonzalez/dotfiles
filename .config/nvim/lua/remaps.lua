@@ -81,3 +81,4 @@ vim.keymap.set('n', '<leader>x', ':!chmod +x %<CR>')
 -- Keybinds to temporary see a split in fullscreen
 vim.keymap.set('n', '<leader>ts', ':tab split<CR>')
 vim.keymap.set('n', '<leader>tc', ':tabc<CR>')
+vim.keymap.set('n', '<leader>tn', ':tabnew<CR>')
