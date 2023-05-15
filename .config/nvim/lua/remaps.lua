@@ -56,6 +56,7 @@ vim.keymap.set('n', '<leader>i', ":r!cd _attachment && ls '.png'<left><left><lef
 -- Set filetype
 vim.keymap.set('n', '<leader>qs', ':set filetype=sql<CR>')
 vim.keymap.set('n', '<leader>qp', ':set filetype=python<CR>')
+vim.keymap.set('n', '<leader>qm', ':set filetype=markdown<CR>')
 
 -- format sql queries
 vim.keymap.set('n', '<leader>qf', ':%!sqlformat -r --comma_first True -k "upper" - <CR>')
