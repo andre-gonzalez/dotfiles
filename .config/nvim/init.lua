@@ -69,4 +69,12 @@ let g:LanguageClient_serverCommands = {
 		let g:db_ui_execute_on_save = 0 " Disable the executing of the query on save
 		let g:db_ui_force_echo_notifications = 1 "Force notifications to be show on command line
 		autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
+
+function TrimEndLines()
+    let save_cursor = getpos(".")
+    silent! %s#\($\n\s*\)\+\%$##
+    call setpos('.', save_cursor)
+endfunction
+
+autocmd BufWritePre *.py call TrimEndLines()
 ]])
