@@ -18,8 +18,7 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 
 require("lazy").setup({
   "tpope/vim-surround",
-  "vim-airline/vim-airline",
-  "vim-airline/vim-airline-themes",
+	"nvim-lualine/lualine.nvim",
   "tpope/vim-fugitive",
   "airblade/vim-gitgutter",
   "Yggdroot/indentLine",
