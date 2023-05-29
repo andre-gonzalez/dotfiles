@@ -55,14 +55,6 @@ let g:LanguageClient_serverCommands = {
 		let g:slime_target = "tmux"
 		let g:slime_paste_file = expand("$HOME/.cache/slime_paste")
 
-		"Vim airline
-		let g:airline#extensions#tabline#enabled = 0 " Enable the list of buffers
-		let g:airline#extensions#tabline#formatter = 'default'  " f/p/file-name.js
-		let g:airline#extensions#tabline#formatter = 'jsformatter' " path-to/f
-		let g:airline#extensions#tabline#formatter = 'unique_tail' " file-name.js
-		let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " f/p/file-name.js
-		let g:airline#extensions#disable_rtp_load=1 "fix error messages when starting neovim
-
 		"Database operations
 		let g:db_ui_save_location = '~/eureciclo/salesops-dw/main-salesops-dw/queries'
 		let g:db_ui_tmp_query_location = '~/eureciclo/salesops-dw/main-salesops-dw/tmp'
