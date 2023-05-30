@@ -18,12 +18,6 @@ augroup END
 "autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 1000)
 " autocmd BufWritePre *.sql lua vim.lsp.buf.formatting_sync(nil, 100)
 
-nnoremap <Leader>f :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
-nnoremap <leader>g :lua require('telescope.builtin').live_grep({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
-nnoremap <leader>c :Telescope file_browser<CR>
-nnoremap <leader>tb :Telescope buffers<CR>
-
-
 "SQL Server completion
 let g:LanguageClient_serverCommands = {
 	\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
