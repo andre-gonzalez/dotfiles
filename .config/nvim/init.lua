@@ -14,36 +14,21 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 augroup END
 
-" auto-format
-"autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 1000)
-" autocmd BufWritePre *.sql lua vim.lsp.buf.formatting_sync(nil, 100)
+function TrimEndLines()
+    let save_cursor = getpos(".")
+    silent! %s#\($\n\s*\)\+\%$##
+    call setpos('.', save_cursor)
+endfunction
 
-"SQL Server completion
-let g:LanguageClient_serverCommands = {
-	\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
-	\ }
+autocmd BufWritePre *.py call TrimEndLines()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-		"firenvim config
-		let g:firenvim_config = {
-			\ 'globalSettings': {
-				\ 'alt': 'all',
-				\ 'takeover': 'never'
-			\  },
-			\ 'localSettings': {
-				\ '.*': {
-				\ },
-			\ }
-		\ }
-		let fc = g:firenvim_config['localSettings']
-		let fc['https?://.+'] = { 'takeover': 'never', 'priority': 1 }
-		let fc['.*'] = { 'cmdline' : 'neovim' }
+    "firenvim config
 		au BufEnter d8c7fc-e847.cloud.databricks.com_*.txt set filetype=sql
 		au BufEnter mail.google.com_*.txt set filetype=markdown
-		let g:timer_started = v:false
 
 		"vim-slime
 		let g:slime_target = "tmux"
