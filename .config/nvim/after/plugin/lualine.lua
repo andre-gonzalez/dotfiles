@@ -1,6 +1,6 @@
 local colors = {
 	fg = "#838994",
-	bg = "#252829",
+	bg = "#192334",
 }
 require('lualine').setup({
 	options = {
