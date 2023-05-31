@@ -42,11 +42,9 @@ autocmd BufWritePre *.py call TrimEndLines()
 		let g:db_ui_force_echo_notifications = 1 "Force notifications to be show on command line
 		autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
 
-function TrimEndLines()
-    let save_cursor = getpos(".")
-    silent! %s#\($\n\s*\)\+\%$##
-    call setpos('.', save_cursor)
-endfunction
+"SQL Server completion
+let g:LanguageClient_serverCommands = {
+	\ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
+	\ }
 
-autocmd BufWritePre *.py call TrimEndLines()
 ]])
