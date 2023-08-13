@@ -16,12 +16,13 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push -u origin"
+alias sa="/bin/sh fill-password-in-script.sh $(cat $HOME/.scripts/.env/ssh | grep -Po '(?<=ssh-password=).*') \"Enter passphrase for key '/home/frank/.ssh/personal_id_ed25519_2023-05'\""
 alias gam="git commit -am"
 alias gd="git diff"
 # pacman aliases
 alias mirror="doas reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" #get fastest mirrors
 alias pms="doas pacman -S"
-alias pmu="doas pacman -Syyu; kill -47 $(pidof dwmblocks)"
+alias pmu="yay -Syyu; kill -47 $(pidof dwmblocks)"
 alias pmr="doas pacman -Rns"
 alias orphans="doas pacman -Qtdq | doas pacman -Rns -"
 # vim
