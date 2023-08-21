@@ -22,7 +22,7 @@ alias gd="git diff"
 # pacman aliases
 alias mirror="doas reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" #get fastest mirrors
 alias pms="doas pacman -S"
-alias pmu="yay -Syyu; kill -47 $(pidof dwmblocks)"
+alias pmu="yay -Syyu --askremovemake --noconfirm; kill -47 $(pidof dwmblocks)"
 alias pmr="doas pacman -Rns"
 alias orphans="doas pacman -Qtdq | doas pacman -Rns -"
 # vim
