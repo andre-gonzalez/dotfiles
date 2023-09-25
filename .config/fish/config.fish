@@ -30,6 +30,8 @@ set -gx LESSHISTFILE "$XDG_CACHE_HOME"/less/history
 set -gx _JAVA_OPTIONS -Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 set -gx PYTHONSTARTUP "$XDG_CONFIG_HOME/python/pythonrc"
 set -gx ANSIBLE_HOME "$XDG_CONFIG_HOME/ansible"
+set -gx PYTHON_BIN ".env/bin"
+set -gx MANPAGER "nvim +Man!"
 
 ### MANPAGER
 ### "bat" as manpager
@@ -106,3 +108,4 @@ end
 
 bind -M insert \ch 'cd $(pwd | fd -Htd . |fzf -e)'
 
+zoxide init fish | source
