@@ -209,5 +209,6 @@ gdrive-pessoal/
 .config/google-chrome-unstable/
 .config/google-chrome/
 .config/ungoogled-chromium/
+.config/wall-d/
 .databricks-connect
 .vault_password
