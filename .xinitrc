@@ -43,9 +43,6 @@ unclutter &
 # insync start
 insync start &
 
-# start xflux so the screen get orange in the night
-xflux -l 19.438315 -g -99.201804 -k 2000 &
-
 #start clipmenud
 clipmenud &
 
@@ -60,6 +57,9 @@ rfkill unblock all &
 
 #Activate numlock on boot
 numlockx &
+
+# Dim screen at night
+redshift -l 19.44:-99.13 -t 6500:3000 -b 1:0.4 &
 
 # Multiple Monitor configuration
 if [ $(xrandr --query | grep -c HDMI) = 1 ]; then
