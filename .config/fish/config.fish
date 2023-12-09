@@ -108,4 +108,8 @@ end
 
 bind -M insert \ch 'cd $(pwd | fd -Htd . |fzf -e)'
 
+if test -n "$NVIM_LISTEN_ADDRESS"
+  set -x MANPAGER "/usr/local/bin/nvr -c 'Man!' -o -"
+end
+
 zoxide init fish | source
