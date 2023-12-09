@@ -86,3 +86,4 @@ SHELL=/bin/fish
 
 #Execute DWM
 exec dwm
+
