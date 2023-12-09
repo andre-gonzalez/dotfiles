@@ -27,7 +27,7 @@ require("lazy").setup({
   "nvim-lua/popup.nvim",
   "nvim-lua/plenary.nvim",
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim',
       dependencies = { 'nvim-lua/plenary.nvim' }
   },
   "nvim-telescope/telescope-fzy-native.nvim",
