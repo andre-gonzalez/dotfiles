@@ -3,83 +3,82 @@
 ------------------------------------------------------------------------------
 
 -- Clear search highlights with a keybind
-vim.keymap.set('n', '<C-l>', ':nohlsearch<CR>')
+vim.keymap.set("n", "<C-l>", ":nohlsearch<CR>")
 
 -- Remaped the leader key
---vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
--- DBUI
-vim.keymap.set('n', '<leader>bf', ':DBUIFindBuffer<CR>')
+vim.g.mapleader = " "
+-- vim.g.maplocalleader = ' '
 
 -- use s as an alias to replace all
-vim.keymap.set('v', '<leader>s', ':s//g<Left><Left>')
-vim.keymap.set('n', '<leader>S', ':%s//g<Left><Left>')
+vim.keymap.set("v", "<leader>s", ":s//g<Left><Left>")
+vim.keymap.set("n", "<leader>S", ":%s//g<Left><Left>")
 
 -- Remap to substitute a word in the file
-vim.keymap.set('n', '<leader>ws', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>')
+vim.keymap.set("n", "<leader>ws", ":%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>")
 
 -- Enable spell checking
-vim.keymap.set('n', '<leader>roe', ':setlocal spell! spelllang=en_us<CR>')
-vim.keymap.set('n', '<leader>rop', ':setlocal spell! spelllang=pt_br<CR>')
+vim.keymap.set("n", "<leader>roe", ":setlocal spell! spelllang=en_us<CR>")
+vim.keymap.set("n", "<leader>rop", ":setlocal spell! spelllang=pt_br<CR>")
 
 -- Fill with the date and hour
-vim.keymap.set('n', '<F3>', 'i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>')
-vim.keymap.set('i', '<F3>', '<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>')
+vim.keymap.set("n", "<F3>", 'i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>')
+vim.keymap.set("i", "<F3>", '<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>')
 
 -- insert lines to debug in python
 -- vim.keymap.set('n', '<leader>bb', ':lua require("dap").toggle_breakpoint()<CR>')
-vim.keymap.set('n', '<leader>bb', 'ifrom ipdb import set_trace as st<CR>st()<Esc>')
+vim.keymap.set("n", "<leader>bb", "ifrom ipdb import set_trace as st<CR>st()<Esc>")
 
 --  Remap to paste delete and paste without change the register
-vim.keymap.set('x', '<leader>p', '"_dP')
+vim.keymap.set("x", "<leader>p", '"_dP')
 
 -- Delete without saving to register
-vim.keymap.set('x', '<leader>d', '"_d')
-vim.keymap.set('n', '<leader>d', '"_d')
-vim.keymap.set('v', '<leader>d', '"_d')
+vim.keymap.set("x", "<leader>d", '"_d')
+vim.keymap.set("n", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
 
 -- Insert line using o but keeping you in normal mode
-vim.keymap.set('n', '<leader>o', 'o<Esc>')
-vim.keymap.set('n', '<leader>O', 'O<Esc>')
+vim.keymap.set("n", "<leader>o", "o<Esc>")
+vim.keymap.set("n", "<leader>O", "O<Esc>")
 
 -- Move with the screen centralized
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- Find last search match with screen centralized
-vim.keymap.set('n', 'n', 'nzz')
+vim.keymap.set("n", "n", "nzz")
 
 --Insert image in markdown note
-vim.keymap.set('n', '<leader>i', ":r!cd _attachment && ls '.png'<left><left><left><left><left>")
+vim.keymap.set("n", "<leader>i", ":r!cd _attachment && ls '.png'<left><left><left><left><left>")
 
 -- Set filetype
-vim.keymap.set('n', '<leader>qs', ':set filetype=sql<CR>')
-vim.keymap.set('n', '<leader>qp', ':set filetype=python<CR>')
-vim.keymap.set('n', '<leader>qm', ':set filetype=markdown<CR>')
+vim.keymap.set("n", "<leader>qs", ":set filetype=sql<CR>")
+vim.keymap.set("n", "<leader>qp", ":set filetype=python<CR>")
+vim.keymap.set("n", "<leader>qm", ":set filetype=markdown<CR>")
 
 -- format sql queries
-vim.keymap.set('n', '<leader>qf', ':%!sqlformat -r --comma_first True -k "upper" - <CR>')
+vim.keymap.set("n", "<leader>qf", ':%!sqlformat -r --comma_first True -k "upper" - <CR>')
 
 -- Move what is highlighted
-vim.keymap.set('v', 'J', ":m \\'>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ":m \\'<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m \'>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m \'<-2<CR>gv=gv")
 
 -- When using J keep cursor still
-vim.keymap.set('n', 'J', 'mzJ`z')
+vim.keymap.set("n", "J", "mzJ`z")
 
 -- When searching keep the cursos in the middle of the screen
-vim.keymap.set('n', 'n', 'nzzzv')
-vim.keymap.set('n', 'N', 'Nzzzv')
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 -- Getting rid of Ex mode
-vim.keymap.set('n', 'Q', '<nop>')
-
+vim.keymap.set("n", "Q", "<nop>")
 
 -- Make a file executable
-vim.keymap.set('n', '<leader>x', ':!chmod +x %<CR>')
+vim.keymap.set("n", "<leader>x", ":!chmod +x %<CR>")
 
 -- Keybinds to temporary see a split in fullscreen
-vim.keymap.set('n', '<leader>ts', ':tab split<CR>')
-vim.keymap.set('n', '<leader>tc', ':tabc<CR>')
-vim.keymap.set('n', '<leader>tn', ':tabnew<CR>')
+vim.keymap.set("n", "<leader>ts", ":tab split<CR>")
+vim.keymap.set("n", "<leader>tc", ":tabc<CR>")
+vim.keymap.set("n", "<leader>tn", ":enew<CR>")
+
+-- Hide tab line
+vim.opt.showtabline = 0
