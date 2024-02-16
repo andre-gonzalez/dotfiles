@@ -26,7 +26,7 @@ windows:
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     panes:
       - cd ~/eureciclo/airflow/ && nvim -c "Telescope file_browser"
-      - cd ~/eureciclo/airflow/main-airflow/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
+      - cd ~/eureciclo/airflow/master-airflow/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
   - window_name: pessoal
     panes:
       - clear && ls ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
