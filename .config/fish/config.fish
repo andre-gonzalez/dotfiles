@@ -33,12 +33,6 @@ set -gx ANSIBLE_HOME "$XDG_CONFIG_HOME/ansible"
 set -gx PYTHON_BIN ".env/bin"
 set -gx MANPAGER "nvim +Man!"
 
-### MANPAGER
-### "bat" as manpager
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-### "nvim" as manpager
-# set -x MANPAGER "nvim -c 'set ft=man' -"
-
 # Functions needed for !! and !$
 function __history_previous_command
   switch (commandline -t)
