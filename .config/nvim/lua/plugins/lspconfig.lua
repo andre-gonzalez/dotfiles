@@ -23,6 +23,7 @@ return {
 					"terraformls",
 					"jsonls",
 					"grammarly",
+					"marksman",
 				},
 			})
 		end,
@@ -60,6 +61,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.terraformls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.marksman.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.grammarly.setup({
