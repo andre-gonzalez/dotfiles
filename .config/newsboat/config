@@ -1,0 +1,45 @@
+########################
+# Miscellaneous
+########################
+auto-reload yes
+reload-threads 100
+
+########################
+# Keys
+########################
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+bind-key d pagedown
+bind-key u pageup
+bind-key G end
+bind-key g home
+bind-key U show-urls
+# SHift + n to toggle a article as read
+# L -> to toggle-show-read-feeds
+# Shift + c -> Mark all feeds-read
+# Shift + a -> mark feed read
+
+########################
+# Media
+########################
+browser "qutebrowser --target tab"
+macro , open-in-browser
+macro i set browser "feh %u"; open-in-browser ; set browser qutebrowser
+macro v set browser "setsid -f mpv --really-quiet --no-terminal"; open-in-browser ; set browser qutebrowser
+macro b set browser "qutebrowser --target tab"; open-in-browser ; set browser qutebrowser
+confirm-mark-all-feeds-read yes
+datetime-format "%Y-%m-%d"
+display-article-progress yes
+
+########################
+# Colorscheme
+########################
+include /usr/share/doc/newsboat/contrib/colorschemes/gruvbox
+
+########################
+# Categories
+########################
+highlight feedlist "---.*---" white default bold
+highlight feedlist ".*0/0.." default default invis
