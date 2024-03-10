@@ -21,3 +21,6 @@ windows:
     panes:
       - nvim ~/gdrive-pessoal/pessoal/programação/ansible/main-ansible/
       - clear && ls
+  - window_name: newsboat
+    panes:
+      - newsboat
