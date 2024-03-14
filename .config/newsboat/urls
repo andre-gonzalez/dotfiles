@@ -1,4 +1,6 @@
 # Unread
+---Starred--- starred
+"query:Starred:flags # \"s\"" starred
 ---Unread--- unread
 "query:Unread All:unread = \"yes\"" unread
 
