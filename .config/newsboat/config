@@ -3,6 +3,9 @@
 ########################
 auto-reload yes
 reload-threads 100
+confirm-mark-all-feeds-read yes
+datetime-format "%Y-%m-%d"
+display-article-progress yes
 
 ########################
 # Keys
@@ -29,9 +32,6 @@ macro , open-in-browser
 macro i set browser "feh %u"; open-in-browser ; set browser qutebrowser
 macro v set browser "setsid -f mpv --really-quiet --no-terminal"; open-in-browser ; set browser qutebrowser
 macro b set browser "qutebrowser --target tab"; open-in-browser ; set browser qutebrowser
-confirm-mark-all-feeds-read yes
-datetime-format "%Y-%m-%d"
-display-article-progress yes
 
 ########################
 # Colorscheme
