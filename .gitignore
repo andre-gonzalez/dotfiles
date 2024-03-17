@@ -1,7 +1,9 @@
 # Directories
 eureciclo/
 gdrive-pessoal/
+ProgramasRFB/
 projects/
+videos
 
 # File extensions
 *.csv
@@ -21,12 +23,15 @@ projects/
 .bashrc.backup
 .boto
 .databrickscfg
+.databricks-connect
 .fehbg
 .gtkrc-2.0
 .icons
 .ipython
 .lesshst
+.mbsyncrc
 .msmtprc
+.notmuch-config
 .npmrc
 .pdbhistory
 .pulse-cookie
@@ -38,7 +43,9 @@ projects/
 .screenrc
 .steampath
 .steampid
+.urlview
 .vault_key
+.vault_password
 .viminfo
 .wget-hsts
 .Xauthority
@@ -46,10 +53,9 @@ projects/
 .zcompdump
 .zsh_history
 .zshrc
-.databricks-connect
-.vault_password
 
 # Dot directories
+.abook/
 .ansible/
 .cache/
 .cargo/
@@ -61,10 +67,30 @@ projects/
 .elinks/
 .fonts/
 .gnupg/
+.grip/
 .jak/
 .java/
 .jupyter/
 .kube/
+.mozilla/
+.npm/
+.password-store/
+.pki/
+.scripts/
+.sdb/
+.ssh/
+.steam/
+.stremio-server/
+.swt/
+.terraform.d/
+.var/
+.vim/after/
+.vim/undo/
+.vscode/
+.vscode-oss/
+.wdm/
+.zoom/
+
 # .local
 .local/
 .local/bin/
@@ -107,23 +133,6 @@ projects/
 .local/share/vscode-sqltools/
 .local/share/vulkan/
 .local/share/xorg/
-.mozilla/
-.npm/
-.password-store/
-.pki/
-.scripts/
-.ssh/
-.steam/
-.stremio-server/
-.swt/
-.terraform.d/
-.var/
-.vim/after/
-.vim/undo/
-.vscode/
-.vscode-oss/
-.wdm/
-.zoom/
 
 # .config directory files
 .config/anki
@@ -182,6 +191,7 @@ projects/
 .config/menus/
 .config/mimeapps.list
 .config/msmtp/
+.config/mutt/
 .config/my-dwm
 .config/neofetch
 .config/nitrogen/
@@ -204,12 +214,18 @@ projects/
 .config/qBittorrent/
 .config/qt5ct/
 .config/QtProject.conf
+.config/qutebrowser/bookmarks/
+.config/qutebrowser/cache/
+.config/qutebrowser/config/
+.config/qutebrowser/data/
 .config/qutebrowser/qsettings/
+.config/qutebrowser/qute-bitwarden
 .config/remmina/
 .config/rncbc.org/
 .config/RogueLegacy/
 .config/Slack/
 .config/slock/
+.config/spicy/
 .config/spotify/
 .config/spotifyd/
 .config/spotifyd.conf
@@ -238,3 +254,4 @@ projects/
 .config/yay-git
 .config/zoomus.conf
 .config/Zulip/
+.config/syncthing/
