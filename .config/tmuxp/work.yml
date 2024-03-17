@@ -1,15 +1,6 @@
 session_name: work
 windows:
   - window_name: work
-    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    shell_command_before:
-      - cd ~/eureciclo/ # run as a first command in all panes
-    panes:
-      - shell_command:
-        - nvim -c "Telescope file_browser"  # pane no. 1
-        focus: true
-      - shell_command:
-        - clear && ls ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
   - window_name: notas
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
@@ -28,7 +19,9 @@ windows:
     panes:
       - cd ~/eureciclo/airflow/ && nvim -c "Telescope file_browser"
       - cd ~/eureciclo/airflow/master-airflow/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
-  - window_name: pessoal
+  - window_name: newsboat
     panes:
-      - clear && ls ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
       - newsboat
+  - window_name: neomutt
+    panes:
+      - mw -y andre.gonzalez@nhecotech.com && neomutt
