@@ -37,6 +37,7 @@ return {
 						"-g",
 						"!.git",
 					},
+					file_ignore_patterns = {".env/.*"}
 				})
 			end)
 
