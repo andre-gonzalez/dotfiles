@@ -6,6 +6,8 @@ reload-threads 100
 confirm-mark-all-feeds-read yes
 datetime-format "%Y-%m-%d"
 display-article-progress yes
+# Make text more readble by wrapping text
+text-width 72
 
 ########################
 # Keys
