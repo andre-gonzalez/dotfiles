@@ -25,3 +25,7 @@ windows:
   - window_name: neomutt
     panes:
       - mw -y andre.gonzalez@nhecotech.com && neomutt
+  - window_name: iac
+    panes:
+      - cd ~/eureciclo/data-platform-iac/ && nvim -c "Telescope file_browser"
+      - cd ~/eureciclo/data-platform-iac/main-data-platform-iac/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
