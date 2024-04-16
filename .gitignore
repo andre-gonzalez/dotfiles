@@ -36,7 +36,7 @@ videos
 .pdbhistory
 .pulse-cookie
 .python_history
-.python_history-58539.tmp
+.python_history-*.tmp
 .rnd
 .scala_history
 .sc_history
