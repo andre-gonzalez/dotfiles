@@ -32,6 +32,9 @@ return {
 			require("dap-python").setup("~/.config/python-env/bin/python")
 		end,
 	},
+	{
+		"nvim-neotest/nvim-nio",
+	},
 
 	{
 		"rcarriga/nvim-dap-ui",
