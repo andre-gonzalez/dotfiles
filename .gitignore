@@ -18,6 +18,8 @@ videos
 *.xml
 *.xlsx
 *.zip
+*.xcf
+*.psd
 
 # Dotfiles in home directory
 .bash_history
