@@ -48,11 +48,8 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 					{ name = "buffer" },
-					{ name = "calc" },
 					{ name = "path" },
-					{ name = "vim_dadbod_completion" },
 					{ name = "treesitter" },
-					{ name = "spell" },
 					{ name = "tags" },
 				}),
 			})
@@ -64,6 +61,30 @@ return {
 				}, {
 					{ name = "buffer" },
 				}),
+			})
+
+			-- Set configuration for sql filetype.
+			cmp.setup.filetype("sql", {
+				sources = {
+					{ name = "nvim_lsp" },
+					{ name = "luasnip" }, -- For luasnip users.
+					{ name = "vim-dadbod-completion" },
+					{ name = "buffer" },
+				},
+			})
+			--
+			-- Set configuration for specific filetype.
+			cmp.setup.filetype("markdown", {
+				sources = {
+					{ name = "calc" },
+					{ name = "nvim_lsp" },
+					{ name = "luasnip" }, -- For luasnip users.
+					{ name = "buffer" },
+					{ name = "path" },
+					{ name = "treesitter" },
+					{ name = "spell" },
+					{ name = "tags" },
+				},
 			})
 
 			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
