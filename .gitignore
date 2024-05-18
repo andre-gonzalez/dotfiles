@@ -17,6 +17,7 @@ videos
 *.txt
 *.xml
 *.xlsx
+*.zip
 
 # Dotfiles in home directory
 .bash_history
