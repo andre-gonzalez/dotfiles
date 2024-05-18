@@ -14,7 +14,7 @@ https://sive.rs/en.atom blog
 ---Videos--- video
 "query:Unread Video:unread = \"yes\" and tags # \"video\"" video
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmRI-X6XoeH2dQE4BShRU9Q video # Advancing Analytics
-https://www.youtube.com/feeds/videos.xml?channel_id=UC46xhU1EH7aywEgvA9syS3w video "~Anthony Writes Code" # Anthony Writes Code
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC46xhU1EH7aywEgvA9syS3w video "~Anthony Writes Code" # Anthony Writes Code
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrcYWzHrg55foUj7nVB6b2w video # Backdoor
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjiOL5ElZcOOEUhtqrpDxPA video # Barmine Tech
 https://www.youtube.com/feeds/videos.xml?channel_id=UCZgt6AzoyjslHTC9dz0UoTw video "~Byte Byte Go" # ByteByteGo
