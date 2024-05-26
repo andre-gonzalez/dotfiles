@@ -64,7 +64,7 @@ redshift -l 19.44:-99.13 -t 6500:3000 -b 1:0.4 &
 # Multiple Monitor configuration
 if [ $(xrandr --query | grep -c HDMI) = 1 ]; then
 		xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 2560x1080 --pos 1920x0 --rotate normal --rate 75
-else
+	elif [ $(xrandr --query | grep -c eDP-1) = 1]; then
 		xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off &
 fi
 
