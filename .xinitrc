@@ -68,6 +68,8 @@ if [ $(xrandr --query | grep -c HDMI) = 1 ]; then
 		xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off &
 fi
 
+lxsession &
+
 #Wallpaper
 /bin/dash "$HOME"/.scripts/random-wallpaper.sh
 
