@@ -16,7 +16,6 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push -u origin"
-alias sa="/bin/sh fill-password-in-script.sh $(cat $HOME/.scripts/.env/ssh | grep -Po '(?<=ssh-password=).*') \"Enter passphrase for key '/home/frank/.ssh/personal_id_ed25519_2023-05'\""
 alias gam="git commit -am"
 alias gd="git diff"
 # pacman aliases
