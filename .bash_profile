@@ -24,6 +24,8 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 export MANPAGER="nvim +Man!"
 export ANSIBLE_HOME="$XDG_DATA_HOME"/ansible
+export MBSYNCRC="$XDG_CONFIG_HOME"/isync/mbsyncrc
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 

@@ -32,6 +32,8 @@ set -gx PYTHONSTARTUP "$XDG_CONFIG_HOME/python/pythonrc"
 set -gx ANSIBLE_HOME "$XDG_CONFIG_HOME/ansible"
 set -gx PYTHON_BIN ".env/bin"
 set -gx MANPAGER "nvim +Man!"
+set -gx MBSYNCRC "$XDG_CONFIG_HOME"/isync/mbsyncrc
+set -gx PASSWORD_STORE_DIR "$XDG_DATA_HOME"/pass
 
 # Functions needed for !! and !$
 function __history_previous_command
