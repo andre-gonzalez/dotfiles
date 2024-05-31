@@ -193,6 +193,7 @@ videos
 .config/libvirt/
 .config/mc/
 .config/menus/
+.config/notmuch/
 .config/mimeapps.list
 .config/msmtp/
 .config/mutt/
