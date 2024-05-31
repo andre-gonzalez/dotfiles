@@ -25,21 +25,6 @@ export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
-#Change directories using fuzzy finder
-gi() {
-		file=$(pwd | fd -H -td . | fzf -e) && cd "$file"
-}
-g() {
-		file=$(pwd | fd -td . | fzf -e) && cd "$file"
-}
-gh() {
-    file=$(fd  -td . ~ | fzf -e) && cd "$file"
-}
-gr() {
-    file=$(fd -td . / | fzf -e) && cd "$file"
-}
-
-
 #auto cd. Moving around without the need to type cd
 shopt -s autocd
 shopt -s cdspell #aurocorrects cd misspellings
