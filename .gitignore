@@ -224,6 +224,8 @@ videos
 .config/qutebrowser/data/
 .config/qutebrowser/qsettings/
 .config/qutebrowser/qute-bitwarden
+.config/qutebrowser/autoconfig.yml
+.config/qutebrowser/quickmarks
 .config/remmina/
 .config/rncbc.org/
 .config/RogueLegacy/
