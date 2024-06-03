@@ -28,5 +28,3 @@ export MBSYNCRC="$XDG_CONFIG_HOME"/isync/mbsyncrc
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-
-[ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 ] && exec startx
