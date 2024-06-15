@@ -19,6 +19,8 @@ return {
 			vim.keymap.set({ "i", "s" }, "<C-J>", function()
 				ls.jump(-1)
 			end, { silent = true })
+			-- Keymap to disable completion
+			vim.keymap.set("n", "<leader>'", ":lua require('cmp').setup.buffer { enabled = false }")
 		end,
 	},
 
@@ -94,7 +96,6 @@ return {
 					{ name = "buffer" },
 				},
 			})
-
 		end,
 	},
 }
