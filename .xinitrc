@@ -66,7 +66,12 @@ lxsession &
 
 # Multiple Monitor configuration
 if [ $(xrandr --query | grep -c HDMI) = 1 ]; then
-		xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 2560x1080 --pos 1920x0 --rotate normal --rate 75
+		if [ $(xrandr --query | grep  HDMI | grep -c 2560x1080) = 1 ]; then
+			# Only use ultra-wide monitor
+			xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 2560x1080 --pos 1920x0 --rotate normal
+			# Use ultra-wide monitor and laptop screen
+			# xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 2560x1080 --pos 1920x0 --rotate normal --rate 75
+		fi
 	elif [ $(xrandr --query | grep -c eDP-1) = 1]; then
 		xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off
 fi
