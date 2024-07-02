@@ -28,7 +28,6 @@ fi
 xcompmgr -c &
 
 # set keyboard layout to dvorak, change esc with caps lock and change numpad , to . (dot)
-
 setxkbmap -layout us -variant dvorak-intl && setxkbmap -option caps:swapescape
 
 #Keybinds for audio and backlight
@@ -76,14 +75,8 @@ if [ $(xrandr --query | grep -c HDMI) = 1 ]; then
 		xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off
 fi
 
-
 #Wallpaper
 /bin/dash "$HOME"/.scripts/random-wallpaper.sh
-
-# Turn off bluetooth
-# bluetoothctl power off
-bluetoothctl power on
-bluetoothctl connect CC:98:8B:C1:5C:78; kill -46 $(pidof dwmblocks)
 
 # Loop
 while true; do
