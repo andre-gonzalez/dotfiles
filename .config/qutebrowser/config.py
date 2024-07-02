@@ -389,7 +389,7 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 # set `colors.webpage.darkmode.policy.images` to `never`.  - "With
 # selective image inversion": qutebrowser default settings.
 # Type: Bool
-c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.enabled = True
 
 # Bindings for normal mode
 config.bind('xt', 'config-cycle tabs.show always switching')
