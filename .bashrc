@@ -19,6 +19,7 @@ PS1="\W\033[00;32m\]\$(git_branch)\[\033[00m\] ❯ "
 #ALCI
 ########
 export EDITOR='/usr/bin/nvim'
+export GTK_THEME='Arc-Dark'
 export VISUAL='/usr/bin/nvim'
 export PATH='$HOME/.scripts:$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH'
 export FZF_DEFAULT_COMMAND="fd . $HOME"
