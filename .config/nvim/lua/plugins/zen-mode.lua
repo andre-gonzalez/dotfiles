@@ -21,6 +21,9 @@ return {
 						[[tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z]])
 				end
 			}
+			plugins = {
+				gitsigns = { enabled = false }
+			}
 
 			require("zen-mode").toggle()
 		end)
