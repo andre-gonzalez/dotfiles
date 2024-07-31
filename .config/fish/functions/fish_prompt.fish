@@ -86,7 +86,7 @@ function fish_prompt
         end
     end
 
-    echo -n -s $cwd $repo_info $normal ' ' $arrow ' '
+    echo -n -s $cwd $repo_info $normal \n ' ' $arrow ' '
 
     set -l cmd_status $status
     if test $cmd_status -ne 0
