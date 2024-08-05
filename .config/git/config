@@ -2,7 +2,7 @@
 	email = lopescg@gmail.com
 	name = André Gonzalez
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential
 [core]
 	editor = nvim
@@ -19,5 +19,5 @@
   log = delta
   show = delta
   diff = delta
-; [delta]
-    ; side-by-side = true
+[delta]
+    side-by-side = true
