@@ -4,6 +4,7 @@ alias lf="/usr/local/bin/lfub"
 alias l="ls --color -h --group-directories-first"
 alias tar="tar -xf"
 alias p="python3"
+alias f='fzf --preview="bat --color=always {}"'
 # making some command interactive
 alias mv="mv -i"
 alias rm="trash -i"
