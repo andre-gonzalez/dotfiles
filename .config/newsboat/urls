@@ -7,8 +7,9 @@
 # Blog
 ---Blogs--- blog
 "query:Unread Blog:unread = \"yes\" and tags # \"blog\"" blog
-https://world.hey.com/dhh/feed.atom blog
 https://sive.rs/en.atom blog
+https://www.mrmoneymustache.com/feed/
+https://world.hey.com/dhh/feed.atom blog
 https://herman.bearblog.dev/feed/
 https://frankandrews.bearblog.dev/feed/
 
