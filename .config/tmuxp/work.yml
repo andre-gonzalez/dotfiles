@@ -27,11 +27,11 @@ windows:
   # - window_name: neomutt
   #   panes:
   #     -  mailsync && neomutt
-  - window_name: package
+  - window_name: power_bi
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     panes:
-      - cd ~/eureciclo/repos/package_classification_api/ && nvim -c "Telescope file_browser"
-      - cd ~/eureciclo/repos/package_classification_api/main_package_classification_api/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
+      - cd ~/eureciclo/repos/power-bi-azure-devops/ && nvim -c "Telescope file_browser"
+      - cd ~/eureciclo/repos/power-bi-azure-devops/main-power-bi-azure-devops/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
   - window_name: iac
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     panes:
