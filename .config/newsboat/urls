@@ -20,7 +20,7 @@ https://frankandrews.bearblog.dev/feed/
 ## curl -s https://www.youtube.com/@[CHANNEL NAME HERE]/videos | grep -Eo 'https://www\.youtube\.com/feeds/videos\.xml\?channel_id=.{24}' | head -n 1
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmRI-X6XoeH2dQE4BShRU9Q video # Advancing Analytics
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC46xhU1EH7aywEgvA9syS3w video "~Anthony Writes Code" # Anthony Writes Code
-https://www.youtube.com/feeds/videos.xml?channel_id=UCrcYWzHrg55foUj7nVB6b2w video # Backdoor
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCrcYWzHrg55foUj7nVB6b2w video # Backdoor
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCjiOL5ElZcOOEUhtqrpDxPA video # Barmine Tech
 https://www.youtube.com/feeds/videos.xml?channel_id=UCZgt6AzoyjslHTC9dz0UoTw video "~Byte Byte Go" # ByteByteGo
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtinbF-Q-fVthA0qrFQTgXQ video "~Casey Neistat" # Casey Neistat
@@ -45,7 +45,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCR-DXc1voovS8nhAvccRZhg vid
 https://www.youtube.com/feeds/videos.xml?channel_id=UCYG34XaWAy1Sei1c53MO1AQ video "~Lalo Villar" # Lalo Villar
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCHkYOD-3fZbuGhwsADBd9ZQ video # Lawrence Systems
 https://www.youtube.com/feeds/videos.xml?channel_id=UCxQKHvKbmSzGMvUrVtJYnUA video # Learn Linux TV
-https://www.youtube.com/feeds/videos.xml?channel_id=UCECJDeK0MNapZbpaOzxrUPA video # Luisito Comunica
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCECJDeK0MNapZbpaOzxrUPA video # Luisito Comunica
 https://www.youtube.com/feeds/videos.xml?channel_id=UCb31gOY6OD8ES0zP8M0GhAw video # Max Fosh
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyyUN3N2D0nuVP5SWWi5A video # Mexican Spanish 101
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCy--PYvwBwAeuYaR8JLmrfg video # Microsoft Power BI
