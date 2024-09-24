@@ -398,3 +398,6 @@ config.bind('xt', 'config-cycle tabs.show always switching')
 config.bind('M', 'hint links spawn mpv {hint-url}')
 config.bind('m', 'spawn mpv {url}')
 config.bind('Z', 'hint links spawn st -e yt-dlp {hint-url}')
+
+config.set('scrolling.bar', 'when-searching')
+config.set('scrolling.smooth', True)
