@@ -391,6 +391,7 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 # Type: Bool
 c.colors.webpage.darkmode.enabled = True
 config.set('colors.webpage.darkmode.enabled', False, 'http://192.168.1.254/')
+config.set('colors.webpage.darkmode.enabled', False, 'https://apprendafixa.com.br/')
 
 # Bindings for normal mode
 config.bind('xt', 'config-cycle tabs.show always switching')
