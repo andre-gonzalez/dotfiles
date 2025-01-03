@@ -1,9 +1,12 @@
 # Directories
+.dart-tool/
 eureciclo/
 gdrive-pessoal/
 ProgramasRFB/
 projects/
+.thunderbird/
 videos
+.zen/
 
 # File extensions
 *.csv
@@ -11,24 +14,27 @@ videos
 *.md
 *.pdf
 *.png
+*.psd
 *.py
 *.rs
 *.sql
 *.txt
-*.xml
-*.xlsx
-*.zip
 *.xcf
-*.psd
+*.xlsx
+*.xml
+*.zip
 
 # Dotfiles in home directory
 .bash_history
 .bash_logout
 .bashrc.backup
+.bean-shell-history
 .boto
 .databrickscfg
 .databricks-connect
+.duckdb_history
 .fehbg
+.flutter
 .gtkrc-2.0
 .icons
 .ipython
@@ -57,6 +63,7 @@ videos
 .zcompdump
 .zsh_history
 .zshrc
+.nvidia-settings-rc
 
 # Dot directories
 .abook/
@@ -140,6 +147,7 @@ videos
 .local/share/xorg/
 
 # .config directory files
+.config/act/
 .config/anki
 .config/ansible/
 .config/Authy Desktop/
@@ -170,10 +178,12 @@ videos
 .config/fish/fishd.tmp.*
 .config/fontforge/
 .config/freerdp/
+.config/fvm/
 .config/gcloud/
 .config/gedit/
 .config/gh/
 .config/GIMP/
+.config/go/
 .config/google-chrome/
 .config/google-chrome-unstable/
 .config/google-cloud-sdk/
@@ -187,6 +197,7 @@ videos
 .config/ipython
 .config/JetBrains/
 .config/kconf_updaterc
+.config/kdeconnect/
 .config/kdeglobals
 .config/kmagrc
 .config/ktorrentrc
@@ -194,13 +205,15 @@ videos
 .config/libvirt/
 .config/mc/
 .config/menus/
-.config/notmuch/
 .config/mimeapps.list
+.config/mps-youtube/
 .config/msmtp/
 .config/mutt/
 .config/my-dwm
 .config/neofetch
 .config/nitrogen/
+.config/nixpkgs/
+.config/notmuch/
 .config/nuclear/
 .config/nvim/lazy-lock.json
 .config/nvim/plugged/
@@ -209,25 +222,28 @@ videos
 .config/nvim/spell/pt.utf-8.spl
 .config/nvim/undo
 .config/obsidian/
+.config/obs-studio/
 .config/onlyoffice/
 .config/packer/
 .config/pavucontrol.ini
 .config/Portmaster/
 .config/Postman/
 .config/pritunl/
+.config/Proton/
 .config/pulse/
 .config/python-env/
 .config/qBittorrent/
 .config/qt5ct/
 .config/QtProject.conf
+.config/qutebrowser/autoconfig.yml
 .config/qutebrowser/bookmarks/
 .config/qutebrowser/cache/
 .config/qutebrowser/config/
 .config/qutebrowser/data/
 .config/qutebrowser/qsettings/
-.config/qutebrowser/qute-bitwarden
-.config/qutebrowser/autoconfig.yml
 .config/qutebrowser/quickmarks
+.config/qutebrowser/qute-bitwarden
+.config/rclone/
 .config/remmina/
 .config/rncbc.org/
 .config/RogueLegacy/
@@ -241,6 +257,7 @@ videos
 .config/sql-language-server/
 .config/st/
 .config/stw/
+.config/syncthing/
 .config/systemd/
 .config/thorium/
 .config/Thunar/
@@ -252,6 +269,7 @@ videos
 .config/virt-manager/
 .config/VirtualBox/
 .config/VirtualBox VMs/
+.config/vlc/
 .config/vscode-sqltools/
 .config/VSCodium/
 .config/wall-d/
@@ -262,4 +280,3 @@ videos
 .config/yay-git
 .config/zoomus.conf
 .config/Zulip/
-.config/syncthing/
