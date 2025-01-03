@@ -8,10 +8,11 @@
 ---Blogs--- blog
 "query:Unread Blog:unread = \"yes\" and tags # \"blog\"" blog
 https://sive.rs/en.atom blog
-https://www.mrmoneymustache.com/feed/
+https://www.mrmoneymustache.com/feed/ blog
 https://world.hey.com/dhh/feed.atom blog
-https://herman.bearblog.dev/feed/
-https://frankandrews.bearblog.dev/feed/
+https://herman.bearblog.dev/feed/ blog
+https://dataswamp.org/~solene/ blog
+https://frankandrews.bearblog.dev/feed/ blog
 
 # Video
 ---Videos--- video
@@ -35,8 +36,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCX_WM2O-X96URC5n66G-hvw vid
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCZcvCpFcLxOKGbMocVgLjEA video "~Kurzgesagt" # Kurzgesagt
 https://www.youtube.com/feeds/videos.xml?channel_id=UCU5JicSrEM5A63jkJ2QvGYw video # Filipe Deschamps
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA video # Fireship
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsd6hP-zzIkCpw8XGw7Osyw video # Geerling Engineering
-https://www.youtube.com/feeds/videos.xml?channel_id=UCFp1vaKzpfvoGai0vE5VJ0w video # Guy in a Cube
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCsd6hP-zzIkCpw8XGw7Osyw video # Geerling Engineering
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCFp1vaKzpfvoGai0vE5VJ0w video # Guy in a Cube
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCkZjTZNvuxq1CYMS3cwZa1Q video # Huberman Lab Clips
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC_ML5xP23TOWKUcc-oAE_Eg video # Hussein Nasser
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCKWaEZ-_VweaEx1j62do_vQ video # IBM Techonolgy
@@ -73,3 +74,5 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCZzFRKsgVMhGTxffpzgTJlQ vid
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmw-QGOHbHA5cDAvwwqUTKQ video # Zaney
 https://www.youtube.com/feeds/videos.xml?channel_id=UCnRVL1-HJnXWB_Xi2dAoTcg # Bryan Johnson
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrwOzu7ienZYuzAdeeRL4rQ # Andrew Giraffe
+https://www.youtube.com/feeds/videos.xml?channel_id=UCT_yAgNF6xfngUONqx2qYCw # Daniel Medeiros - Pra lá que eu voo
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw # Vimjoyer (Nix os content)
