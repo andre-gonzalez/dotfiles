@@ -400,4 +400,7 @@ config.bind('m', 'spawn mpv {url}')
 config.bind('Z', 'hint links spawn st -e yt-dlp {hint-url}')
 
 config.set('scrolling.bar', 'when-searching')
-config.set('scrolling.smooth', True)
+config.set('scrolling.smooth', False)
+
+# Set new pages to blank
+config.set('url.default_page', 'about:blank')
