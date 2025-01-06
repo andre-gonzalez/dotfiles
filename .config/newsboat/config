@@ -8,6 +8,9 @@ datetime-format "%Y-%m-%d"
 display-article-progress yes
 # Make text more readble by wrapping text
 text-width 72
+# Ignore youtube shorts
+ignore-article "*" "title =~ \"#shorts\""
+ignore-article "*" "content =~ \"#shorts\""
 
 ########################
 # Keys
@@ -45,3 +48,6 @@ include /usr/share/doc/newsboat/contrib/colorschemes/gruvbox
 ########################
 highlight feedlist "---.*---" white default bold
 highlight feedlist ".*0/0.." default default invis
+
+
+
