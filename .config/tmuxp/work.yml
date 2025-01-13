@@ -9,7 +9,7 @@ windows:
       - cd ~/projects/notas/ # run as a first command in all panes
     panes:
       - shell_command:
-        - nvim ~/projects/notas/todo.md
+        - nvim ~/projects/notas/trabalho/eureciclo/todo.md
       - cd ~/projects/notas/ # run as a first command in all panes
   - window_name: databricks
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
