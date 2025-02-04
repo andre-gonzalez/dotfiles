@@ -11,6 +11,7 @@ set -gx XDG_DATA_HOME "$HOME/.local/share"
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx XDG_STATE_HOME "$HOME/.local/state"
 set -gx XDG_CACHE_HOME "$HOME/.cache"
+set -gx XDG_DOWNLOAD_DIR "$HOME/gdrive-pessoal/downloads"
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/.scripts /usr/local/bin /usr/bin $fish_user_paths
 set -gx EDITOR "/usr/bin/nvim"
