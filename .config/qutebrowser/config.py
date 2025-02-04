@@ -408,3 +408,7 @@ config.set('scrolling.smooth', False)
 
 # Set new pages to blank
 config.set('url.default_page', 'about:blank')
+
+# Set default download location
+config.set('downloads.location.directory', '~/gdrive-pessoal/downloads')
+config.set('downloads.location.prompt', False)
