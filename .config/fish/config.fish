@@ -110,4 +110,15 @@ if test -n "$NVIM_LISTEN_ADDRESS"
   set -x MANPAGER "/usr/local/bin/nvr -c 'Man!' -o -"
 end
 
+function __autols_hook --description "Auto ls" --on-event fish_prompt
+  if test "$NO_AUTO_LS" != ""
+    return
+  end
+
+  if test "$__autols_last" != (pwd)
+    echo; ls
+  end
+  set  -g __autols_last (pwd)
+end
+
 zoxide init fish | source
