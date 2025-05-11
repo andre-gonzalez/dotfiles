@@ -1,48 +1,59 @@
 return {
 	{
 		"mfussenegger/nvim-dap",
-
+		keys = {
+			"<F5>", "<F10>", "<F11>", "<F12>",
+			"<leader>b", "<leader>B", "<leader>lp", "<leader>dr",
+		},
 		config = function()
-			require("dap-python").setup("~/.config/python-env/bin/python")
-			vim.keymap.set("n", "<F5>", ':lua require"dap".continue()<CR>')
-			vim.keymap.set("n", "<F10>", ':lua require"dap".step_over()<CR>')
-			vim.keymap.set("n", "<F11>", ':lua require"dap".step_into()<CR>')
-			vim.keymap.set("n", "<F12>", ':lua require"dap".step_out()<CR>')
-			vim.keymap.set("n", "<leader>b", ':lua require"dap".toggle_breakpoint()<CR>')
-			vim.keymap.set(
-				"n",
-				"<leader>B",
-				':lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>'
-			)
-			vim.keymap.set(
-				"n",
-				"<leader>lp",
-				':lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>'
-			)
-			vim.keymap.set("n", "<leader>dr", ':lua require"dap".repl.open()<CR>')
-			-- vim.keymap.set('n' , '<leader>dn', ':lua require("dap-python").test_method()<CR>')
-			-- vim.keymap.set('n', '<leader>df', ':lua require("dap-python").test_class()<CR>')
-			-- vim.keymap.set('n', '<leader>ds', ':lua require("dap-python").debug_selection()<CR>')
+			local dap = require("dap")
+
+			-- Optionally trigger virtual text when DAP loads
+			pcall(require, "nvim-dap-virtual-text")
+
+			vim.keymap.set("n", "<F5>", dap.continue, { desc = "DAP Continue" })
+			vim.keymap.set("n", "<F10>", dap.step_over, { desc = "DAP Step Over" })
+			vim.keymap.set("n", "<F11>", dap.step_into, { desc = "DAP Step Into" })
+			vim.keymap.set("n", "<F12>", dap.step_out, { desc = "DAP Step Out" })
+			vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, { desc = "Toggle Breakpoint" })
+			vim.keymap.set("n", "<leader>B", function()
+				dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
+			end, { desc = "Set Conditional Breakpoint" })
+			vim.keymap.set("n", "<leader>lp", function()
+				dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+			end, { desc = "Set Log Point" })
+			vim.keymap.set("n", "<leader>dr", dap.repl.open, { desc = "Open DAP REPL" })
+
+			-- Uncomment these if you want to enable them
+			-- local dap_python = require("dap-python")
+			-- vim.keymap.set('n', '<leader>dn', dap_python.test_method, { desc = "DAP Test Method" })
+			-- vim.keymap.set('n', '<leader>df', dap_python.test_class, { desc = "DAP Test Class" })
+			-- vim.keymap.set('n', '<leader>ds', dap_python.debug_selection, { desc = "DAP Debug Selection" })
 		end,
 	},
 
 	{
 		"mfussenegger/nvim-dap-python",
+		ft = "python", -- optionally lazy load only on Python files
 		config = function()
 			require("dap-python").setup("~/.config/python-env/bin/python")
 		end,
 	},
+
 	{
 		"nvim-neotest/nvim-nio",
+		lazy = true,
 	},
 
 	{
 		"rcarriga/nvim-dap-ui",
+		lazy = true,                          -- tell Lazy to defer loading
+		dependencies = { "mfussenegger/nvim-dap" }, -- ensure DAP is loaded first
 		config = function()
-			require("dapui").setup()
-
-			-- function to automatically start dap-ui once the debugger is started
 			local dap, dapui = require("dap"), require("dapui")
+
+			dapui.setup()
+
 			dap.listeners.after.event_initialized["dapui_config"] = function()
 				dapui.open()
 			end
@@ -53,12 +64,18 @@ return {
 				dapui.close()
 			end
 		end,
+
+		-- Load only when dap is loaded (module-based lazy loading)
+		module = "dapui",
 	},
 
 	{
 		"theHamsta/nvim-dap-virtual-text",
+		lazy = true,
+		module = "nvim-dap-virtual-text", -- module-based trigger
 		config = function()
 			require("nvim-dap-virtual-text").setup()
 		end,
+		dependencies = { "mfussenegger/nvim-dap" },
 	},
 }

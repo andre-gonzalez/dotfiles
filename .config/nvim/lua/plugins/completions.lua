@@ -2,10 +2,12 @@ return {
 
 	{
 		"hrsh7th/cmp-nvim-lsp",
+		lazy = true,
 	},
 
 	{
 		"L3MON4D3/LuaSnip",
+		event = "InsertEnter",
 
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
@@ -13,6 +15,8 @@ return {
 		},
 		config = function()
 			local ls = require("luasnip")
+			require("luasnip.loaders.from_vscode").lazy_load()
+
 			vim.keymap.set({ "i", "s" }, "<C-K>", function()
 				ls.jump(1)
 			end, { silent = true })
@@ -26,10 +30,17 @@ return {
 
 	{
 		"hrsh7th/nvim-cmp",
+		event = {"InsertEnter", "CmdlineEnter"},
+		dependencies = {
+			"MattiasMTS/cmp-dbee",
+			ft = "sql",
+			dependencies = {
+				{ "kndndrj/nvim-dbee" }
+			}
+		},
 
 		config = function()
 			local cmp = require("cmp")
-			require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
 				snippet = {
@@ -53,6 +64,7 @@ return {
 					{ name = "path" },
 					{ name = "treesitter" },
 					{ name = "tags" },
+					{ name = "cmp-dbee" },
 				}),
 			})
 
