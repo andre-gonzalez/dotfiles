@@ -203,6 +203,7 @@ videos
 .config/ktorrentrc
 .config/libreoffice/
 .config/libvirt/
+.config/main.lua
 .config/mc/
 .config/menus/
 .config/mimeapps.list
