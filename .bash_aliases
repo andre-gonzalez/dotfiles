@@ -9,9 +9,6 @@ alias f='fzf --preview="bat --color=always {}"'
 alias mv="mv -i"
 alias rm="trash -i"
 alias cp="cp -i"
-# doas alises
-alias sudo="doas"
-alias sudoedit="doas rvim"
 # git aliases
 alias gs="git status"
 alias ga="git add"
@@ -19,11 +16,11 @@ alias gc="git commit -m"
 alias gp="git push -u origin"
 alias gd="git diff"
 # pacman aliases
-alias mirror="doas reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" #get fastest mirrors
-alias pms="doas pacman -S"
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" #get fastest mirrors
+alias pms="sudo pacman -S"
 alias pmu="yay -Syyu --askremovemake --noconfirm; kill -47 $(pidof dwmblocks)"
-alias pmr="doas pacman -Rns"
-alias orphans="doas pacman -Qtdq | doas pacman -Rns -"
+alias pmr="sudo pacman -Rns"
+alias orphans="sudo pacman -Qtdq | sudo pacman -Rns -"
 # vim
 alias v="nvim"
 # Dotfiles in git
