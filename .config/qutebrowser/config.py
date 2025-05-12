@@ -401,8 +401,8 @@ config.set('colors.webpage.darkmode.enabled', False, 'https://app.btgpactual.com
 
 # Bindings for normal mode
 config.bind('xt', 'config-cycle tabs.show always switching')
-config.bind('M', 'hint links spawn mpv {hint-url}')
-config.bind('m', 'spawn mpv {url}')
+config.bind('M', 'hint links spawn prime-run mpv --save-watch-history {hint-url}')
+config.bind('m', 'spawn mpv --save-watch-history {url}')
 config.bind('Z', 'hint links spawn st -e yt-dlp {hint-url}')
 
 config.set('scrolling.bar', 'when-searching')
