@@ -3,6 +3,7 @@ save-position-on-quit=yes
 hwdec=auto-safe
 write-filename-in-watch-later-config=yes
 save-watch-history=yes
+ytdl-raw-options=output="%(title)s.%(ext)s"
 
 [protocol.https]
 speed=1.25
