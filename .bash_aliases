@@ -6,9 +6,9 @@ alias tar="tar -xf"
 alias p="python3"
 alias f='fzf --preview="bat --color=always {}"'
 # making some command interactive
-alias mv="mv -i"
+alias mv="mvg -ig"
 alias rm="trash -i"
-alias cp="cp -i"
+alias cp="cpg -ig"
 # git aliases
 alias gs="git status"
 alias ga="git add"
