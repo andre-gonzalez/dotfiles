@@ -24,3 +24,6 @@ windows:
   - window_name: newsboat
     panes:
       - newsboat
+  - window_name: spotify
+    panes:
+      - spotify_player

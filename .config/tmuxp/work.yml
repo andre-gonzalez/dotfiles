@@ -37,3 +37,6 @@ windows:
     panes:
       - cd ~/eureciclo/repos/data-platform-iac/ && nvim -c "Telescope file_browser"
       - cd ~/eureciclo/repos/data-platform-iac/main-data-platform-iac/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
+  - window_name: spotify
+    panes:
+      - spotify_player
