@@ -351,7 +351,21 @@ c.url.default_page = 'https://www.google.com/'
 # the search engine name to the search term, e.g. `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}'}
+c.url.searchengines = {
+# note - if you use duckduckgo, you can make use of its built in bangs, of which there are many! https://duckduckgo.com/bangs
+        'DEFAULT': 'https://www.google.com/search?hl=en&q={}',
+        '!aw': 'https://wiki.archlinux.org/?search={}',
+        '!apkg': 'https://archlinux.org/packages/?sort=&q={}&maintainer=&flagged=',
+        # Aur parameters
+        # 0=0 ascending (O=1 for descending)
+        # &S=name  sort by name (other fields: Popularity, Votes, etc.)
+        # &PP=50   results per page
+        # &Page=2  page number
+        '!aur': 'https://aur.archlinux.org/packages?O=0&S=popularity&PP=50&K={}',
+        '!gh': 'https://github.com/search?o=desc&q={}&s=stars',
+        '!yt': 'https://www.youtube.com/results?search_query={}',
+        '!rd': 'https://www.reddit.com/search/?q={}',
+        }
 
 # Hide the window decoration.  This setting requires a restart on
 # Wayland.
