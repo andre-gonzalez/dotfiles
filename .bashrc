@@ -41,7 +41,6 @@ if [ -f '/home/frank/.config/google-cloud-sdk/path.bash.inc' ]; then . '/home/fr
 if [ -f '/home/frank/.config/google-cloud-sdk/completion.bash.inc' ]; then . '/home/frank/.config/google-cloud-sdk/completion.bash.inc'; fi
 
 # enable lf to change directories
-LFCD="$GOPATH/src/github.com/gokcehan/lf/etc/lfcd.sh"  # source
 LFCD="/home/frank/.config/lf/lfcd.sh"                                #  pre-built binary, make sure to use absolute path
 if [ -f "$LFCD" ]; then
     source "$LFCD"
