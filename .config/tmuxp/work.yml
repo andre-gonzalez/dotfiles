@@ -40,3 +40,6 @@ windows:
   - window_name: spotify
     panes:
       - spotify_player
+  - window_name: neomutt
+    panes:
+      - mailsync >> /dev/null & neomutt
