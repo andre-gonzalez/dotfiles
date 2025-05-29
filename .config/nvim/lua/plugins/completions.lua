@@ -30,14 +30,7 @@ return {
 
 	{
 		"hrsh7th/nvim-cmp",
-		event = {"InsertEnter", "CmdlineEnter"},
-		dependencies = {
-			"MattiasMTS/cmp-dbee",
-			ft = "sql",
-			dependencies = {
-				{ "kndndrj/nvim-dbee" }
-			}
-		},
+		event = { "InsertEnter", "CmdlineEnter" },
 
 		config = function()
 			local cmp = require("cmp")
@@ -109,5 +102,13 @@ return {
 				},
 			})
 		end,
+	},
+
+	{
+		"MattiasMTS/cmp-dbee",
+		ft = "sql",
+		dependencies = {
+			"kndndrj/nvim-dbee",
+		},
 	},
 }
