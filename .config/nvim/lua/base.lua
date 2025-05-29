@@ -83,6 +83,10 @@ vim.opt.cmdheight = 0
 --Disable spellchecker
 vim.opt.spell = false
 
+--Set so obsidian plugin can work properly
+vim.opt_local.conceallevel = 2
+
+
 ------------------------------------------------------------------------------
 ----------------------------- OLD VIM COMMANDS -------------------------------
 ------------------------------------------------------------------------------
