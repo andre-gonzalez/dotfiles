@@ -5,6 +5,9 @@ return {
 		"nvim-telescope/telescope.nvim",
 		cmd = "Telescope",
 		tag = "0.1.8",
+		keys = {
+			"<leader>tg", "<leader>tf", "<leader>tc", "<leader>tb",
+		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 
