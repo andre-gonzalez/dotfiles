@@ -94,7 +94,6 @@ return {
 
 					if root_dir then
 						vim.cmd("cd " .. root_dir)
-						vim.notify("Changed working directory to " .. root_dir)
 					end
 				end,
 			})
