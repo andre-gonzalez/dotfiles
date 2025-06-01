@@ -87,6 +87,16 @@ vim.opt.spell = false
 vim.opt_local.conceallevel = 2
 
 
+-- Set filetype in ansible directory structure to yaml.ansible so LSP can load
+vim.filetype.add({
+	pattern = {
+		['.*/playbooks/.*%.ya?ml'] = 'yaml.ansible',
+		['.*/roles/.*/tasks/.*%.ya?ml'] = 'yaml.ansible',
+		['.*/roles/.*/handlers/.*%.ya?ml'] = 'yaml.ansible',
+	},
+})
+
+
 ------------------------------------------------------------------------------
 ----------------------------- OLD VIM COMMANDS -------------------------------
 ------------------------------------------------------------------------------

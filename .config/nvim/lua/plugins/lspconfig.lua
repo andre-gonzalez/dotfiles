@@ -10,7 +10,17 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		ft = {
-			"lua", "python", "sql", "yaml", "sh", "json", "terraform", "markdown",
+			"lua",
+			"python",
+			"sql",
+			"yaml",
+			"sh",
+			"json",
+			"terraform",
+			"markdown",
+			"yaml.ansible",
+			"dockerfile",
+			"nix",
 		},
 		config = function()
 			require("mason-lspconfig").setup({
@@ -23,8 +33,15 @@ return {
 					"yamlls",
 					"terraformls",
 					"jsonls",
-					"grammarly",
 					"marksman",
+					"stylua",
+					"black",
+					"isort",
+					"prettier",
+					"markdownlint",
+					"dockerls",
+					"rnix",
+					-- "snyk_ls",
 				},
 			})
 		end,
@@ -33,7 +50,17 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		ft = {
-			"lua", "python", "sql", "yaml", "sh", "json", "terraform", "markdown",
+			"lua",
+			"python",
+			"sql",
+			"yaml",
+			"sh",
+			"json",
+			"terraform",
+			"markdown",
+			"yaml.ansible",
+			"dockerfile",
+			"nix",
 		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -45,10 +72,10 @@ return {
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 				vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-				-- vim.keymap.set('n', '<C-y>', vim.lsp.diagnostic.goto_prev, {})
-				-- vim.keymap.set('n', '<C-p>', vim.lsp.diagnostic.goto_next, {})
-				-- vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
-				-- vim.keymap.set("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
+				vim.keymap.set("n", "<C-y>", vim.diagnostic.goto_prev, {})
+				vim.keymap.set("n", "<C-p>", vim.diagnostic.goto_next, {})
+				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+				vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 			end
 
 			vim.lsp.handlers["textDocument/publishDiagnostics"] =
@@ -64,7 +91,6 @@ return {
 				yamlls = {},
 				jsonls = {},
 				terraformls = {},
-				grammarly = {},
 				marksman = {},
 				ansiblels = {
 					cmd = { "ansible-language-server", "--stdio" },
@@ -78,6 +104,8 @@ return {
 						},
 					},
 				},
+				rnix = {},
+				-- snyk_ls = {},
 			}
 
 			for name, config in pairs(servers) do
@@ -85,6 +113,25 @@ return {
 				config.on_attach = on_attach
 				lspconfig[name].setup(config)
 			end
+
+			-- -- Manual setup for ltex-ls-plus
+			-- lspconfig.ltex_plus.setup({
+			-- 	cmd = { "ltex-ls-plus" },
+			-- 	filetypes = { "markdown", "tex", "text" },
+			-- 	capabilities = capabilities,
+			-- 	on_attach = on_attach,
+			-- 	settings = {
+			-- 		ltex = {
+			-- 			language = "en-US",
+			-- 			additionalLanguages = { "pt-BR" },
+			-- 			checkFrequency = "save",
+			-- 			disabledRules = {
+			-- 				["en-US"] = {},
+			-- 				["pt-BR"] = {},
+			-- 			},
+			-- 		},
+			-- 	},
+			-- })
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
@@ -97,6 +144,35 @@ return {
 					end
 				end,
 			})
+
+			-- Keymaps to manually switch ltex language
+			-- vim.keymap.set("n", "<leader>le", function()
+			-- 	for _, client in pairs(vim.lsp.get_clients()) do
+			-- 		if client.name == "ltex" then
+			-- 			client.config.settings.ltex.language = "en-US"
+			-- 			client.notify("workspace/didChangeConfiguration", {
+			-- 				settings = client.config.settings,
+			-- 			})
+			-- 		end
+			-- 	end
+			-- 	print("Switched ltex language to en-US")
+			-- end, { desc = "LTeX: Switch to English" })
+			--
+			-- vim.keymap.set("n", "<leader>lp", function()
+			-- 	for _, client in pairs(vim.lsp.get_clients()) do
+			-- 		if client.name == "ltex_plus" then
+			-- 			client.config.settings.ltex.language = "pt-BR"
+			-- 			client.notify("workspace/didChangeConfiguration", {
+			-- 				settings = client.config.settings,
+			-- 			})
+			-- 			client.stop()
+			-- 			vim.defer_fn(function()
+			-- 				vim.cmd("edit")
+			-- 			end, 100)
+			-- 		end
+			-- 	end
+			-- 	print("Switched ltex language to pt-BR and restarted LSP")
+			-- end, { desc = "LTeX: Switch to Portuguese" })
 		end,
 	},
 }
