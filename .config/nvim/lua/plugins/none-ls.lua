@@ -3,7 +3,6 @@ return {
 	event = "LspAttach",
 	dependencies = { "nvim-lua/plenary.nvim" },
 
-
 	config = function()
 		local null_ls = require("null-ls")
 
@@ -32,10 +31,22 @@ return {
 				-- Shell
 				null_ls.builtins.formatting.shfmt,
 
-
 				-- Diagnostics
 				-- Generic
-				null_ls.builtins.diagnostics.codespell,
+				null_ls.builtins.diagnostics.codespell.with({
+					filetypes = {
+						"lua",
+						"python",
+						"sql",
+						"yaml",
+						"sh",
+						"terraform",
+						"yaml.ansible",
+						"dockerfile",
+						"nix",
+						"beancount",
+					},
+				}),
 				-- null_ls.builtins.diagnostics.misspell,
 				-- null_ls.builtins.diagnostics.typos,
 				-- Ansible
@@ -56,8 +67,7 @@ return {
 				null_ls.builtins.completion.spell,
 			},
 
-			vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format with LSP" })
-
+			vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format with LSP" }),
 		})
 	end,
 }
