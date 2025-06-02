@@ -96,6 +96,9 @@ vim.filetype.add({
 	},
 })
 
+-- Disable command line window open command
+vim.keymap.set("n", "q:", "<Nop>", { noremap = true })
+
 
 ------------------------------------------------------------------------------
 ----------------------------- OLD VIM COMMANDS -------------------------------
