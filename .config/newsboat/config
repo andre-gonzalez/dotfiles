@@ -41,7 +41,10 @@ macro b set browser "qutebrowser --target tab"; open-in-browser ; set browser qu
 ########################
 # Colorscheme
 ########################
-include /usr/share/doc/newsboat/contrib/colorschemes/gruvbox
+# include /usr/share/doc/newsboat/contrib/colorschemes/gruvbox
+# include ~/.config/newsboat/catppucin
+include ~/.config/newsboat/dracula
+
 
 ########################
 # Categories

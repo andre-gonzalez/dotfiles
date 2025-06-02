@@ -1,0 +1,19 @@
+color listnormal         color15 default
+color listnormal_unread  color2  default
+color listfocus_unread   color2  color238
+color listfocus          default color238
+
+color background         default color235
+color article            default color235
+color end-of-text-marker color235  default
+color info               color4  color235
+color hint-separator     default color235
+color hint-description   default color235
+color title              color14 color235
+
+highlight article "^(Feed|Title|Author|Link|Date): .+" color4 color235 bold
+highlight article "^(Feed|Title|Author|Link|Date):" color14 color235 bold
+
+highlight article "\\((link|image|video)\\)" color235 color235
+highlight article "https?://[^ ]+" color4 color235
+highlight article "\[[0-9]+\]" color6 color235 bold
