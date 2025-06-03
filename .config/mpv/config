@@ -5,5 +5,11 @@ write-filename-in-watch-later-config=yes
 save-watch-history=yes
 ytdl-raw-options=output="%(title)s.%(ext)s"
 
+# Cache and demuxer settings
+cache=yes
+cache-secs=10800
+demuxer-max-bytes=700000000
+demuxer-max-back-bytes=700000000
+
 [protocol.https]
 speed=1.25
