@@ -1,4 +1,4 @@
-session_name: work
+session_name: athenaworks
 windows:
   - window_name: work
     shell_command_before:
@@ -9,34 +9,34 @@ windows:
       - cd ~/projects/notas/ # run as a first command in all panes
     panes:
       - shell_command:
-        - nvim ~/projects/notas/trabalho/eureciclo/todo.md
+        - nvim ~/projects/notas/trabalho/athenaworks/uberall/uberall-todo.md
       - cd ~/projects/notas/ # run as a first command in all panes
-  - window_name: databricks
+  - window_name: work_2
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    panes:
-      - cd ~/eureciclo/repos/databricks-notebooks/ && nvim -c "Telescope file_browser"
-      - cd ~/eureciclo/repos/databricks-notebooks/main-databricks-notebooks/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
-  - window_name: airflow
+    # panes:
+      # - cd ~/eureciclo/repos/databricks-notebooks/ && nvim -c "Telescope file_browser"
+      # - cd ~/eureciclo/repos/databricks-notebooks/main-databricks-notebooks/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
+  - window_name: work_3
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    panes:
-      - cd ~/eureciclo/repos/airflow/ && nvim -c "Telescope file_browser"
-      - cd ~/eureciclo/repos/airflow/master-airflow/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
+    # panes:
+      # - cd ~/eureciclo/repos/airflow/ && nvim -c "Telescope file_browser"
+      # - cd ~/eureciclo/repos/airflow/master-airflow/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
   - window_name: newsboat
     panes:
       - newsboat
   # - window_name: neomutt
   #   panes:
   #     -  mailsync && neomutt
-  - window_name: power_bi
-    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    panes:
-      - cd ~/eureciclo/repos/power-bi-azure-devops/ && nvim -c "Telescope file_browser"
-      - cd ~/eureciclo/repos/power-bi-azure-devops/main-power-bi-azure-devops/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
-  - window_name: iac
-    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    panes:
-      - cd ~/eureciclo/repos/data-platform-iac/ && nvim -c "Telescope file_browser"
-      - cd ~/eureciclo/repos/data-platform-iac/main-data-platform-iac/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
+  # - window_name: power_bi
+  #   layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
+  #   panes:
+  #     - cd ~/eureciclo/repos/power-bi-azure-devops/ && nvim -c "Telescope file_browser"
+  #     - cd ~/eureciclo/repos/power-bi-azure-devops/main-power-bi-azure-devops/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
+  # - window_name: iac
+  #   layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
+  #   panes:
+  #     - cd ~/eureciclo/repos/data-platform-iac/ && nvim -c "Telescope file_browser"
+  #     - cd ~/eureciclo/repos/data-platform-iac/main-data-platform-iac/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
   - window_name: spotify
     panes:
       - spotify_player
