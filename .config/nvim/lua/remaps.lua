@@ -113,3 +113,60 @@ vim.keymap.set("n", "gj", function()
   -- Clear the search highlight
   vim.cmd("nohlsearch")
 end, { desc = "Go to next markdown header" })
+
+vim.keymap.set(
+  "v",
+  "<leader>bq",
+  "<cmd>lua run_sql_visual_flattened()<CR>",
+  { desc = "Run the visually‐selected SQL via nvim‐dbee" }
+)
+
+-- ─────────────────────────────────────────────────────────
+-- Transparent background
+-- ─────────────────────────────────────────────────────────
+
+-- Store original background highlight to restore later
+local original_bg = nil
+local transparency_enabled = false
+
+function ToggleTransparency()
+  if not transparency_enabled then
+    -- Save current highlight background
+    original_bg = vim.api.nvim_get_hl(0, { name = "Normal" }).bg
+
+    -- Set transparency
+    vim.cmd [[
+      highlight Normal guibg=NONE
+      highlight NormalNC guibg=NONE
+      highlight SignColumn guibg=NONE
+      highlight LineNr guibg=NONE
+      highlight VertSplit guibg=NONE
+    ]]
+    transparency_enabled = true
+    print("Transparency enabled")
+  else
+    -- Restore original background if available
+    if original_bg then
+      local bg_color = string.format("#%06x", original_bg)
+      vim.cmd("highlight Normal guibg=" .. bg_color)
+      vim.cmd("highlight NormalNC guibg=" .. bg_color)
+      vim.cmd("highlight SignColumn guibg=" .. bg_color)
+      vim.cmd("highlight LineNr guibg=" .. bg_color)
+      vim.cmd("highlight VertSplit guibg=" .. bg_color)
+    else
+      -- Fallback: use 'default' if original is unknown
+      vim.cmd [[
+        highlight Normal guibg=default
+        highlight NormalNC guibg=default
+        highlight SignColumn guibg=default
+        highlight LineNr guibg=default
+        highlight VertSplit guibg=default
+      ]]
+    end
+    transparency_enabled = false
+    print("Transparency disabled")
+  end
+end
+
+-- Keymap
+vim.keymap.set("n", "<leader>;", ToggleTransparency, { desc = "Toggle background transparency" })
