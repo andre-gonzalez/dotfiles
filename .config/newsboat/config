@@ -35,7 +35,7 @@ bind-key U show-urls
 browser "qutebrowser --target tab"
 macro , open-in-browser
 macro i set browser "feh %u"; open-in-browser ; set browser qutebrowser
-macro v set browser "setsid -f prime-run mpv --really-quiet --no-terminal --cache=yes --cache-secs=10800 --demuxer-max-bytes=700000000 --demuxer-max-back-bytes=700000000"; open-in-browser ; set browser qutebrowser
+macro v set browser "setsid -f mpv --really-quiet --no-terminal --cache=yes --cache-secs=10800 --demuxer-max-bytes=700000000 --demuxer-max-back-bytes=700000000"; open-in-browser ; set browser qutebrowser
 macro b set browser "qutebrowser --target tab"; open-in-browser ; set browser qutebrowser
 
 ########################
