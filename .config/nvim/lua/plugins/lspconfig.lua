@@ -39,6 +39,7 @@ return {
 					"dockerls",
 					"rnix",
 					"beancount",
+					"ruff",
 					-- "snyk_ls",
 				},
 			})
