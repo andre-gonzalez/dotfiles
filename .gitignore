@@ -12,6 +12,7 @@ videos
 *.csv
 *.jpg
 *.md
+*.mp4
 *.pdf
 *.png
 *.psd
@@ -147,6 +148,7 @@ videos
 .local/share/xorg/
 
 # .config directory files
+.config/1Password/
 .config/act/
 .config/anki
 .config/ansible/
