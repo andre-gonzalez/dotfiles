@@ -158,6 +158,7 @@ videos
 .config/autostart/
 .config/aws/
 .config/aws/credentials
+.config/AWSVPNClient/
 .config/Bitwarden CLI/
 .config/bleachbit/
 .config/BraveSoftware/
