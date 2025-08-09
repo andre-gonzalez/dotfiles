@@ -28,7 +28,7 @@ fi
 xcompmgr -c &
 
 # set keyboard layout to dvorak, change esc with caps lock and change numpad , to . (dot)
-setxkbmap -layout us -variant dvorak-intl && setxkbmap -option caps:swapescape
+setxkbmap -layout us -variant dvorak-intl && setxkbmap -option caps:swapescape &
 
 #Keybinds for audio and backlight
 xbindkeys &
@@ -46,7 +46,7 @@ insync start &
 clipmenud &
 
 #fast scroll with j and k in vim
-xset r rate 400 50
+xset r rate 400 50 &
 
 # Xautolock to lock screen after some time of inactivity
 xautolock -time 10 -locker slock -notify 2 -corners ---- &
@@ -56,9 +56,6 @@ rfkill unblock all &
 
 #Activate numlock on boot
 numlockx &
-
-# Dim screen at night
-redshift -l 19.44:-99.13 -t 6500:3000 -b 1:0.4 &
 
 # Polkit agent
 lxsession &
@@ -74,9 +71,17 @@ lxsession &
 # 	elif [ $(xrandr --query | grep -c eDP-1) = 1]; then
 # 		xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off
 # fi
+
+# Load Xresources (font rendering, DPI, etc.)
+xrdb -merge ~/.Xresources &
+
+# Set correct DPI for your ultrawide
+xrandr --dpi 109 &
+
+# Restore display layout via autorandr
 autorandr --change &
 
-#Wallpaper
+# Wallpaper
 /bin/dash "$HOME"/.scripts/random-wallpaper.sh
 
 # Loop
