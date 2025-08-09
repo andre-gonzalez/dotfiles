@@ -1,4 +1,6 @@
 # Directories
+athenaworks/
+.aws/
 .dart-tool/
 eureciclo/
 gdrive-pessoal/
