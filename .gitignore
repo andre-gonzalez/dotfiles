@@ -46,6 +46,7 @@ videos
 .msmtprc
 .notmuch-config
 .npmrc
+.odbc.ini
 .pdbhistory
 .pulse-cookie
 .python_history
@@ -163,10 +164,13 @@ videos
 .config/bleachbit/
 .config/BraveSoftware/
 .config/btop/
+.config/calibre/
 .config/cef_user_data/
+.config/chatgpt-dmenu/
 .config/chromium/
 .config/Clockify/
 .config/configstore/
+.config/Cursor/
 .config/db_ui/
 .config/dconf/
 .config/discord/
@@ -179,6 +183,8 @@ videos
 .config/dwmblocks/
 .config/dwm-large-screen/
 .config/dwmstatus/
+.config/fcitx/
+.config/fcitx5/
 .config/Ferdium/
 .config/fish/fishd.tmp.*
 .config/fontforge/
@@ -195,11 +201,15 @@ videos
 .config/grammarly-languageserver/
 .config/gtk-2.0/
 .config/guiscrcpy/
+.config/heroic/
 .config/htop/
+.config/ibus/
 .config/Insomnia/
 .config/Insomnium/
 .config/Insync/
+.config/isync/
 .config/ipython
+.config/jgit
 .config/JetBrains/
 .config/kconf_updaterc
 .config/kdeconnect/
