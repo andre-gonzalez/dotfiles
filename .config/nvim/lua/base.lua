@@ -99,6 +99,62 @@ vim.filetype.add({
 -- Disable command line window open command
 vim.keymap.set("n", "q:", "<Nop>", { noremap = true })
 
+-- ─────────────────────────────────────────────────────────
+-- Helper: grab exactly what you visually selected, as a list of lines
+-- ─────────────────────────────────────────────────────────
+-- Returns a list of strings: exactly the lines (and columns) you highlighted in Visual mode.
+-- You must be in Visual mode (v/V/) when calling this.
+local function _get_visual_selection_lines()
+  local s_pos = vim.fn.getpos("'<")
+  local e_pos = vim.fn.getpos("'>")
+  local start_row, start_col = s_pos[2], s_pos[3]
+  local end_row,   end_col   = e_pos[2],   e_pos[3]
+
+  -- Grab all lines from start_row through end_row
+  local lines = vim.fn.getline(start_row, end_row)
+  if #lines == 0 then
+    return {}
+  end
+
+  -- Trim off any extra columns on the first and last lines
+  lines[1]       = string.sub(lines[1],       start_col)
+  lines[#lines]  = string.sub(lines[#lines],   1, end_col)
+
+  return lines
+end
+
+local function hide_everything_but_result()
+  vim.defer_fn(function()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+      local buf   = vim.api.nvim_win_get_buf(win)
+      local ftype = vim.bo[buf].filetype
+      if ftype ~= "dbee-result" then
+        -- close all windows that aren’t the result pane
+        vim.api.nvim_win_close(win, true)
+      end
+    end
+  end, 100)  -- give Dbee ~100ms to finish drawing
+end
+
+-- ─────────────────────────────────────────────────────────
+-- Main function: run whatever was visually selected, via dbee.execute()
+-- ─────────────────────────────────────────────────────────
+function _G.run_sql_visual_flattened()
+  local lines = _get_visual_selection_lines()
+  if #lines == 0 then
+    vim.notify("No SQL selected in Visual mode.", vim.log.levels.WARN)
+    return
+  end
+
+  -- Join all lines with a single space so dbee.parse() sees one continuous statement.
+  local sql = table.concat(lines, " ")
+
+  -- Now send that single-line SQL to nvim-dbee.
+  -- (Make sure you have already done :lua require("dbee").open() at least once,
+  --  so that there’s an active connection. Otherwise execute() will error.)
+  require("dbee").execute(sql)
+	hide_everything_but_result()
+end
 
 ------------------------------------------------------------------------------
 ----------------------------- OLD VIM COMMANDS -------------------------------
