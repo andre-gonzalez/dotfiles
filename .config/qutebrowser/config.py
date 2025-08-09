@@ -412,10 +412,12 @@ config.set('colors.webpage.darkmode.enabled', False, 'https://www.kasmweb.com/')
 config.set('colors.webpage.darkmode.enabled', False, 'https://www.instapaper.com/')
 config.set('colors.webpage.darkmode.enabled', False, 'https://web.whatsapp.com/')
 config.set('colors.webpage.darkmode.enabled', False, 'https://app.btgpactual.com/')
+config.set('colors.webpage.darkmode.enabled', False, 'http://localhost/')
+config.set('colors.webpage.darkmode.enabled', False, 'https://app.alude.com.br/')
 
 # Bindings for normal mode
 config.bind('xt', 'config-cycle tabs.show always switching')
-config.bind('M', 'hint links spawn prime-run mpv --save-watch-history {hint-url}')
+config.bind('M', 'hint links spawn  mpv --save-watch-history {hint-url}')
 config.bind('m', 'spawn mpv --save-watch-history {url}')
 config.bind('Z', 'hint links spawn st -e yt-dlp {hint-url}')
 
