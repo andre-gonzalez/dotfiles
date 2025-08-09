@@ -12,6 +12,25 @@ return {
 				-- Python
 				null_ls.builtins.formatting.black,
 				null_ls.builtins.formatting.isort,
+				{
+					name = "pyproject-fmt",
+					method = null_ls.methods.FORMATTING,
+					filetypes = { "toml" },
+					generator = null_ls.generator({
+						command = "pyproject-fmt",
+						args = { "-" },
+						to_stdin = true,
+						from_stderr = false,
+						format = "raw",
+					}),
+					condition = function(params)
+						-- Get only the filename (no path)
+						return vim.fn.fnamemodify(params.bufname, ":t") == "pyproject.toml"
+					end,
+				},
+				-- null_ls.builtins.diagnostics.ruff,
+				-- null_ls.builtins.formatting.ruff,
+				null_ls.builtins.diagnostics.mypy,
 				-- null_ls.builtins.formatting.docformatter,
 
 				null_ls.builtins.formatting.prettier,
