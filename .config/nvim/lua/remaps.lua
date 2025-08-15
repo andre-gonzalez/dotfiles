@@ -122,17 +122,21 @@ vim.keymap.set(
 )
 
 -- ─────────────────────────────────────────────────────────
--- Transparent background
+-- Transparent background toggle
 -- ─────────────────────────────────────────────────────────
 
--- Store original background highlight to restore later
 local original_bg = nil
+local original_colorcolumn_bg = nil
 local transparency_enabled = false
 
 function ToggleTransparency()
   if not transparency_enabled then
-    -- Save current highlight background
-    original_bg = vim.api.nvim_get_hl(0, { name = "Normal" }).bg
+    -- Save current backgrounds
+    local normal_hl = vim.api.nvim_get_hl(0, { name = "Normal" })
+    original_bg = normal_hl.bg
+
+    local cc_hl = vim.api.nvim_get_hl(0, { name = "ColorColumn" })
+    original_colorcolumn_bg = cc_hl.bg
 
     -- Set transparency
     vim.cmd [[
@@ -141,7 +145,9 @@ function ToggleTransparency()
       highlight SignColumn guibg=NONE
       highlight LineNr guibg=NONE
       highlight VertSplit guibg=NONE
+      highlight ColorColumn guibg=NONE
     ]]
+
     transparency_enabled = true
     print("Transparency enabled")
   else
@@ -154,7 +160,6 @@ function ToggleTransparency()
       vim.cmd("highlight LineNr guibg=" .. bg_color)
       vim.cmd("highlight VertSplit guibg=" .. bg_color)
     else
-      -- Fallback: use 'default' if original is unknown
       vim.cmd [[
         highlight Normal guibg=default
         highlight NormalNC guibg=default
@@ -163,6 +168,15 @@ function ToggleTransparency()
         highlight VertSplit guibg=default
       ]]
     end
+
+    -- Restore ColorColumn background
+    if original_colorcolumn_bg then
+      local cc_bg_color = string.format("#%06x", original_colorcolumn_bg)
+      vim.cmd("highlight ColorColumn guibg=" .. cc_bg_color)
+    else
+      vim.cmd [[ highlight ColorColumn guibg=default ]]
+    end
+
     transparency_enabled = false
     print("Transparency disabled")
   end
