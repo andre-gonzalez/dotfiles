@@ -13,7 +13,10 @@ https://world.hey.com/dhh/feed.atom blog
 https://herman.bearblog.dev/feed/ blog
 https://dataswamp.org/~solene/ blog
 https://frankandrews.bearblog.dev/feed/ blog
-https://www.databricks.com/feed
+https://www.databricks.com/feed blog
+https://kill-the-newsletter.com/feeds/syfrm9ltz1440ssd703z.xml blog # Tim Ferriss
+https://kill-the-newsletter.com/feeds/zk6582hprooy1z70wm7h.xml blog # Chris Williamson
+https://kill-the-newsletter.com/feeds/pxowoyh6dp07zddq9qu3.xml blog # Filipe Deschamps
 
 # Video
 ---Videos--- video
@@ -73,11 +76,11 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UChoRUssc5HoO-xQ9hUKZ1mA vid
 https://www.youtube.com/feeds/videos.xml?channel_id=UCqYPhGiB9tkShZorfgcL2lA video # What I've Learned
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCZzFRKsgVMhGTxffpzgTJlQ video "~Zak George" # Zak George
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmw-QGOHbHA5cDAvwwqUTKQ video # Zaney
-https://www.youtube.com/feeds/videos.xml?channel_id=UCnRVL1-HJnXWB_Xi2dAoTcg # Bryan Johnson
-https://www.youtube.com/feeds/videos.xml?channel_id=UCrwOzu7ienZYuzAdeeRL4rQ # Andrew Giraffe
-https://www.youtube.com/feeds/videos.xml?channel_id=UCT_yAgNF6xfngUONqx2qYCw # Daniel Medeiros - Pra lá que eu voo
-https://www.youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw # Vimjoyer (Nix os content)
-https://www.youtube.com/feeds/videos.xml?channel_id=UCwHwDuNd9lCdA7chyyquDXw # Bread on Penguins
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ # ThePrimeTime
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgfe2ooZD3VJPB6aJAnuQng # bycloud
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUkM9uMpWatT7gVWShgtKFw # David Heinemeier Hansson
+https://www.youtube.com/feeds/videos.xml?channel_id=UCnRVL1-HJnXWB_Xi2dAoTcg video # Bryan Johnson
+https://www.youtube.com/feeds/videos.xml?channel_id=UCrwOzu7ienZYuzAdeeRL4rQ video # Andrew Giraffe
+https://www.youtube.com/feeds/videos.xml?channel_id=UCT_yAgNF6xfngUONqx2qYCw video # Daniel Medeiros - Pra lá que eu voo
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw video # Vimjoyer (Nix os content)
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwHwDuNd9lCdA7chyyquDXw video # Bread on Penguins
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ video # ThePrimeTime
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgfe2ooZD3VJPB6aJAnuQng video # bycloud
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUkM9uMpWatT7gVWShgtKFw video # David Heinemeier Hansson
