@@ -11,6 +11,7 @@ text-width 72
 # Ignore youtube shorts
 ignore-article "*" "title =~ \"#shorts\""
 ignore-article "*" "content =~ \"#shorts\""
+cleanup-on-quit yes # Remove feeds that are not in config file from cache
 
 ########################
 # Keys
