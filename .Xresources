@@ -19,7 +19,7 @@ xautolock.conersize: 5
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
-Xft.dpi: 109
+Xft.dpi: 103
 Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintslight
