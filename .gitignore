@@ -152,25 +152,44 @@ videos
 
 # .config directory files
 .config/1Password/
+.config/AWSVPNClient/
+.config/Authy Desktop/
+.config/Bitwarden CLI/
+.config/BraveSoftware/
+.config/Clockify/
+.config/Cursor/
+.config/Ferdium/
+.config/GIMP/
+.config/Insomnia/
+.config/Insomnium/
+.config/Insync/
+.config/JetBrains/
+.config/Portmaster/
+.config/Postman/
+.config/Proton/
+.config/QtProject.conf
+.config/RogueLegacy/
+.config/Slack/
+.config/Thunar/
+.config/Unknown Organization/
+.config/VSCodium/
+.config/VirtualBox VMs/
+.config/VirtualBox/
+.config/Xmind/
+.config/Zulip/
 .config/act/
 .config/anki
 .config/ansible/
-.config/Authy Desktop/
 .config/autostart/
 .config/aws/
 .config/aws/credentials
-.config/AWSVPNClient/
-.config/Bitwarden CLI/
 .config/bleachbit/
-.config/BraveSoftware/
 .config/btop/
 .config/calibre/
 .config/cef_user_data/
 .config/chatgpt-dmenu/
 .config/chromium/
-.config/Clockify/
 .config/configstore/
-.config/Cursor/
 .config/db_ui/
 .config/dconf/
 .config/discord/
@@ -180,12 +199,11 @@ videos
 .config/dotfiles
 .config/dwm
 .config/dwm-bar/
-.config/dwmblocks/
 .config/dwm-large-screen/
+.config/dwmblocks/
 .config/dwmstatus/
 .config/fcitx/
 .config/fcitx5/
-.config/Ferdium/
 .config/fish/fishd.tmp.*
 .config/fontforge/
 .config/freerdp/
@@ -193,10 +211,9 @@ videos
 .config/gcloud/
 .config/gedit/
 .config/gh/
-.config/GIMP/
 .config/go/
-.config/google-chrome/
 .config/google-chrome-unstable/
+.config/google-chrome/
 .config/google-cloud-sdk/
 .config/grammarly-languageserver/
 .config/gtk-2.0/
@@ -204,13 +221,9 @@ videos
 .config/heroic/
 .config/htop/
 .config/ibus/
-.config/Insomnia/
-.config/Insomnium/
-.config/Insync/
-.config/isync/
 .config/ipython
+.config/isync/
 .config/jgit
-.config/JetBrains/
 .config/kconf_updaterc
 .config/kdeconnect/
 .config/kdeglobals
@@ -221,6 +234,7 @@ videos
 .config/main.lua
 .config/mc/
 .config/menus/
+.config/microsoft-edge-dev/
 .config/mimeapps.list
 .config/mps-youtube/
 .config/msmtp/
@@ -237,20 +251,16 @@ videos
 .config/nvim/plugged/dbext.vim
 .config/nvim/spell/pt.utf-8.spl
 .config/nvim/undo
-.config/obsidian/
 .config/obs-studio/
+.config/obsidian/
 .config/onlyoffice/
 .config/packer/
 .config/pavucontrol.ini
-.config/Portmaster/
-.config/Postman/
 .config/pritunl/
-.config/Proton/
 .config/pulse/
 .config/python-env/
 .config/qBittorrent/
 .config/qt5ct/
-.config/QtProject.conf
 .config/qutebrowser/autoconfig.yml
 .config/qutebrowser/bookmarks/
 .config/qutebrowser/cache/
@@ -262,37 +272,30 @@ videos
 .config/rclone/
 .config/remmina/
 .config/rncbc.org/
-.config/RogueLegacy/
-.config/Slack/
 .config/slock/
 .config/spicy/
-.config/spotify/
-.config/spotifyd/
-.config/spotifyd.conf
 .config/spotify-tui/
+.config/spotify/
+.config/spotifyd.conf
+.config/spotifyd/
 .config/sql-language-server/
 .config/st/
 .config/stw/
 .config/syncthing/
 .config/systemd/
 .config/thorium/
-.config/Thunar/
 .config/tlpui/
 .config/tmux/tmux-resurrect/
 .config/ungoogled-chromium/
-.config/Unknown Organization/
 .config/user-dirs.locale
 .config/virt-manager/
-.config/VirtualBox/
-.config/VirtualBox VMs/
 .config/vlc/
 .config/vscode-sqltools/
-.config/VSCodium/
 .config/wall-d/
 .config/whatsapp-nativefier-d40211/
 .config/xfce4/
-.config/Xmind/
 .config/yay
 .config/yay-git
 .config/zoomus.conf
-.config/Zulip/
+.config/vivaldi-snapshot/
+.config/vivaldi/
