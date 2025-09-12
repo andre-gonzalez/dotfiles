@@ -51,6 +51,8 @@ xset r rate 400 50 &
 # Xautolock to lock screen after some time of inactivity
 xautolock -time 10 -locker slock -notify 2 -corners ---- &
 
+kill-xautolock.sh &
+
 # Fix a bug in the bluetooth
 rfkill unblock all &
 
