@@ -418,8 +418,8 @@ config.set('colors.webpage.darkmode.enabled', False, 'https://app.alude.com.br/'
 
 # Bindings for normal mode
 config.bind('xt', 'config-cycle tabs.show always switching')
-config.bind('M', 'hint links spawn  mpv --save-watch-history {hint-url}')
-config.bind('m', 'spawn mpv --save-watch-history {url}')
+config.bind('M', 'hint links spawn --detach sh -c "nohup mpv --save-watch-history {hint-url} >/dev/null 2>&1 &"')
+config.bind('m', 'spawn --detach sh -c "nohup mpv --save-watch-history {url} >/dev/null 2>&1 &"')
 config.bind('Z', 'hint links spawn st -e yt-dlp {hint-url}')
 
 config.set('scrolling.bar', 'when-searching')
