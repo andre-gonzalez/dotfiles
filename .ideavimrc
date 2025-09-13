@@ -4,3 +4,11 @@ augroup highlight_yank
 	autocmd!
 	au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=200 }
 augroup END
+
+" Emulate vim-commentary's gcc and gc mappings
+
+" Use 'gcc' to comment/uncomment the current line in Normal mode.
+nmap gcc <Action>(CommentByLineComment)
+
+" Use 'gc' to comment/uncomment the selected lines in Visual mode.
+vmap gc <Action>(CommentByLineComment)
