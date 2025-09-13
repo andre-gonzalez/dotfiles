@@ -107,6 +107,25 @@ return {
 				rnix = {},
 				beancount = {},
 				-- snyk_ls = {},
+				docker_compose_language_service = {
+					filetypes = { "yaml" }, -- still runs on YAML but we filter below
+					on_new_config = function(new_config, root_dir)
+						-- Only attach to docker-compose files
+						local fname = vim.api.nvim_buf_get_name(0)
+						local function is_docker_compose(name)
+							return name:match("docker%-compose%.yml$")
+								or name:match("docker%-compose%.yaml$")
+								or name:match("compose%.yml$")
+								or name:match("compose%.yaml$")
+								or name:match("%compose.yaml$")
+						end
+						if not is_docker_compose(fname) then
+							-- prevent LSP from starting
+							new_config.cmd = { "false" }
+						end
+					end,
+					-- optional: capabilities, on_attach inherited from your setup
+				},
 			}
 
 			for name, config in pairs(servers) do
