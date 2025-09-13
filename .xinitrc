@@ -81,7 +81,7 @@ xrdb -merge ~/.Xresources &
 xrandr --dpi 109 &
 
 # Restore display layout via autorandr
-autorandr --change &
+autorandr --change
 
 # Wallpaper
 /bin/dash "$HOME"/.scripts/random-wallpaper.sh
