@@ -25,7 +25,7 @@ https://eclecti.cc/feed blog # Nirav Patel - Framework founder
 "query:Unread Video:unread = \"yes\" and tags # \"video\"" video
 ## To get the link of a youtube channel run the following code:
 ## curl -s https://www.youtube.com/@[CHANNEL NAME HERE]/videos | grep -Eo 'https://www\.youtube\.com/feeds/videos\.xml\?channel_id=.{24}' | head -n 1
-https://www.youtube.com/feeds/videos.xml?channel_id=UCmRI-X6XoeH2dQE4BShRU9Q video # Advancing Analytics
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCmRI-X6XoeH2dQE4BShRU9Q video # Advancing Analytics
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC46xhU1EH7aywEgvA9syS3w video "~Anthony Writes Code" # Anthony Writes Code
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCrcYWzHrg55foUj7nVB6b2w video # Backdoor
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCjiOL5ElZcOOEUhtqrpDxPA video # Barmine Tech
