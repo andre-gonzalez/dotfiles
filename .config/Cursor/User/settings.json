@@ -1,0 +1,15 @@
+{
+    "window.commandCenter": 1,
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "workbench.colorTheme": "Nightfall Coder ( Borderless )",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingComments": "never",
+    "editor.fontFamily": "DejaVu Sans Mono",
+    "editor.fontLigatures": true,
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.showTabs": "single"
+}
