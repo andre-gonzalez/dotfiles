@@ -11,5 +11,14 @@
     "editor.fontLigatures": true,
     "zenMode.centerLayout": false,
     "zenMode.hideLineNumbers": false,
-    "zenMode.showTabs": "single"
+    "zenMode.showTabs": "single",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    }
 }
