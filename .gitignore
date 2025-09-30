@@ -1,6 +1,7 @@
 # Directories
 athenaworks/
 .aws/
+.cursor/
 .dart-tool/
 eureciclo/
 gdrive-pessoal/
@@ -170,8 +171,8 @@ videos
 .config/chromium/
 .config/Clockify/
 .config/configstore/
-.config/cursor/auth.json
 .config/Cursor/
+.config/cursor/auth.json
 .config/db_ui/
 .config/dconf/
 .config/discord/
