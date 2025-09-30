@@ -170,6 +170,7 @@ videos
 .config/chromium/
 .config/Clockify/
 .config/configstore/
+.config/cursor/auth.json
 .config/Cursor/
 .config/db_ui/
 .config/dconf/
