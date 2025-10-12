@@ -1,13 +1,13 @@
-#Increase volume
-"pactl set-sink-volume @DEFAULT_SINK@ +1000 ; kill -44 $(pidof dwmblocks)"
+# Increase volume
+"sh -c 'pactl set-sink-volume @DEFAULT_SINK@ +1000; touch /tmp/dwm_volume_show; ( sleep 2 && rm -f /tmp/dwm_volume_show && kill -44 $(pidof dwmblocks) ) & kill -44 $(pidof dwmblocks)'"
    XF86AudioRaiseVolume
 
 # Decrease volume
-"pactl set-sink-volume @DEFAULT_SINK@ -1000 ; kill -44 $(pidof dwmblocks)"
+"sh -c 'pactl set-sink-volume @DEFAULT_SINK@ -1000; touch /tmp/dwm_volume_show; ( sleep 2 && rm -f /tmp/dwm_volume_show && kill -44 $(pidof dwmblocks) ) & kill -44 $(pidof dwmblocks)'"
    XF86AudioLowerVolume
 
 # Mute volume
-"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+"pactl set-sink-mute @DEFAULT_SINK@ toggle; kill -44 $(pidof dwmblocks)"
    XF86AudioMute
 
 # Play and pause audio
