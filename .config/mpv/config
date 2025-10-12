@@ -4,6 +4,7 @@ hwdec=auto-safe
 write-filename-in-watch-later-config=yes
 save-watch-history=yes
 ytdl-raw-options=output="%(title)s.%(ext)s"
+ytdl-raw-options=cookies=chromium
 
 # Cache and demuxer settings
 cache=yes
@@ -13,3 +14,5 @@ demuxer-max-back-bytes=700000000
 
 [protocol.https]
 speed=1.35
+
+
