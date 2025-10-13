@@ -5,6 +5,7 @@ athenaworks/
 .dart-tool/
 eureciclo/
 gdrive-pessoal/
+no-backup/
 ProgramasRFB/
 projects/
 .thunderbird/
@@ -173,6 +174,8 @@ videos
 .config/configstore/
 .config/Cursor/
 .config/cursor/auth.json
+.config/cursor/chats/
+.config/cursor/prompt_history.json
 .config/db_ui/
 .config/dconf/
 .config/discord/
@@ -188,6 +191,7 @@ videos
 .config/fcitx/
 .config/fcitx5/
 .config/Ferdium/
+.config/fish/
 .config/fish/fishd.tmp.*
 .config/fontforge/
 .config/freerdp/
