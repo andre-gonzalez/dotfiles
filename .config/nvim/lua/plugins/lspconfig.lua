@@ -34,7 +34,7 @@ return {
 					"yamlls",
 					"terraformls",
 					"jsonls",
-					"marksman",
+					-- "marksman",
 					"stylua",
 					"dockerls",
 					"rnix",
@@ -91,7 +91,7 @@ return {
 				yamlls = {},
 				jsonls = {},
 				terraformls = {},
-				marksman = {},
+				-- marksman = {},
 				ansiblels = {
 					cmd = { "ansible-language-server", "--stdio" },
 					filetype = { "yaml.ansible" },
