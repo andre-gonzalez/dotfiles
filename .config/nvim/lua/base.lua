@@ -156,6 +156,35 @@ function _G.run_sql_visual_flattened()
 	hide_everything_but_result()
 end
 
+--- CENTERED NEWSBOAT READER ---
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    if vim.env.NEWSBOAT == "1" then
+      -- Minimal UI
+      vim.opt.showmode = false
+      vim.opt.ruler = false
+      vim.opt.cmdheight = 0
+      vim.opt.laststatus = 0
+      vim.opt.statusline = ""       -- fallback, hide any manual statusline
+      vim.opt.number = false
+      vim.opt.relativenumber = false
+      vim.opt.signcolumn = "no"
+      vim.opt.cursorline = false
+      vim.opt.wrap = true
+      vim.opt.linebreak = true
+	  vim.opt.laststatus = 0
+	  vim.opt.cmdheight = 0
+	  vim.opt.colorcolumn = "0"
+
+      -- Centering
+      pcall(function()
+        require("no-neck-pain").enable()
+      end)
+    end
+  end,
+})
+
 ------------------------------------------------------------------------------
 ----------------------------- OLD VIM COMMANDS -------------------------------
 ------------------------------------------------------------------------------
@@ -175,3 +204,4 @@ endfunction
 
 autocmd BufWritePre *.py call TrimEndLines()
 ]])
+

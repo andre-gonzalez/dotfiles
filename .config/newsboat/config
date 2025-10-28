@@ -12,6 +12,7 @@ text-width 72
 ignore-article "*" "title =~ \"#shorts\""
 ignore-article "*" "content =~ \"#shorts\""
 cleanup-on-quit yes # Remove feeds that are not in config file from cache
+pager "env NEWSBOAT=1 nvim -R -"
 
 ########################
 # Keys
