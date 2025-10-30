@@ -166,8 +166,8 @@ vim.api.nvim_create_autocmd("VimEnter", {
 			vim.opt.cmdheight = 0
 			vim.opt.laststatus = 0
 			vim.opt.statusline = "" -- fallback, hide any manual statusline
-			vim.opt.number = false
-			vim.opt.relativenumber = false
+			vim.opt.number = true
+			vim.opt.relativenumber = true
 			vim.opt.signcolumn = "no"
 			vim.opt.cursorline = false
 			vim.opt.wrap = true
