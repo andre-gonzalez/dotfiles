@@ -15,6 +15,8 @@ videos
 # File extensions
 *.csv
 *.jpg
+*.log
+*.logs
 *.md
 *.mp4
 *.pdf
@@ -35,6 +37,7 @@ videos
 .bashrc.backup
 .bean-shell-history
 .boto
+.config/newsboat/.env
 .databrickscfg
 .databricks-connect
 .duckdb_history
@@ -48,6 +51,7 @@ videos
 .msmtprc
 .notmuch-config
 .npmrc
+.nvidia-settings-rc
 .odbc.ini
 .pdbhistory
 .pulse-cookie
@@ -69,7 +73,6 @@ videos
 .zcompdump
 .zsh_history
 .zshrc
-.nvidia-settings-rc
 
 # Dot directories
 .abook/
@@ -205,6 +208,7 @@ videos
 .config/google-chrome-beta/
 .config/google-chrome-unstable/
 .config/google-cloud-sdk/
+.config/gpick/
 .config/grammarly-languageserver/
 .config/gtk-2.0/
 .config/guiscrcpy/
@@ -273,6 +277,8 @@ videos
 .config/RogueLegacy/
 .config/Slack/
 .config/slock/
+.config/spectaclerc
+.config/spectaclerc
 .config/spicy/
 .config/spotify/
 .config/spotifyd/
