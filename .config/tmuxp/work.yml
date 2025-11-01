@@ -29,5 +29,11 @@ windows:
     panes:
       - spotify_player
   - window_name: neomutt
+    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     panes:
       - mailsync >> /dev/null & neomutt
+      - |
+        while true
+         mailsync
+         sleep 600
+        end
