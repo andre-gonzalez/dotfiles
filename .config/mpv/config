@@ -4,7 +4,6 @@ hwdec=auto-safe
 write-filename-in-watch-later-config=yes
 save-watch-history=yes
 ytdl-raw-options=output="%(title)s.%(ext)s"
-ytdl-raw-options=cookies="$HOME"/.config/chromium/Default/Cookies
 
 # Cache and demuxer settings
 cache=yes
