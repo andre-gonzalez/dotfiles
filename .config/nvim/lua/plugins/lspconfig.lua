@@ -64,7 +64,6 @@ return {
 		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
 
 			local on_attach = function(_, bufnr)
 				local opts = { buffer = bufnr }
@@ -131,7 +130,8 @@ return {
 			for name, config in pairs(servers) do
 				config.capabilities = capabilities
 				config.on_attach = on_attach
-				lspconfig[name].setup(config)
+				vim.lsp.config(name, config)
+				vim.lsp.enable(name)
 			end
 
 			-- -- Manual setup for ltex-ls-plus
