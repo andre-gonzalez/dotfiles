@@ -29,7 +29,7 @@ bind-key G end
 bind-key g home
 bind-key U show-urls
 # SHift + n to toggle a article as read
-# L -> to toggle-show-read-feeds
+bind-key L toggle-show-read-feeds
 # Shift + c -> Mark all feeds-read
 # Shift + a -> mark feed read
 
