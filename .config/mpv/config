@@ -5,6 +5,10 @@ write-filename-in-watch-later-config=yes
 save-watch-history=yes
 ytdl-raw-options=output="%(title)s.%(ext)s"
 
+# Never use Vulkan
+vo=gpu
+gpu-api=opengl
+
 # Cache and demuxer settings
 cache=yes
 cache-secs=10800
