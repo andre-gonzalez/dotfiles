@@ -2,7 +2,8 @@
 "query:--- Categories ---:unread = \"yes\" and tags # \"unread\""
 "query:Unread All:unread = \"yes\"" unread
 "query:Unread Blogs:unread = \"yes\" and tags # \"Blogs\""
-"query:Unread Video:unread = \"yes\" and tags # \"Videos\""
+"query:Unread Videos:unread = \"yes\" and tags # \"Videos\""
+"query:Unread Work:unread = \"yes\" and tags # \"Work\""
 "query:Starred:flags # \"s\"" starred
 
 "query:--- Feeds ---:unread = \"yes\" and tags # \"feeds\""
