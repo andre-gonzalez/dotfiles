@@ -416,6 +416,7 @@ config.set('colors.webpage.darkmode.enabled', False, 'https://web.whatsapp.com/'
 config.set('colors.webpage.darkmode.enabled', False, 'https://app.btgpactual.com/')
 config.set('colors.webpage.darkmode.enabled', False, 'http://localhost/')
 config.set('colors.webpage.darkmode.enabled', False, 'https://app.alude.com.br/')
+config.set('colors.webpage.darkmode.enabled', False, 'https://www.mercadolivre.com.br/')
 
 # Bindings for normal mode
 config.bind('xt', 'config-cycle tabs.show always switching')
