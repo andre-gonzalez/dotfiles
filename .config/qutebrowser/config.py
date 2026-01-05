@@ -366,6 +366,7 @@ c.url.searchengines = {
         '!yt': 'https://www.youtube.com/results?search_query={}',
         '!rd': 'https://www.reddit.com/search/?q={}',
         '!dh': 'https://hub.docker.com/search?q={}',
+        '!ma': 'https://www.google.com/maps/search/{}'
         }
 
 # Hide the window decoration.  This setting requires a restart on
