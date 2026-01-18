@@ -73,7 +73,13 @@ function fish_prompt
         set arrow "$arrow_color# "
     end
 
-    set -l cwd $normal(basename (prompt_pwd))
+    # Show relative path from HOME when inside HOME, otherwise full path
+    set -l cwd
+    if string match -q "$HOME*" $PWD
+        set cwd $normal(string replace "$HOME" "~" $PWD)
+    else
+        set cwd $normal$PWD
+    end
 
     set -l repo_info
     if set -l repo_type (_repo_type)
