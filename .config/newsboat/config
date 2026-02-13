@@ -60,7 +60,8 @@ highlight feedlist ".*0/0.." default default invis
 # Fresh RSS
 ########################
 urls-source "freshrss"
-freshrss-url "http://servarr.ewe-musical.ts.net:81/api/greader.php"
+freshrss-url "http://docker-deploys.ewe-musical.ts.net:81/api/greader.php"
+# freshrss-url "http://servarr.ewe-musical.ts.net:81/api/greader.php"
 freshrss-login "frank"
 freshrss-passwordfile "~/.config/newsboat/.env"
 freshrss-flag-star "s"
