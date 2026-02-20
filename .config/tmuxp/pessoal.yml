@@ -1,12 +1,11 @@
 session_name: pessoal
 windows:
   - window_name: pessoal
-    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    shell_command_before:
-      - cd ~/gdrive-pessoal
+    layout: 3a87,85x48,0,0{67x48,0,0[67x33,0,0,0,67x14,0,34,1],17x48,68,0,2}
     panes:
-      - shell_command:
-        - clear && ls
+      - shell_command: clear  # top-left: editor
+      - shell_command: clear && ls # bottom-left: terminal
+      - shell_command: clear  # right: cursor-agent
   - window_name: notas
     layout: main-horizontal
     shell_command_before:
@@ -14,16 +13,16 @@ windows:
     panes:
       - shell_command:
         - "nvim ~/projects/notas/pessoal/to-dos/meus-personal-to-dos.md" # run as a first command in all panes
-  - window_name: ansible
-    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    shell_command_before:
-      - cd ~/projects/ansible/main-ansible/
-    panes:
-      - nvim ~/projects/ansible/main-ansible/
-      - clear && ls
+  # - window_name: ansible
+  #   layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
+  #   shell_command_before:
+  #     - cd ~/projects/ansible/main-ansible/
+  #   panes:
+  #     - nvim ~/projects/ansible/main-ansible/
+  #     - clear && ls
   - window_name: newsboat
     panes:
       - newsboat
-  - window_name: spotify
-    panes:
-      - spotify_player
+  # - window_name: spotify
+  #   panes:
+  #     - spotify_player

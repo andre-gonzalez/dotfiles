@@ -17,14 +17,14 @@ windows:
   - window_name: work
     shell_command_before:
       - cd ~/athenaworks/uberall/repos/ && clear ; eval (ssh-agent -c) ; ssh-add ~/.ssh/uberall-2025-06 # run as a first command in all panes
-    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
+    layout: 3a87,85x48,0,0{67x48,0,0[67x33,0,0,0,67x14,0,34,1],17x48,68,0,2}
     # panes:
       # - cd ~/eureciclo/repos/databricks-notebooks/ && nvim -c "Telescope file_browser"
       # - cd ~/eureciclo/repos/databricks-notebooks/main-databricks-notebooks/ ; eval (ssh-agent -c) ; ssh-add ~/.ssh/eureciclo-2023-06
   - window_name: work
     shell_command_before:
       - cd ~/athenaworks/uberall/repos/ && clear ; eval (ssh-agent -c) ; ssh-add ~/.ssh/uberall-2025-06 # run as a first command in all panes
-    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
+    layout: 3a87,85x48,0,0{67x48,0,0[67x33,0,0,0,67x14,0,34,1],17x48,68,0,2}
   - window_name: newsboat
     panes:
       - newsboat
