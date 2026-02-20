@@ -188,6 +188,15 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
+-- Auto open ipynb as python files
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "*.ipynb",
+  callback = function()
+    vim.cmd("!jupytext --to py %")
+    vim.cmd("edit " .. vim.fn.expand("%:r") .. ".py")
+  end,
+})
+
 ------------------------------------------------------------------------------
 ----------------------------- OLD VIM COMMANDS -------------------------------
 ------------------------------------------------------------------------------
