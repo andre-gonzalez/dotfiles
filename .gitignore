@@ -168,7 +168,7 @@ videos
 .config/Bitwarden CLI/
 .config/bleachbit/
 .config/BraveSoftware/
-.config/btop/
+.config/btop/btop.log
 .config/calibre/
 .config/cef_user_data/
 .config/chatgpt-dmenu/
