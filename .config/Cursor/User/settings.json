@@ -20,5 +20,6 @@
     },
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
-    }
+    },
+    "window.titleBarStyle": "native"
 }
