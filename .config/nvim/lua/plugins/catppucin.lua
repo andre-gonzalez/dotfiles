@@ -59,7 +59,11 @@ return {
 				},
 			},
 			color_overrides = {},
-			custom_highlights = {},
+			custom_highlights = function(colors)
+			return {
+				ColorColumn = { bg = colors.mantle },
+			}
+		end,
 			default_integrations = true,
 			auto_integrations = false,
 			integrations = {
