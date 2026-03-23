@@ -61,7 +61,7 @@ return {
 			color_overrides = {},
 			custom_highlights = function(colors)
 			return {
-				ColorColumn = { bg = colors.mantle },
+				ColorColumn = { bg = "#1c1c2d" },
 			}
 		end,
 			default_integrations = true,
