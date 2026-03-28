@@ -57,7 +57,7 @@ return {
 					{ name = "path" },
 					{ name = "treesitter" },
 					{ name = "tags" },
-					{ name = "cmp-dbee" },
+					-- { name = "cmp-dbee" },
 				}),
 			})
 
@@ -74,8 +74,8 @@ return {
 			cmp.setup.filetype("sql", {
 				sources = {
 					{ name = "nvim_lsp" },
-					{ name = "luasnip" }, -- For luasnip users.
-					{ name = "cmp-dbee" },
+					{ name = "vim-dadbod-completion" },
+					{ name = "luasnip" },
 					{ name = "buffer" },
 				},
 			})
@@ -104,11 +104,11 @@ return {
 		end,
 	},
 
-	{
-		"MattiasMTS/cmp-dbee",
-		ft = "sql",
-		dependencies = {
-			"kndndrj/nvim-dbee",
-		},
-	},
+	-- {
+	-- 	"MattiasMTS/cmp-dbee",
+	-- 	ft = "sql",
+	-- 	dependencies = {
+	-- 		"kndndrj/nvim-dbee",
+	-- 	},
+	-- },
 }

@@ -114,13 +114,6 @@ vim.keymap.set("n", "gj", function()
   vim.cmd("nohlsearch")
 end, { desc = "Go to next markdown header" })
 
-vim.keymap.set(
-  "v",
-  "<leader>bq",
-  "<cmd>lua run_sql_visual_flattened()<CR>",
-  { desc = "Run the visually‐selected SQL via nvim‐dbee" }
-)
-
 -- ─────────────────────────────────────────────────────────
 -- Transparent background toggle
 -- ─────────────────────────────────────────────────────────
