@@ -11,10 +11,11 @@ return {
 			"DBUIAddConnection",
 			"DBUIFindBuffer",
 		},
+		keys = {
+			{ "<leader>db", "<cmd>DBUIToggle<CR>", desc = "Toggle DB UI" },
+			{ "<leader>bf", "<cmd>DBUIFindBuffer<CR>", desc = "Find DB buffer" },
+		},
 		config = function()
-			vim.keymap.set("n", "<leader>db", ":DBUIToggle<CR>", { desc = "Toggle DB UI" })
-			vim.keymap.set("n", "<leader>bf", ":DBUIFindBuffer<CR>", { desc = "Find DB buffer" })
-
 			vim.g.db_ui_use_nerd_fonts = 1
 			vim.g.db_ui_save_location = vim.fn.stdpath("data") .. "/db_ui"
 
