@@ -15,7 +15,7 @@ windows:
     panes:
       - shell_command:
         - nvim ~/projects/notas/trabalho/athenaworks/uberall/uberall-todo.md
-      - cd ~/projects/notas/ # run as a first command in all panes
+      - shell_command: tmux resize-pane -Z -t uberall:notas.1
   - window_name: database
     shell_command_before:
       - ~/athenaworks/uberall/downloads/query && clear # run as a first command in all panes
@@ -42,8 +42,10 @@ windows:
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     panes:
       - mailsync >> /dev/null & neomutt
-      - |
-        while true
-         mailsync
-         sleep 600
-        end
+      - shell_command:
+        - tmux resize-pane -Z -t uberall:neomutt.1
+        - |
+          while true
+           mailsync
+           sleep 600
+          end
