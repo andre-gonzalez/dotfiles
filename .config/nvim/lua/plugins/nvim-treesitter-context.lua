@@ -3,7 +3,8 @@ return {
 	event = "BufReadPost",
 	config = function()
 		require("treesitter-context").setup({
-			max_lines = 10
+			max_lines = 10,
+			disable = { "markdown" },
 		})
 	end
 }
