@@ -1,7 +1,7 @@
 return {
 	'nvim-treesitter/nvim-treesitter',
 	branch = "main",
-	lazy = false,
+	event = { "BufReadPost", "BufNewFile" },
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter").setup()
@@ -20,5 +20,8 @@ return {
 				vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 			end,
 		})
+
+		-- Re-trigger FileType for the buffer that caused this plugin to load
+		vim.cmd("doautocmd FileType")
 	end
 }

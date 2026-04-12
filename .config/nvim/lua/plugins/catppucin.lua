@@ -4,6 +4,7 @@ return {
 	priority = 1000,
 	config = function()
 		require("catppuccin").setup({
+			compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 			flavour = "auto", -- latte, frappe, macchiato, mocha
 			background = { -- :h background
 				light = "latte",

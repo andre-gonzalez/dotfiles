@@ -5,6 +5,17 @@
 -- Suppress startup/intro message
 vim.opt.shortmess:append("I")
 
+-- Defer heavy built-in plugins to after startup
+vim.api.nvim_create_autocmd("VimEnter", {
+	once = true,
+	callback = function()
+		vim.schedule(function()
+			vim.cmd("runtime! plugin/rplugin.vim")
+			vim.cmd("runtime! plugin/matchit.vim")
+		end)
+	end,
+})
+
 -- set tab width to 4 spaces
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4

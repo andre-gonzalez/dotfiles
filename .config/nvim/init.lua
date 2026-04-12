@@ -1,3 +1,5 @@
+vim.loader.enable()
+
 if vim.g.vscode then
 	-- VSCode Neovim
 	require("vscode-base")
