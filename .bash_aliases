@@ -17,7 +17,7 @@ alias gp="git push -u origin"
 alias gd="git diff"
 # pacman aliases
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" #get fastest mirrors
-alias pms="sudo pacman -S"
+alias pms="fpf -a"
 alias pmu="yay -Syyu --askremovemake --noconfirm; kill -47 $(pidof dwmblocks)"
 alias pmr="sudo pacman -Rns"
 alias orphans="sudo pacman -Qtdq | sudo pacman -Rns -"
