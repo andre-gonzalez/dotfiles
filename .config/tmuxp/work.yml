@@ -1,51 +1,35 @@
 session_name: uberall
 windows:
   - window_name: work
-    shell_command_before:
-      - cd ~/athenaworks/uberall/repos/  && clear # run as a first command in all panes
-    layout: 3a87,85x48,0,0{67x48,0,0[67x33,0,0,0,67x14,0,34,1],17x48,68,0,2}
+    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     panes:
-      - shell_command: clear # top-left: editor
-      - shell_command: clear && eval (ssh-agent -c) ; ssh-add ~/.ssh/uberall-2025-06 # bottom-left: terminal
-      - shell_command: clear # right: cursor-agent
-  - window_name: notas
+      - shell_command: clear
+      - shell_command: tmux resize-pane -Z -t uberall:work.1 ; clear
+  - window_name: notes
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
       - cd ~/projects/notas/ # run as a first command in all panes
     panes:
       - shell_command:
         - nvim ~/projects/notas/trabalho/athenaworks/uberall/uberall-todo.md
-      - shell_command: tmux resize-pane -Z -t uberall:notas.1
+      - shell_command: tmux resize-pane -Z -t uberall:notes.1 ; clear
   - window_name: database
+    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
       - ~/athenaworks/uberall/downloads/query && clear # run as a first command in all panes
-    layout: 3a87,85x48,0,0{67x48,0,0[67x33,0,0,0,67x14,0,34,1],17x48,68,0,2}
     panes:
       - shell_command: nvim -c "DBUIToggle"  # top-left: editor with DBUI open
-      - shell_command: clear && eval (ssh-agent -c) ; ssh-add ~/.ssh/uberall-2025-06  # bottom-left: terminal
-      - shell_command: clear  # right: cursor-agent
-  - window_name: work
+      - shell_command: tmux resize-pane -Z -t uberall:database.1 ; clear
+  - window_name: code
+    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     shell_command_before:
       - cd ~/athenaworks/uberall/repos/ && clear ; eval (ssh-agent -c) # run as a first command in all panes
-    layout: 3a87,85x48,0,0{67x48,0,0[67x33,0,0,0,67x14,0,34,1],17x48,68,0,2}
     panes:
-      - shell_command: clear
+      - shell_command: clear ; l
       - shell_command: clear && eval (ssh-agent -c) ; ssh-add ~/.ssh/uberall-2025-06 # bottom-left: terminal
-      - shell_command: clear  # right: cursor-agent
-  - window_name: newsboat
-    panes:
-      - newsboat
-  - window_name: spotify
-    panes:
-      - spotify_player
-  - window_name: neomutt
+  - window_name: e-mail
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     panes:
-      - mailsync >> /dev/null & neomutt
+      - mailsync >> /dev/null ; neomutt
       - shell_command:
-        - tmux resize-pane -Z -t uberall:neomutt.1
-        - |
-          while true
-           mailsync
-           sleep 600
-          end
+        - tmux resize-pane -Z -t uberall:e-mail.1 ; clear
