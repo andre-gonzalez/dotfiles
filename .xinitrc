@@ -77,10 +77,12 @@ lxsession &
 # Load Xresources (font rendering, DPI, etc.)
 xrdb -merge ~/.Xresources &
 
-# Set correct DPI for your ultrawide
-xrandr --dpi 109 &
+# Set DPI to match Xft.dpi in ~/.Xresources
+xrandr --dpi 103 &
 
-# Restore display layout via autorandr
+# Restore display layout via autorandr. Hotplug switching is handled by
+# udev (/usr/lib/udev/rules.d/40-monitor-hotplug.rules -> autorandr.service);
+# dwm build switching happens in ~/.config/autorandr/postswitch.
 autorandr --change
 
 # Wallpaper
@@ -90,7 +92,7 @@ autorandr --change
 
 # Loop
 while true; do
-	dwm > /dev/null 2>&1
+	dwm >/dev/null 2>&1
 done
 
 # Shell definition
