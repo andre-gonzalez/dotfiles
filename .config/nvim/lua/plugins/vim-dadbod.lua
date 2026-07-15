@@ -27,6 +27,14 @@ return {
 					name = "developers-interactive-warehouse",
 					url = ok and secrets.databricks_url or "",
 				},
+				{
+					name = "Local SEO Dev",
+					url = ok and secrets.local_seo_dev or "",
+				},
+				-- {
+				-- 	name = "Data SDK Dev",
+				-- 	url = ok and secrets.data_sdk_dev or "",
+				-- },
 			}
 		end,
 	},

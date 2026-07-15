@@ -46,3 +46,12 @@ function! db#adapter#databricks#complete_database(url) abort
         \ "SHOW SCHEMAS")
   return result[2:]
 endfunction
+
+function! db#adapter#databricks#tables(url) abort
+  let conn = s:parse(a:url)
+  let result = db#systemlist(
+        \ ['python3', s:script, conn.host, conn.http_path, conn.token],
+        \ "-- no-limit\nSELECT DISTINCT table_name FROM INFORMATION_SCHEMA.TABLES ORDER BY table_name")
+  " result[0] = header line, result[1] = separator line, result[2:] = data rows
+  return map(result[2:], 'trim(v:val)')
+endfunction
