@@ -353,7 +353,8 @@ c.url.default_page = 'https://www.google.com/'
 # Type: Dict
 c.url.searchengines = {
 # note - if you use duckduckgo, you can make use of its built in bangs, of which there are many! https://duckduckgo.com/bangs
-        'DEFAULT': 'https://www.google.com/search?hl=en&q={}',
+        'DEFAULT': 'https://chatgpt.com/?q={}',
+        '!g': 'https://www.google.com/search?hl=en&q={}',
         '!aw': 'https://wiki.archlinux.org/?search={}',
         '!apkg': 'https://archlinux.org/packages/?sort=&q={}&maintainer=&flagged=',
         # Aur parameters
