@@ -35,6 +35,10 @@ return {
 		config = function()
 			local cmp = require("cmp")
 
+			-- Register context-aware SQL source (wraps vim-dadbod-completion with
+			-- clause-based filtering: FROM/JOIN → tables, SELECT/WHERE → columns).
+			cmp.register_source("dadbod-context", require("dadbod_context").source.new())
+
 			cmp.setup({
 				snippet = {
 					-- REQUIRED - you must specify a snippet engine
@@ -73,8 +77,7 @@ return {
 			-- Set configuration for sql filetype.
 			cmp.setup.filetype("sql", {
 				sources = {
-					{ name = "nvim_lsp" },
-					{ name = "vim-dadbod-completion" },
+					{ name = "dadbod-context" },
 					{ name = "luasnip" },
 					{ name = "buffer" },
 				},

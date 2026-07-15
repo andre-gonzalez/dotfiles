@@ -3,7 +3,23 @@ return {
 		"kristijanhusak/vim-dadbod-ui",
 		dependencies = {
 			{ "tpope/vim-dadbod", lazy = true },
-			{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+			{
+				"kristijanhusak/vim-dadbod-completion",
+				ft = { "sql", "mysql", "plsql" },
+				lazy = true,
+				-- vim-dadbod must load with the completion plugin: its fetch calls
+				-- db#resolve, which errors if only the ft trigger fired (dadbod is
+				-- otherwise only pulled in when DBUI opens).
+				dependencies = { "tpope/vim-dadbod" },
+				config = function()
+					-- Install the databricks scheme override (defined in
+					-- after/plugin/databricks_completion.vim) before the plugin's
+					-- FileType autocmd fetches and caches the connection's scheme.
+					if vim.fn.exists("*DatabricksCompletionInstall") == 1 then
+						vim.fn.DatabricksCompletionInstall()
+					end
+				end,
+			},
 		},
 		cmd = {
 			"DBUI",
