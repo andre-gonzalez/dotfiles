@@ -29,7 +29,29 @@ return {
 		},
 		keys = {
 			{ "<leader>db", "<cmd>DBUIToggle<CR>", desc = "Toggle DB UI" },
-			{ "<leader>bf", "<cmd>DBUIFindBuffer<CR>", desc = "Find DB buffer" },
+			{
+				"<leader>bf",
+				-- DBUIFindBuffer unconditionally opens the drawer; close it
+				-- afterwards unless it was already open.
+				function()
+					local function drawer_win()
+						for _, win in ipairs(vim.api.nvim_list_wins()) do
+							if vim.bo[vim.api.nvim_win_get_buf(win)].filetype == "dbui" then
+								return win
+							end
+						end
+					end
+					local was_open = drawer_win() ~= nil
+					vim.cmd("DBUIFindBuffer")
+					if not was_open then
+						local win = drawer_win()
+						if win then
+							vim.api.nvim_win_close(win, false)
+						end
+					end
+				end,
+				desc = "Find DB buffer",
+			},
 		},
 		config = function()
 			vim.g.db_ui_use_nerd_fonts = 1
