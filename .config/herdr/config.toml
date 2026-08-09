@@ -106,6 +106,7 @@ command = "herdr plugin action invoke open-jira --plugin herdr-jira"
 
 [ui]
 agent_panel_sort = "spaces"
+pane_scrollbars = false
 
 # tmux ran with `set -g status off`, so start with no sidebar chrome and
 # reveal it on demand with alt+b.
