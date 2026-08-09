@@ -1,0 +1,97 @@
+onboarding = false
+# herdr configuration — migrated from ~/.config/tmux/tmux.conf
+#
+# The tmux config drove almost everything from prefix-free alt+<key> chords,
+# so the same style is kept here: alt bindings work straight from a pane, and
+# ctrl+q is still the prefix for everything else.
+
+[theme]
+name = "catppuccin"
+
+[terminal]
+default_shell = "/usr/bin/fish"   # tmux: set -g default-shell /usr/bin/fish
+new_cwd = "follow"                # tmux: new-window -c '#{pane_current_path}'
+
+[keys]
+prefix = "ctrl+q"                 # tmux: unbind C-b; set -g prefix C-q
+
+# --- splits (tmux M-s / M-v) -------------------------------------------------
+split_horizontal = "alt+s"        # stacked  — tmux: split-window
+split_vertical   = "alt+v"        # side/side — tmux: split-window -h
+
+# --- pane focus (tmux M-h/j/k/l) ---------------------------------------------
+focus_pane_left  = "alt+h"
+focus_pane_down  = "alt+j"
+focus_pane_up    = "alt+k"
+focus_pane_right = "alt+l"
+
+# --- pane actions ------------------------------------------------------------
+swap_pane_up = "alt+enter"        # tmux: M-Enter swap-pane -U
+close_pane   = "alt+x"            # tmux: M-x kill-pane
+zoom         = "alt+z"            # tmux: M-z resize-pane -Z
+copy_mode    = "alt+["            # tmux: M-[ copy-mode
+resize_mode  = "prefix+r"         # interactive resize; see alt+shift+HJKL below
+
+# --- tabs == tmux windows ----------------------------------------------------
+new_tab      = "alt+o"            # tmux: M-o new-window -c '#{pane_current_path}'
+previous_tab = "alt+p"            # tmux: M-p previous-window
+next_tab     = "alt+n"            # tmux: M-n next-window
+close_tab    = "alt+shift+x"      # tmux: M-X kill-window
+switch_tab   = "alt+1..9"         # tmux: M-1..M-9 select-window -t :=N
+rename_tab   = "alt+i"            # tmux: M-i command-prompt 'rename-window %%'
+
+# --- misc --------------------------------------------------------------------
+toggle_sidebar = "alt+b"          # tmux: M-b set-option -g status
+reload_config  = "alt+r"          # tmux: M-r source-file ~/.config/tmux/tmux.conf
+
+# --- directional resize (tmux M-H/J/K/L resize-pane 5) -----------------------
+# herdr's --amount is a ratio delta of the container, not a cell count.
+# 0.05 ≈ tmux's 5 cells on a ~100-column pane.
+[[keys.command]]
+key = "alt+shift+h"
+type = "shell"
+command = "herdr pane resize --current --direction left --amount 0.05"
+
+[[keys.command]]
+key = "alt+shift+j"
+type = "shell"
+command = "herdr pane resize --current --direction down --amount 0.05"
+
+[[keys.command]]
+key = "alt+shift+k"
+type = "shell"
+command = "herdr pane resize --current --direction up --amount 0.05"
+
+[[keys.command]]
+key = "alt+shift+l"
+type = "shell"
+command = "herdr pane resize --current --direction right --amount 0.05"
+
+# --- small bottom terminal (tmux M-t: split-window -l 15) --------------------
+# ratio is the share kept by the original pane, so 0.75 leaves a short strip.
+[[keys.command]]
+key = "alt+t"
+type = "shell"
+command = "herdr pane split --current --direction down --ratio 0.75 --focus"
+
+[ui]
+agent_panel_sort = "spaces"
+
+# tmux ran with `set -g status off`, so start with no sidebar chrome and
+# reveal it on demand with alt+b.
+sidebar_start_collapsed = true
+sidebar_collapsed_mode = "hidden"
+hide_tab_bar_when_single_tab = true
+
+# tmux: new-window created immediately without prompting for a name.
+prompt_new_tab_name = false
+
+# tmux: setw -g mouse on, plus copy-pipe on MouseDragEnd1Pane
+mouse_capture = true
+copy_on_select = true
+
+[ui.sound]
+enabled = false
+
+[ui.toast]
+delivery = "system"
