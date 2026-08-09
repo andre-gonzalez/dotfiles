@@ -368,6 +368,7 @@ c.url.searchengines = {
         '!rd': 'https://www.reddit.com/search/?q={}',
         '!dh': 'https://hub.docker.com/search?q={}',
         '!ma': 'https://www.google.com/maps/search/{}',
+        '!maps': 'https://www.google.com/maps/search/{}',
         '!imdb': 'https://www.imdb.com/find/?q={}'
         }
 
