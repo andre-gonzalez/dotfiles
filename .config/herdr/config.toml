@@ -33,12 +33,35 @@ copy_mode    = "alt+["            # tmux: M-[ copy-mode
 resize_mode  = "prefix+r"         # interactive resize; see alt+shift+HJKL below
 
 # --- tabs == tmux windows ----------------------------------------------------
-new_tab      = "alt+o"            # tmux: M-o new-window -c '#{pane_current_path}'
-previous_tab = "alt+p"            # tmux: M-p previous-window
-next_tab     = "alt+n"            # tmux: M-n next-window
+# Tabs live on alt+shift, spaces on plain alt: spaces are the more common jump.
+# alt+shift+o / alt+shift+p emit ESC O and ESC P, which collide with the SS3 and
+# DCS escape introducers and get swallowed before they reach a binding, so the
+# tab side substitutes c (create) and b (back) for the tmux o/p letters.
+new_tab      = "alt+shift+c"      # tmux: M-o new-window -c '#{pane_current_path}'
+previous_tab = "alt+shift+b"      # tmux: M-p previous-window
+next_tab     = "alt+shift+n"      # tmux: M-n next-window
 close_tab    = "alt+shift+x"      # tmux: M-X kill-window
-switch_tab   = "alt+1..9"         # tmux: M-1..M-9 select-window -t :=N
-rename_tab   = "alt+i"            # tmux: M-i command-prompt 'rename-window %%'
+switch_tab   = "alt+shift+1..9"   # tmux: M-1..M-9 select-window -t :=N
+rename_tab   = "alt+shift+i"      # tmux: M-i command-prompt 'rename-window %%'
+
+# --- spaces == tmux sessions -------------------------------------------------
+# Mirrors the tab bindings above: same letter, minus shift for the wider scope.
+new_workspace      = "alt+o"         # cf. new_tab      = alt+shift+c
+previous_workspace = "alt+p"         # cf. previous_tab = alt+shift+b
+next_workspace     = "alt+n"         # cf. next_tab     = alt+shift+n
+rename_workspace   = "alt+i"         # cf. rename_tab   = alt+shift+i
+close_workspace    = "alt+d"         # d = delete; alt+x is already close_pane
+switch_workspace   = "alt+1..9"      # cf. switch_tab   = alt+shift+1..9
+
+# --- agents ------------------------------------------------------------------
+# Jump straight to the Nth row of the agent panel: ctrl+q then 1-9.
+# NOT ctrl+alt+1..9: st has no key[] entry for digits with ControlMask|Mod1Mask
+# and no modifyOtherKeys patch, so it drops the ctrl and sends ESC 1 — byte for
+# byte identical to alt+1, which is already switch_workspace.
+# prefix+1..9 is free because no alt-digit chord is left over for the agents.
+focus_agent = "prefix+1..9"
+workspace_picker   = "alt+w"         # fuzzy jump to any space
+goto               = "alt+g"         # navigate mode across spaces and panes
 
 # --- misc --------------------------------------------------------------------
 toggle_sidebar = "alt+b"          # tmux: M-b set-option -g status
