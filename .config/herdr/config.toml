@@ -97,6 +97,13 @@ key = "alt+t"
 type = "shell"
 command = "herdr pane split --current --direction down --ratio 0.75 --focus"
 
+# --- Jira TUI (herdr-jira plugin) --------------------------------------------
+# Launch-or-focus: splits right on first press, focuses the existing pane after.
+[[keys.command]]
+key = "alt+shift+t"
+type = "shell"
+command = "herdr plugin action invoke open-jira --plugin herdr-jira"
+
 [ui]
 agent_panel_sort = "spaces"
 
