@@ -4,6 +4,7 @@
 "query:Unread Blogs:unread = \"yes\" and tags # \"Blogs\""
 "query:Unread Videos:unread = \"yes\" and tags # \"Videos\""
 "query:Unread Work:unread = \"yes\" and tags # \"Work\""
+"query:Unread Twitter:unread = \"yes\" and tags # \"Twitter\""
 "query:Starred:flags # \"s\"" starred
 
 "query:--- Feeds ---:unread = \"yes\" and tags # \"feeds\""
