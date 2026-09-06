@@ -3,7 +3,7 @@
 	name = André Gonzalez
 [credential "https://github.com"]
 	helper =
-	helper = !/usr/bin/gh auth git-credential
+	helper = !gh auth git-credential
 [core]
 	editor = nvim
 [pull]

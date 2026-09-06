@@ -9,7 +9,7 @@ onboarding = false
 name = "catppuccin"
 
 [terminal]
-default_shell = "/usr/bin/fish"   # tmux: set -g default-shell /usr/bin/fish
+default_shell = "fish"   # tmux: set -g default-shell /usr/bin/fish
 new_cwd = "follow"                # tmux: new-window -c '#{pane_current_path}'
 
 [keys]

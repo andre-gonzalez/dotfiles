@@ -1,6 +1,6 @@
 # ~/.bash_aliases
 
-alias lf="/usr/local/bin/lfub"
+alias lf="lfub"
 alias l="ls --color -h --group-directories-first"
 alias tar="tar -xf"
 alias p="python3"
@@ -24,6 +24,6 @@ alias orphans="sudo pacman -Qtdq | sudo pacman -Rns -"
 # vim
 alias v="nvim"
 # Dotfiles in git
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
+alias dotfiles="git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
 # ansible
 alias ansible-local="ansible-playbook --connection=local --inventory 127.0.0.1, --limit 127.0.0.1 --ask-become"

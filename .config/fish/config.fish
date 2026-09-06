@@ -1,5 +1,7 @@
 # startx
-[ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 ] && exec startx
+if status is-login; and test -z "$DISPLAY"; and test "$XDG_VTNR" = 1
+    exec startx
+end
 
 # Bring the aliases from bash
 source ~/.bash_aliases
@@ -14,8 +16,8 @@ set -gx XDG_CACHE_HOME "$HOME/.cache"
 set -gx XDG_DOWNLOAD_DIR "$HOME/gdrive-pessoal/downloads"
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/.scripts /usr/local/bin /usr/bin $fish_user_paths
-set -gx EDITOR "/usr/bin/nvim"
-set -gx VISUAL "/usr/bin/nvim"
+set -gx EDITOR "nvim"
+set -gx VISUAL "nvim"
 set -gx HISTFILE "$XDG_STATE_HOME/bash/history"
 set -gx AWS_SHARED_CREDENTIALS_FILE "$XDG_CONFIG_HOME/aws/credentials"
 set -gx AWS_CONFIG_FILE "$XDG_CONFIG_HOME/aws/config"
@@ -109,7 +111,7 @@ end
 bind -M insert \ch 'cd $(pwd | fd -Htd . |fzf -e)'
 
 if test -n "$NVIM_LISTEN_ADDRESS"
-  set -x MANPAGER "/usr/local/bin/nvr -c 'Man!' -o -"
+  set -x MANPAGER "nvr -c 'Man!' -o -"
 end
 
 function __autols_hook --description "Auto ls" --on-event fish_prompt

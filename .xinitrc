@@ -86,9 +86,9 @@ xrandr --dpi 103 &
 autorandr --change
 
 # Wallpaper
-/bin/dash "$HOME"/.scripts/random-wallpaper.sh &
+sh "$HOME"/.scripts/random-wallpaper.sh &
 
-/usr/bin/redshift -l 0:0 &
+redshift -l 0:0 &
 
 # Loop
 while true; do
