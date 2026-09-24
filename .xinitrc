@@ -36,6 +36,9 @@ xbindkeys &
 # DWM Status
 dwmblocks &
 
+# Notify on program crashes and offer a Claude Code diagnosis
+crash-notify &
+
 # unclutter to make the mouse dissapear when not using it
 unclutter &
 
