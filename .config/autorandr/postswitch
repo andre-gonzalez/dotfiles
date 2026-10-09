@@ -1,0 +1,24 @@
+#!/bin/sh
+# Runs after autorandr applies a profile (udev -> autorandr.service on HDMI
+# hotplug, or a manual `autorandr --change`). Restores keyboard/DPI/status bar.
+# Runs with DISPLAY set but a minimal PATH, so use absolute paths.
+#
+# dwm is no longer switched from here. One build serves both layouts: xrandr
+# resizing the root window makes dwm re-run updategeom(), which sets each
+# monitor's ultra-wide margin from its own width. See patch/ultrawide.c in
+# ~/.config/dwm.
+
+case "$AUTORANDR_CURRENT_PROFILE" in
+docked | laptop) ;;
+*) exit 0 ;;
+esac
+
+# autorandr does not restore DPI; keep it in sync with Xft.dpi in ~/.Xresources.
+xrandr --dpi 103
+
+setxkbmap -layout us -variant dvorak-intl -option "" -option caps:swapescape,terminate:ctrl_alt_bksp
+
+# Restart the status bar for the new layout. KillMode=process in
+# autorandr.service means this child survives the service exiting.
+pkill -x dwmblocks
+dwmblocks &
