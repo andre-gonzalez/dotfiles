@@ -1,4 +1,4 @@
-theme = "dracula"
+theme = "Catppuccin-mocha"
 client_id = "cc6d00c56da94cf79916af0a1043d032"
 client_port = 8080
 login_redirect_uri = "http://127.0.0.1:8989/login"
