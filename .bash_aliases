@@ -6,9 +6,9 @@ alias tar="tar -xf"
 alias p="python3"
 alias f='fzf --preview="bat --color=always {}"'
 # making some command interactive
-alias mv="mvg -ig"
+alias mv="mv -i"
 alias rm="trash -i"
-alias cp="cpg -ig"
+alias cp="cp -i"
 # git aliases
 alias gs="git status"
 alias ga="git add"
@@ -23,6 +23,7 @@ alias pmr="sudo pacman -Rns"
 alias orphans="sudo pacman -Qtdq | sudo pacman -Rns -"
 # vim
 alias v="nvim"
+alias nano="nvim"
 # Dotfiles in git
 alias dotfiles="git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
 # ansible
