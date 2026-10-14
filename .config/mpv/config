@@ -13,6 +13,11 @@ cache=yes
 demuxer-max-bytes=5GiB
 demuxer-max-back-bytes=5GiB
 
+# Metered-network overrides written by ~/.scripts/save-data (empty when off).
+# Must stay after every top-level option it overrides and before the first
+# [profile] section, or it would only apply inside that profile.
+include="~~/save-data.conf"
+
 [protocol.https]
 speed=1.25
 
