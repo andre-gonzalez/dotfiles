@@ -21,3 +21,6 @@
   diff = delta
 [delta]
     side-by-side = true
+[includeIf "gitdir:~/work/"]
+	# Untracked: work email and the gitlab.com credential helper.
+	path = ~/.config/git/work.config
