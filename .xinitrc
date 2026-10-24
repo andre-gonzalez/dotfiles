@@ -39,6 +39,9 @@ dwmblocks &
 # Notify on program crashes and offer a Claude Code diagnosis
 crash-notify &
 
+# OpenSnitch: ask before a program makes a new outgoing connection
+opensnitch-ui &
+
 # unclutter to make the mouse dissapear when not using it
 unclutter &
 
