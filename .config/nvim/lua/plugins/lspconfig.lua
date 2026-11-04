@@ -1,9 +1,39 @@
+-- On NixOS, the nix_os flake (homeManager.neovim / nixos.neovim) installs the
+-- language servers. Mason cannot install most of them there: its prebuilt
+-- binaries need nix-ld, and some packages build with cargo. So on NixOS Mason
+-- installs only sqlls (npm, not in nixpkgs), and its bin goes at the end of
+-- PATH, so that the Nix servers come first.
+local is_nixos = vim.uv.fs_stat("/etc/NIXOS") ~= nil
+
+local mason_servers = {
+	"lua_ls",
+	"pyright",
+	"sqlls",
+	"ansiblels",
+	"bashls",
+	"yamlls",
+	"terraformls",
+	"jsonls",
+	-- "marksman",
+	"stylua",
+	"dockerls",
+	"nil_ls",
+	"beancount",
+	"ruff",
+	-- "snyk_ls",
+}
+if is_nixos then
+	mason_servers = { "sqlls" }
+end
+
 return {
 	{
 		"williamboman/mason.nvim",
 		cmd = { "Mason", "MasonInstall", "MasonUpdate" },
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+				PATH = is_nixos and "append" or "prepend",
+			})
 		end,
 	},
 
@@ -25,23 +55,7 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"lua_ls",
-					"pyright",
-					"sqlls",
-					"ansiblels",
-					"bashls",
-					"yamlls",
-					"terraformls",
-					"jsonls",
-					-- "marksman",
-					"stylua",
-					"dockerls",
-					"rnix",
-					"beancount",
-					"ruff",
-					-- "snyk_ls",
-				},
+				ensure_installed = mason_servers,
 			})
 		end,
 	},
@@ -103,8 +117,10 @@ return {
 						},
 					},
 				},
-				rnix = {},
+				nil_ls = {},
 				beancount = {},
+				ruff = {},
+				dockerls = {},
 				-- snyk_ls = {},
 				docker_compose_language_service = {
 					filetypes = { "yaml" }, -- still runs on YAML but we filter below
