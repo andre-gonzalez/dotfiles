@@ -1,0 +1,4 @@
+#!/bin/sh
+# Never pick "dual" on hotplug: it has the same fingerprint as "docked", and
+# autorandr prefers the newest config. Load it on purpose: autorandr --load dual
+exit 0

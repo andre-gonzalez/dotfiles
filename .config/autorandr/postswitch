@@ -1,7 +1,12 @@
 #!/bin/sh
 # Runs after autorandr applies a profile (udev -> autorandr.service on HDMI
-# hotplug, or a manual `autorandr --change`). Restores keyboard/DPI/status bar.
-# Runs with DISPLAY set but a minimal PATH, so use absolute paths.
+# hotplug, or a manual `autorandr --change` / `autorandr --load <profile>`).
+# Restores keyboard/DPI/status bar/wallpaper and puts the pointer on the
+# primary monitor. Runs with DISPLAY set but a minimal PATH.
+#
+# Profiles: laptop (panel only), docked (ultrawide only, picked on hotplug),
+# dual (both side by side; blocked on hotplug, see dual/block, loaded from
+# ~/.scripts/dual-screen-layout).
 #
 # dwm is no longer switched from here. One build serves both layouts: xrandr
 # resizing the root window makes dwm re-run updategeom(), which sets each
@@ -9,7 +14,7 @@
 # ~/.config/dwm.
 
 case "$AUTORANDR_CURRENT_PROFILE" in
-docked | laptop) ;;
+docked | laptop | dual) ;;
 *) exit 0 ;;
 esac
 
@@ -18,7 +23,33 @@ xrandr --dpi 103
 
 setxkbmap -layout us -variant dvorak-intl -option "" -option caps:swapescape,terminate:ctrl_alt_bksp
 
+# feh draws the wallpaper at the old screen size, so draw it again for the new
+# one. ~/.scripts/random-wallpaper.sh records the current image in ~/.fehbg.
+[ -f "$HOME/.fehbg" ] && sh "$HOME/.fehbg"
+
 # Restart the status bar for the new layout. KillMode=process in
 # autorandr.service means this child survives the service exiting.
 pkill -x dwmblocks
 dwmblocks &
+
+# dwm opens new windows on its selected monitor, and after a layout change it
+# selects the monitor under the pointer, not the RandR primary. Put the pointer
+# on the primary so dwm selects it. Open windows stay where they are: dwm keeps
+# them on monitor 0, which is the primary.
+# Wait first so dwm handles the root resize before the pointer moves. Then move
+# via another monitor: dwm switches monitor only when root motion crosses one.
+# xrandr --listmonitors lines: " 0: +*HDMI-A-0 2560/673x1080/284+1920+709 ..."
+centres=$(xrandr --listmonitors | awk '
+	/^ *[0-9]+:/ {
+		split($3, g, /[\/x+]/)
+		c = (g[5] + int(g[1] / 2)) " " (g[6] + int(g[3] / 2))
+		if ($2 ~ /\*/) p = c; else if (o == "") o = c
+	}
+	END { if (p != "" && o != "") print o, p }')
+if [ -n "$centres" ]; then
+	# shellcheck disable=SC2086 # intentional split into x y x y
+	set -- $centres
+	sleep 0.5
+	xdotool mousemove "$1" "$2"
+	xdotool mousemove "$3" "$4"
+fi
