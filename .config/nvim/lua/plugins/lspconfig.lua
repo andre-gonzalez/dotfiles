@@ -1,14 +1,14 @@
 -- On NixOS, the nix_os flake (homeManager.neovim / nixos.neovim) installs the
 -- language servers. Mason cannot install most of them there: its prebuilt
 -- binaries need nix-ld, and some packages build with cargo. So on NixOS Mason
--- installs only sqlls (npm, not in nixpkgs), and its bin goes at the end of
--- PATH, so that the Nix servers come first.
+-- installs nothing, and its bin goes at the end of PATH, so that the Nix
+-- servers come first.
 local is_nixos = vim.uv.fs_stat("/etc/NIXOS") ~= nil
 
 local mason_servers = {
 	"lua_ls",
 	"pyright",
-	"sqlls",
+	"sqls",
 	"ansiblels",
 	"bashls",
 	"yamlls",
@@ -23,7 +23,7 @@ local mason_servers = {
 	-- "snyk_ls",
 }
 if is_nixos then
-	mason_servers = { "sqlls" }
+	mason_servers = {}
 end
 
 return {
@@ -56,6 +56,10 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = mason_servers,
+				-- The servers table in nvim-lspconfig below enables servers
+				-- explicitly; don't also enable whatever Mason has installed
+				-- (e.g. a leftover sqlls).
+				automatic_enable = false,
 			})
 		end,
 	},
@@ -99,7 +103,7 @@ return {
 			local servers = {
 				lua_ls = {},
 				pyright = {},
-				sqlls = {},
+				sqls = {},
 				bashls = {},
 				yamlls = {},
 				jsonls = {},
