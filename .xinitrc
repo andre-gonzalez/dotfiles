@@ -30,6 +30,9 @@ picom &
 # set keyboard layout to dvorak, change esc with caps lock and change numpad , to . (dot)
 setxkbmap -layout us -variant dvorak-intl -option caps:swapescape
 
+# Tracks the most-recently-active MPRIS player so media keys follow it
+playerctld daemon &
+
 #Keybinds for audio and backlight
 xbindkeys &
 
@@ -44,9 +47,6 @@ opensnitch-ui &
 
 # unclutter to make the mouse dissapear when not using it
 unclutter &
-
-# insync start
-insync start &
 
 #start clipmenud
 clipmenud &
@@ -93,6 +93,7 @@ autorandr --change
 
 # Wallpaper
 sh "$HOME"/.scripts/random-wallpaper.sh &
+# feh --bg-fill --no-fehbg ~/.config/.wallpaper/wide-nebulosa-roxa.jpg
 
 redshift -l 0:0 &
 
