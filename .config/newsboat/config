@@ -46,8 +46,8 @@ macro b set browser "qutebrowser --target tab"; open-in-browser ; set browser qu
 # Colorscheme
 ########################
 # include /usr/share/doc/newsboat/contrib/colorschemes/gruvbox
-# include ~/.config/newsboat/catppucin
-include ~/.config/newsboat/dracula
+include ~/.config/newsboat/dark
+# include ~/.config/newsboat/dracula
 
 
 ########################
@@ -60,8 +60,7 @@ highlight feedlist ".*0/0.." default default invis
 # Fresh RSS
 ########################
 urls-source "freshrss"
-freshrss-url "http://docker-deploys.ewe-musical.ts.net:81/api/greader.php"
-# freshrss-url "http://servarr.ewe-musical.ts.net:81/api/greader.php"
+freshrss-url "https://freshrss.franktech.dev/api/greader.php"
 freshrss-login "frank"
 freshrss-passwordfile "~/.config/newsboat/.env"
 freshrss-flag-star "s"
