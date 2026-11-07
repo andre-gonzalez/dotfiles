@@ -87,8 +87,8 @@ xrdb -merge ~/.Xresources &
 xrandr --dpi 103 &
 
 # Restore display layout via autorandr. Hotplug switching is handled by
-# udev (/usr/lib/udev/rules.d/40-monitor-hotplug.rules -> autorandr.service);
-# dwm build switching happens in ~/.config/autorandr/postswitch.
+# udev -> autorandr.service (services.autorandr in the nix_os flake). Profiles
+# are per host (<layout>-<host>), see ~/.config/autorandr/postswitch.
 autorandr --change
 
 # Wallpaper

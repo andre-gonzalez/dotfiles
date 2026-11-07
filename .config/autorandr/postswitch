@@ -4,9 +4,13 @@
 # Restores keyboard/DPI/status bar/wallpaper and puts the pointer on the
 # primary monitor. Runs with DISPLAY set but a minimal PATH.
 #
-# Profiles: laptop (panel only), docked (ultrawide only, picked on hotplug),
-# dual (both side by side; blocked on hotplug, see dual/block, loaded from
-# ~/.scripts/dual-screen-layout).
+# Profiles are per host, named <layout>-<host> (one directory serves every
+# laptop; output names and panels differ): laptop (panel only), docked
+# (ultrawide only, picked on hotplug with the lid open), docked-lid (the same
+# layout, picked with the lid closed), dual-t14 (both side by side; blocked on
+# hotplug, see dual-t14/block, loaded from ~/.scripts/dual-screen-layout).
+# Each profile's block script blocks it on the other hosts. Save new ones with
+# ~/.scripts/autorandr-save-host.
 #
 # dwm is no longer switched from here. One build serves both layouts: xrandr
 # resizing the root window makes dwm re-run updategeom(), which sets each
@@ -14,7 +18,7 @@
 # ~/.config/dwm.
 
 case "$AUTORANDR_CURRENT_PROFILE" in
-docked | laptop | dual) ;;
+docked-* | laptop-* | dual-*) ;;
 *) exit 0 ;;
 esac
 

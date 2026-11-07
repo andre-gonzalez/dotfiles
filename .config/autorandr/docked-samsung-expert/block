@@ -1,0 +1,3 @@
+#!/bin/sh
+# Only samsung-expert may pick this profile (written by autorandr-save-host).
+[ "$(uname -n)" != "samsung-expert" ]
