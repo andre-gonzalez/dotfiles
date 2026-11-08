@@ -1,6 +1,7 @@
 [user]
 	email = lopescg@gmail.com
 	name = André Gonzalez
+	signingkey = 546B690A34BFB5F67D768159BB1AC653FDBAD33C
 [credential "https://github.com"]
 	helper =
 	helper = !gh auth git-credential
