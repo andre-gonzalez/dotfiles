@@ -353,8 +353,8 @@ c.url.default_page = 'https://www.google.com/'
 # Type: Dict
 c.url.searchengines = {
 # note - if you use duckduckgo, you can make use of its built in bangs, of which there are many! https://duckduckgo.com/bangs
-        'DEFAULT': 'https://chatgpt.com/?q={}',
-        '!g': 'https://www.google.com/search?hl=en&q={}',
+        'DEFAULT': 'https://www.google.com/search?hl=en&q={}',
+        '!cg': 'https://chatgpt.com/?q={}',
         '!aw': 'https://wiki.archlinux.org/?search={}',
         '!apkg': 'https://archlinux.org/packages/?sort=&q={}&maintainer=&flagged=',
         # Aur parameters
@@ -466,3 +466,12 @@ c.content.blocking.method = 'adblock' # uncomment this if you install python-adb
 #         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/quick-fixes.txt",
 #         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt",
 #         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt"]
+import catppuccin
+
+# load your autoconfig, use this, if the rest of your config is empty!
+config.load_autoconfig()
+
+# set the flavor you'd like to use
+# valid options are 'mocha', 'macchiato', 'frappe', and 'latte'
+# last argument (optional, default is False): enable the plain look for the menu rows
+catppuccin.setup(c, 'mocha', True)
