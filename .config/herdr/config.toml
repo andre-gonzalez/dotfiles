@@ -127,6 +127,12 @@ prompt_new_tab_name = false
 mouse_capture = true
 copy_on_select = true
 
+# tmux-style space numbers. herdr has no built-in row token for a space's
+# position, so the herdr-autonumber plugin stamps it as a `num` metadata token
+# and `$num` renders it here. See plugins/local/herdr-autonumber/.
+[ui.sidebar.spaces]
+rows = [["state_icon", "$num", "workspace"], ["branch", "git_status"]]
+
 [ui.sound]
 enabled = false
 
