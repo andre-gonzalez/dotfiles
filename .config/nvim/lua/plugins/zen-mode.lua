@@ -14,7 +14,10 @@ return {
   config = function()
     require("zen-mode").setup({
       window = {
-        width = 200,
+        -- Narrow window for prose, wide window for code
+        width = function()
+          return vim.bo.filetype == "markdown" and 100 or 200
+        end,
         options = {},
       },
       plugins = {

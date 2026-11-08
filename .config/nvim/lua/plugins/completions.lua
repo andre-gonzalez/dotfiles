@@ -31,6 +31,12 @@ return {
 	{
 		"hrsh7th/nvim-cmp",
 		event = { "InsertEnter", "CmdlineEnter" },
+		dependencies = {
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-calc",
+			"f3fora/cmp-spell",
+		},
 
 		config = function()
 			local cmp = require("cmp")
@@ -91,9 +97,7 @@ return {
 					{ name = "luasnip" }, -- For luasnip users.
 					{ name = "buffer" },
 					{ name = "path" },
-					{ name = "treesitter" },
 					{ name = "spell" },
-					{ name = "tags" },
 				},
 			})
 

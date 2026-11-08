@@ -14,7 +14,7 @@ local mason_servers = {
 	"yamlls",
 	"terraformls",
 	"jsonls",
-	-- "marksman",
+	"marksman",
 	"stylua",
 	"dockerls",
 	"nil_ls",
@@ -108,7 +108,7 @@ return {
 				yamlls = {},
 				jsonls = {},
 				terraformls = {},
-				-- marksman = {},
+				marksman = {},
 				ansiblels = {
 					cmd = { "ansible-language-server", "--stdio" },
 					filetype = { "yaml.ansible" },
