@@ -29,10 +29,18 @@ vim.api.nvim_create_autocmd("FileType", {
 	command = [[setlocal tabstop=2 shiftwidth=2]],
 })
 
--- Automatically deletes all trailing whitespace on save
+-- Automatically deletes all trailing whitespace on save.
+-- Not in CSV/TSV files: there, trailing whitespace can be part of the data.
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = { "*" },
-	command = ":%s/\\s\\+$//e",
+	callback = function()
+		if vim.tbl_contains({ "csv", "tsv" }, vim.bo.filetype) then
+			return
+		end
+		local view = vim.fn.winsaveview()
+		vim.cmd([[keeppatterns %s/\s\+$//e]])
+		vim.fn.winrestview(view)
+	end,
 })
 
 -- Enable line numbers
