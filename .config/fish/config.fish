@@ -37,7 +37,6 @@ set -gx PYTHON_BIN ".env/bin"
 set -gx MANPAGER "nvim +Man!"
 set -gx MBSYNCRC "$XDG_CONFIG_HOME"/isync/mbsyncrc
 set -gx PASSWORD_STORE_DIR "$XDG_DATA_HOME"/pass
-set -gx GTK_THEME "Arc-Dark"
 set -gx BC_ENV_ARGS "$XDG_CONFIG_HOME/bc/config"
 set -gx CURSOR_CONFIG_DIR "$XDG_CONFIG_HOME/cursor/"
 
