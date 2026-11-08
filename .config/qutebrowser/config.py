@@ -369,7 +369,8 @@ c.url.searchengines = {
         '!dh': 'https://hub.docker.com/search?q={}',
         '!ma': 'https://www.google.com/maps/search/{}',
         '!maps': 'https://www.google.com/maps/search/{}',
-        '!imdb': 'https://www.imdb.com/find/?q={}'
+        '!imdb': 'https://www.imdb.com/find/?q={}',
+        '!gr': 'https://www.goodreads.com/search?q={}'
         }
 
 # Hide the window decoration.  This setting requires a restart on
