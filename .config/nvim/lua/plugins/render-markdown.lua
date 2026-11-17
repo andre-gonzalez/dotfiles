@@ -3,6 +3,7 @@ return {
 	ft = { "markdown" },
 	dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" },
 	opts = {
+		sign = { enabled = false }, -- no heading / code icons in the sign column
 		heading = { width = "block", left_pad = 1, right_pad = 2 },
 		code = { width = "block", left_pad = 2, right_pad = 2 },
 		checkbox = { enabled = true },
