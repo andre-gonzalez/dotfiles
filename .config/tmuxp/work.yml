@@ -20,16 +20,12 @@ windows:
     panes:
       - shell_command: nvim -c "DBUIToggle"  # top-left: editor with DBUI open
       - shell_command: tmux resize-pane -Z -t uberall:database.1 ; clear
-  - window_name: code
-    layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
-    shell_command_before:
-      - cd ~/athenaworks/uberall/repos/ && clear ; eval (ssh-agent -c) # run as a first command in all panes
-    panes:
-      - shell_command: clear ; l
-      - shell_command: clear && eval (ssh-agent -c) ; ssh-add ~/.ssh/uberall-2025-06 # bottom-left: terminal
   - window_name: e-mail
     layout: 406d,85x48,0,0[85x32,0,0,0,85x15,0,33,30]
     panes:
-      - mailsync >> /dev/null ; neomutt
+      - mailsync >> /dev/null ; neomutt ; mailsync
       - shell_command:
         - tmux resize-pane -Z -t uberall:e-mail.1 ; clear
+  - window_name: newsboat
+    panes:
+      - newsboat

@@ -11,13 +11,18 @@
    XF86AudioMute
 
 # Play and pause audio
-"playerctl play-pause"
+# Bluetooth AVRCP sends KEY_PLAYCD/KEY_PAUSECD (XF86AudioPlay/XF86AudioPause),
+# not KEY_PLAYPAUSE, so both keysyms need binding.
+"playerctl -p playerctld play-pause"
    XF86AudioPlay
 
+"playerctl -p playerctld play-pause"
+   XF86AudioPause
+
 # Skip track
- "playerctl next"
+ "playerctl -p playerctld next"
    XF86AudioNext
 
 # Earlier track
-"playerctl previous"
+"playerctl -p playerctld previous"
    XF86AudioPrev

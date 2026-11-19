@@ -56,7 +56,19 @@ return {
 		config = function()
 			vim.g.db_ui_use_nerd_fonts = 1
 			vim.g.db_ui_disable_info_notifications = 1
+			-- ":w" only saves; queries run from <leader>qq instead.
+			vim.g.db_ui_execute_on_save = 0
 			vim.g.db_ui_save_location = vim.fn.stdpath("data") .. "/db_ui"
+
+			-- Run the query under the cursor (normal) or the visual selection.
+			-- Declared here, before DBUI ever opens a buffer, so the hasmapto()
+			-- guard in ftplugin/sql.vim skips dadbod-ui's own <Leader>S default
+			-- (which collides with spectre and :%s). <Leader>W / <Leader>E are
+			-- left as-is. remap = true is required to resolve the <Plug>.
+			vim.keymap.set({ "n", "x" }, "<leader>qq", "<Plug>(DBUI_ExecuteQuery)", {
+				remap = true,
+				desc = "Execute SQL query (dadbod)",
+			})
 
 			-- Credentials are stored in lua/secrets.lua (gitignored).
 			-- Copy lua/secrets.lua.example to lua/secrets.lua and fill in your values.
@@ -69,6 +81,10 @@ return {
 				{
 					name = "Local SEO Dev",
 					url = ok and secrets.local_seo_dev or "",
+				},
+				{
+					name = "Local SEO Prod",
+					url = ok and secrets.local_seo_prod or "",
 				},
 				-- {
 				-- 	name = "Data SDK Dev",

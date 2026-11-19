@@ -39,7 +39,11 @@ return {
 				-- Yaml
 				null_ls.builtins.formatting.yamlfmt,
 				-- SQL
-				null_ls.builtins.formatting.sql_formatter,
+				-- null_ls.builtins.formatting.sql_formatter,
+
+				-- null_ls.builtins.formatting.sqlfuluff.with({
+				--   extra_args = { "--dialect", "sqlite" }, -- customize dialect
+				-- }),
 				-- Nix
 				null_ls.builtins.formatting.nixpkgs_fmt.with({
 					filetypes = { "nix" },
@@ -78,12 +82,14 @@ return {
 				null_ls.builtins.diagnostics.tfsec,
 				-- Docker
 				null_ls.builtins.diagnostics.hadolint,
-				-- null_ls.builtins.diagnostics.sqlfluff.with({
-				--   extra_args = { "--dialect", "postgres" }, -- customize dialect
-				-- }),
 
 				-- Completion
 				null_ls.builtins.completion.spell,
+
+				-- sql
+				null_ls.builtins.diagnostics.sqlfluff.with({
+				  extra_args = { "--dialect", "sqlite" }, -- customize dialect
+				}),
 			},
 
 			vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format with LSP" }),

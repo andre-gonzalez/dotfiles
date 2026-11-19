@@ -19,7 +19,11 @@ return {
 		vim.keymap.set("n", "<C-n>", function() list:select(3) end, { desc = "Harpoon file 3" })
 		vim.keymap.set("n", "<C-s>", function() list:select(4) end, { desc = "Harpoon file 4" })
 
-		harpoon:setup({})
+		harpoon:setup({
+			settings = {
+				sync_on_ui_close = true,
+			},
+		})
 
 		-- -- basic telescope configuration
 		-- local conf = require("telescope.config").values
