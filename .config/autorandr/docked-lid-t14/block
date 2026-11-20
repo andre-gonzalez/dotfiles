@@ -1,0 +1,3 @@
+#!/bin/sh
+# Only t14 may pick this profile.
+[ "$(uname -n)" != "t14" ]
