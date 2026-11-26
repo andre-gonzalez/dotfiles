@@ -71,6 +71,22 @@ vim.opt.path:append({ "**" })
 -- Enable copying to clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Use xclip with stderr sent to /dev/null. The default provider keeps the
+-- stderr of xclip on a pipe to Neovim. After Neovim exits, xclip gets SIGPIPE
+-- in the middle of a paste, and Electron apps (Slack) freeze.
+vim.g.clipboard = {
+	name = "xclip-no-stderr",
+	copy = {
+		["+"] = { "sh", "-c", "exec xclip -quiet -i -selection clipboard 2>/dev/null" },
+		["*"] = { "sh", "-c", "exec xclip -quiet -i -selection primary 2>/dev/null" },
+	},
+	paste = {
+		["+"] = { "xclip", "-o", "-selection", "clipboard" },
+		["*"] = { "xclip", "-o", "-selection", "primary" },
+	},
+	cache_enabled = 1,
+}
+
 --set completeopt+=noselect
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
